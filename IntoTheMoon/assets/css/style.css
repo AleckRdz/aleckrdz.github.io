@@ -243,7 +243,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #47536e;
+  color: #323A2D;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -382,7 +382,7 @@ h6 {
 
 #hero h2 {
   color: #d8d8d8;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 26px;
 }
 
@@ -610,7 +610,7 @@ section {
 .details .content ul i {
   font-size: 24px;
   padding-right: 2px;
-  color: #5777ba;
+  color: #4F5A49;
   line-height: 0;
 }
 
@@ -1087,37 +1087,12 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #fff;
-  padding: 0 0 30px 0;
+  padding: 0 0 0 0;
   color: #47536e;
   font-size: 14px;
   background: #eff2f8;
 }
 
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: #eff2f8;
-  text-align: center;
-  font-size: 15px;
-}
-
-#footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
-  color: #47536e;
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
 
 #footer .footer-newsletter form input[type=email] {
   border: 0;
@@ -1146,12 +1121,11 @@ section {
 }
 
 #footer .footer-top {
-  padding: 60px 0 30px 0;
-  background: #fff;
+  background: #4f5a49;
 }
 
 #footer .footer-top .footer-contact {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 #footer .footer-top .footer-contact h4 {
@@ -1221,7 +1195,7 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5777ba;
+  background: #323A2D;
   color: #fff;
   line-height: 1;
   padding: 8px 0;

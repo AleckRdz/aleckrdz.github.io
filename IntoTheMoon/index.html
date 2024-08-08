@@ -51,71 +51,84 @@
     }
 
     @font-face {
-  font-family: 'Nagbuloe';
-  src: url('assets/fonts/nagbuloe/Nagbuloe-Thin.ttf') format('truetype'),
-       url('assets/fonts/nagbuloe/Nagbuloe-Thin.otf') format('opentype');
-  font-weight: 100; /* Adjust according to the font's weight specification */
-  font-style: normal;
-}
-.nagbuloe-font {
-  font-family: 'Nagbuloe', sans-serif !important;
-  font-weight: 100; /* Make sure the weight matches the @font-face declaration */
-}
+      font-family: 'Nagbuloe';
+      src: url('assets/fonts/nagbuloe/Nagbuloe-Thin.ttf') format('truetype'),
+        url('assets/fonts/nagbuloe/Nagbuloe-Thin.otf') format('opentype');
+      font-weight: 100;
+      /* Adjust according to the font's weight specification */
+      font-style: normal;
+    }
 
-.chicle-regular {
-  font-family: "Chicle", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    .nagbuloe-font {
+      font-family: 'Nagbuloe', sans-serif !important;
+      font-weight: 100;
+      /* Make sure the weight matches the @font-face declaration */
+    }
 
-.container {
-  position: relative; /* Ensure the floating bar is positioned relative to the container */
-  padding: 20px;
-}
+    .chicle-regular {
+      font-family: "Chicle", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-.text-center {
-  text-align: center;
-}
+    .container {
+      position: relative;
+      /* Ensure the floating bar is positioned relative to the container */
+      padding: 20px;
+    }
 
-.hero-img {
-  position: relative;
-}
+    .text-center {
+      text-align: center;
+    }
 
-.hero-img img {
-  width: 100%;
-}
+    .hero-img {
+      position: relative;
+    }
 
-.floating-bar {
-  position: absolute;
-  bottom: 60px; /* Adjust as needed */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 80%; /* Adjust width as needed */
-  background: rgb(255, 255, 255); /* Semi-transparent background */
-  color: rgb(0, 0, 0);
-  padding: 7px 0;
-  border-radius: 30px;
-  z-index: 10; /* Ensure it appears above the image */
-}
+    .hero-img img {
+      width: 100%;
+    }
 
-.hero-label{
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #525252;
-}
+    .floating-bar {
+      position: absolute;
+      bottom: 60px;
+      /* Adjust as needed */
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 80%;
+      /* Adjust width as needed */
+      background: rgb(255, 255, 255);
+      /* Semi-transparent background */
+      color: rgb(0, 0, 0);
+      padding: 7px 0;
+      border-radius: 30px;
+      z-index: 10;
+      /* Ensure it appears above the image */
+    }
 
-.select-no-border-small {
-  border: none; /* Removes the border */
-  outline: none; /* Removes the outline (focus border) */
-  padding: 0.5rem 0.75rem; /* Adjust padding for size */
-  font-size: 0.875rem; /* Smaller font size */
-  border-radius: 0.25rem; /* Optional: adjust border radius for rounded corners */
-  background-color: transparent; /* Optional: transparent background */
-  box-shadow: none; /* Removes any shadow */
-}
+    .hero-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #525252;
+    }
 
-
+    .select-no-border-small {
+      border: none;
+      /* Removes the border */
+      outline: none;
+      /* Removes the outline (focus border) */
+      padding: 0.5rem 0.75rem;
+      /* Adjust padding for size */
+      font-size: 0.875rem;
+      /* Smaller font size */
+      border-radius: 0.25rem;
+      /* Optional: adjust border radius for rounded corners */
+      background-color: transparent;
+      /* Optional: transparent background */
+      box-shadow: none;
+      /* Removes any shadow */
+    }
   </style>
 </head>
 
@@ -138,29 +151,11 @@
           <li><a class="nav-link scrollto" href="#cabañas">Cañabas</a></li>
           <li><a class="nav-link scrollto" href="#acceso">Acceso</a></li>
           <li><a class="nav-link scrollto" href="#reglas">Reglas</a></li>
-          <li><a class="nav-link scrollto" href="#recomendaciones">Recomendaciones</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          <li><a class="nav-link scrollto" href="#recomendaciones">Recomendaciones</a></li>         
           <li><a class="getstarted scrollto" href="#reservar">Reservar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav><!-- navbar -->
 
     </div>
   </header><!-- End Header -->
@@ -174,11 +169,20 @@
           class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
           data-aos="fade-up">
           <div class="text-center">
-            <h1 class="nagbuloe-font">Welcome To</h1>
-            <img src="assets/img/itm-logo-full.png" alt="" width="100%" class="mt-2 mb-4">
-            <h2 class="nagbuloe-font">Modern Cabins</h2><br><br><br>
+            <h1 class="nagbuloe-font mb-4">Welcome To</h1>
+            <img src="assets/img/itm-logo-full.png" alt="" width="80%" class="">
+            <h2 class="mt-3" style="color: #E9E9E9;">Modern Cabins</h2>
             <!-- <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
             <a href="#" class="download-btn"><i class="bx bxl-apple"></i> App Store</a> -->
+            <div class="container d-flex align-items-center justify-content-center">              
+            
+              <nav class="navbar">
+                <ul>                  
+                  <li><a class="getstarted scrollto" style="margin-left: 0 !important;" href="#reservar">Reservar</a></li>
+                </ul>
+              </nav><!-- navbar -->
+            
+            </div>
           </div>
         </div>
         <div
@@ -187,22 +191,19 @@
           <img src="assets/img/itm-hero-img.png" class="img-fluid" alt="">
         </div>
       </div>
-      <div class="floating-bar" data-aos="fade-up">
+      <!-- <div class="floating-bar" data-aos="fade-up">
         <div class="container p-1 ps-3 pe-3">
           <div class="row">
             <div class="col-md-3">
-              <!-- <label for="checkin-date" class="form-label">Checkin Date</label> -->
-               <span class="hero-label">Checkin Date</span>
+              <span class="hero-label">Checkin Date</span>
               <i class="bi bi-calendar-day"></i>
               <input type="date" id="checkin-date" class="form-select select-no-border-small" placeholder="31/07/24">
             </div>
             <div class="col-md-3">
-              <!-- <label for="checkout-date" class="form-label">Checkout Date</label> -->
               <span class="hero-label">Checkout Date</span>
               <input type="date" id="checkout-date" class="form-select select-no-border-small" placeholder="1/08/24">
             </div>
-            <div class="col-md-3">            
-              <!-- <label for="guests" class="form-label">Guests</label> -->
+            <div class="col-md-3">
               <span class="hero-label">Guests</span>
               <select id="guests" class="form-select">
                 <option value="1">1</option>
@@ -213,8 +214,8 @@
               <button class="btn btn-primary rounded-pill">Reservar</button>
             </div>
           </div>
-        </div>
-    </div>
+        </div> -->
+      </div>
 
 
 
@@ -223,15 +224,47 @@
 
   <main id="main">
 
-    <!-- ======= App Features Section ======= -->
+    <!-- ======= Nosotros Section ======= -->
+    <section id="details" class="details">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="assets/img/itm-landscape.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-4" data-aos="fade-up">
+            <h2 class="nagbuloe-font" style="color:#4f5a49">Bienvido a nuestro ​escape en ​Carretera Nacional</h2>
+            <p class="fst-italic">
+              ¡Estamos muy emocionados de recibirte en Into ​The Moon! 🌙✨
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ubicado a solo unos minutos ​de Monterrey.</li>
+              <li><i class="bi bi-check"></i> Nuestro glamping ofrece las ​mejores vistas y una experiencia única. 🌲🏞️</li>
+              <li><i class="bi bi-check"></i> Aquí podrás desconectarte de la ciudad y ​sumergirte en la tranquilidad y belleza del ​entorno.</li>
+              <li><i class="bi bi-check"></i> Nuestras cabañas están equipadas con ​todas las comodidades necesarias para que te ​sientas como en casa, mientras disfrutas de una ​escapada inolvidable. 🏡✨
+              </li>
+            </ul>
+            <p>
+              ¡Prepárate para relajarte, explorar y crear ​recuerdos mágicos con nosotros! 🌟
+            </p>
+          </div>
+        </div>
+    
+    
+    
+      </div>
+    </section>
+    <!-- End Nosotros Section -->
+
+    <!-- ======= Reglas Section ======= -->
     <section id="features" class="features">
       <div class="container">
 
         <div class="section-title">
-          <h2>App Features</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          <h2 class="nagbuloe-font" style="color: #4f5a49;">Reglas</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+            in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="row no-gutters">
@@ -239,49 +272,43 @@
             <div class="content d-flex flex-column justify-content-center">
               <div class="row">
                 <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <i class="bx bx-group" style="color: #4f5a49"></i>
+                  <h4>1 - Respetar a los vecinos</h4>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <i class="bx bx-error" style="color: #4f5a49;"></i>
+                  <h4>2 - Estrictamente prohibido fumar dentro de los cuartos</h4>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <i class="bx bx-receipt" style="color: #4f5a49;"></i>
+                  <h4>3 - Evitar daños o mal uso, ya que puede resultar en la suspensión de la ​estancia y cargos adicionales</h4>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-shield"></i>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                  <i class="bx bx-no-entry" style="color: #4f5a49;"></i>
+                  <h4>4 - No se permiten visitas, eventos ni huéspedes adicionales</h4>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-atom"></i>
-                  <h4>Molestiae dolor</h4>
-                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                  <i class="bx bx-cube-alt" style="color: #4f5a49;"></i>
+                  <h4>5 - No nos hacemos responsables por objetos olvidados, perdidos o ​extraviados</h4>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                  <i class="bx bx-id-card"></i>
-                  <h4>Explicabo consectetur</h4>
-                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                  <i class="bx bx-recycle" style="color: #4f5a49;"></i>
+                  <h4>6 - Limpieza para estancias largas se realiza una vez a la semana</h4>
                 </div>
               </div>
             </div>
           </div>
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2"
             data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/features.svg" class="img-fluid" alt="">
+            <img src="assets/img/itm-reglamento.png" class="img-fluid" alt="">
           </div>
         </div>
 
       </div>
-    </section><!-- End App Features Section -->
+    </section><!-- End Reglas Section -->
 
     <!-- ======= Details Section ======= -->
-    <section id="details" class="details">
+    <!-- <section id="details" class="details">
       <div class="container">
 
         <div class="row content">
@@ -385,10 +412,11 @@
         </div>
 
       </div>
-    </section><!-- End Details Section -->
+    </section> -->
+    <!-- End Details Section -->
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
+    <!-- ======= Default Gallery Section ======= -->
+    <!-- <section id="gallery" class="gallery">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -444,20 +472,35 @@
         </div>
 
       </div>
-    </section><!-- End Gallery Section -->
+    </section> -->
+    <!-- End Default Gallery Section -->
+
+    <!-- ======= New Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2 class="nagbuloe-font" style="color: #4f5a49;">Galería</h2>
+        </div>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-91fa5340-03c4-4027-8179-3a0b7c00a306" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+
+    <!-- End New Gallery Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+          <h2 class="nagbuloe-font" style="color: #4f5a49;">Testimonios</h2>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-4e03a914-d066-45cc-8e8a-431e0afeb84e" data-elfsight-app-lazy></div>
+
+        <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -532,13 +575,14 @@
 
           </div>
           <div class="swiper-pagination"></div>
-        </div>
+        </div> -->
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    <!-- End Testimonials Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <!-- <section id="pricing" class="pricing">
       <div class="container">
 
         <div class="section-title">
@@ -592,10 +636,11 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section> -->
+    <!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq section-bg">
+    <!-- <section id="faq" class="faq section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -679,10 +724,11 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section> -->
+    <!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -745,92 +791,47 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section> -->
+    <!-- End Contact Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+  <footer id="footer" style="background-color: #4f5a49;">
 
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Appland</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <div class="container py-4">
+          <header id="header" class="header-transparent  ">
+            <div class="container d-flex align-items-center justify-content-between">
+        
+              <div class="logo">
+                <!-- <h1><a href="index.html">Appland</a></h1> -->
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="100%"></a>
+              </div>
+        
+              <div class="col-lg-3 col-md-6 footer-links">
+                <div class="social-links mt-3">
+                  <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+                  <!-- <a href="https://instagram.com/intothemoonmx" class="instagram mt-4" target="_blank"><i class="bx bxl-instagram"></i></a> -->
+                  <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+                </div>
+              </div>
+        
             </div>
-          </div>
+          </header><!-- End Header -->
+        </div>
 
         </div>
       </div>
     </div>
 
-    <div class="container py-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Appland</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+    
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -845,19 +846,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- custom js -->
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      flatpickr("#checkin-date", {
-        dateFormat: "d/m/Y",
-      });
-      flatpickr("#checkout-date", {
-        dateFormat: "d/m/Y",
-      });
-    });
-  </script>
-
 
 </body>
 
