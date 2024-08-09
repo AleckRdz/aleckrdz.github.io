@@ -129,6 +129,46 @@
       box-shadow: none;
       /* Removes any shadow */
     }
+
+    .custom-section {
+    height: 100vh;
+    background-image: url('assets/img/drive/aerea1.JPG');
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    background-blend-mode: darken; /* This blends the image with the color */
+}
+
+.pulse-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(255, 255, 0); /* Yellow background color */
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    outline: none;
+    animation: pulse 2s infinite; /* 2-second animation, looping infinitely */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(206, 159, 19, 0.7); /* Yellow shadow */
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 20px rgba(255, 193, 7, 0); /* Fades the shadow */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); /* Back to original */
+    }
+}
+
+
+
   </style>
 </head>
 
@@ -161,16 +201,16 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center theme-color">
+  <section id="hero" class="d-flex align-items-center theme-color custom-section">
 
     <div class="container">
       <div class="row">
         <div
-          class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
+          class="col-lg-12 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
           data-aos="fade-up">
           <div class="text-center">
             <!-- <h1 class="nagbuloe-font mb-4">Welcome To</h1> -->
-            <img src="assets/img/itm-logo-full.png" alt="" width="80%" class="">
+            <img src="assets/img/itm-logo-full.png" alt="" width="40%" class="">
             <h2 class="mt-3" style="color: #E9E9E9;">Modern Cabins</h2>
             <h2 class="mt-3" style="color: #E9E9E9;">Santiago, Nuevo León</h2>
             <!-- <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
@@ -186,11 +226,11 @@
             </div>
           </div>
         </div>
-        <div
+        <!-- <div
           class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch order-1 order-lg-2 hero-img"
           data-aos="fade-up">
           <img src="assets/img/itm-hero-img.png" class="img-fluid" alt="">
-        </div>
+        </div> -->
       </div>
       <!-- <div class="floating-bar" data-aos="fade-up">
         <div class="container p-1 ps-3 pe-3">
@@ -268,50 +308,52 @@
             in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
-        <div class="row no-gutters">
-        
-          <div class="col-lg-4 box" data-aos="fade-right">
-            <h3>Recámara Queen</h3>
-            <!-- <h4>$0<span>per month</span></h4> -->
-             <img src="assets/img/itm-landscape.png" width="100%" alt="" class="mb-3">
-            <ul>
-              <li><i class="bx bx-label" style="color: #4f5a49;"></i> Mini split, TV con streaming, ​baño privado, frigobar, fregadero, ​microondas, cafetera, utensilios</li>
-              <!-- <li><i class="bx bx-check"></i> Mini split</li>
-              <li><i class="bx bx-check"></i> TV con streaming</li>
-              <li><i class="bx bx-check"></i> Baño privado</li>
-              <li><i class="bx bx-check"></i> Frigobar</li>
-              <li><i class="bx bx-check"></i> Fregadero</li>
-              <li><i class="bx bx-check"></i> Microondas</li>
-              <li><i class="bx bx-check"></i> Cafetera</li>
-              <li><i class="bx bx-check"></i> Utensilios</li> -->
-            </ul>
-          </div>
-        
-          <div class="col-lg-4 box featured" data-aos="fade-left">
-            <h3>Terraza Con Vista</h3>
-            <!-- <h4>$49<span>per month</span></h4> -->
-            <img src="assets/img/itm-landscape.png" width="100%" alt="" class="mb-3">
-            <ul>
-              <li><i class="bx bx-label" style="color: #4f5a49;"></i> Terraza privada con asador, ​fogatero, muebles exteriores, luces ​y pileta privada. Incluye leña.
-              </li>
-            </ul>
-          </div>
+        <div class="row no-gutters">                             
 
           <div class="col-lg-4 box" data-aos="fade-up">
             <h3>Pileta Privada</h3>
             <!-- <h4>$29<span>per month</span></h4> -->
-            <img src="assets/img/itm-landscape.png" width="100%" alt="" class="mb-3">
+            <img src="assets/img/drive/alberca1.JPG" width="100%" alt="" class="mb-3" style="border-radius: 15px;">
             <ul>
               <li><i class="bx bx-label" style="color: #4f5a49;"></i> Pileta privada con agua ​climatizada hasta 35 C</li>
             </ul>
           </div>
         
+          <div class="col-lg-4 box featured" data-aos="fade-right">
+            <h3>Recámara Queen</h3>
+            <!-- <h4>$0<span>per month</span></h4> -->
+            <img src="assets/img/drive/interior13.JPG" width="100%" alt="" class="mb-3" style="border-radius: 15px;">
+            <ul>
+              <li><i class="bx bx-label" style="color: #4f5a49;"></i> Mini split, TV con streaming, ​baño privado, frigobar,
+                fregadero, ​microondas, cafetera, utensilios</li>
+              <!-- <li><i class="bx bx-check"></i> Mini split</li>
+                        <li><i class="bx bx-check"></i> TV con streaming</li>
+                        <li><i class="bx bx-check"></i> Baño privado</li>
+                        <li><i class="bx bx-check"></i> Frigobar</li>
+                        <li><i class="bx bx-check"></i> Fregadero</li>
+                        <li><i class="bx bx-check"></i> Microondas</li>
+                        <li><i class="bx bx-check"></i> Cafetera</li>
+                        <li><i class="bx bx-check"></i> Utensilios</li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-4 box" data-aos="fade-left">
+            <h3>Terraza Con Vista</h3>
+            <!-- <h4>$49<span>per month</span></h4> -->
+            <img src="assets/img/drive/patio4.JPG" width="100%" alt="" class="mb-3" style="border-radius: 15px;">
+            <ul>
+              <li><i class="bx bx-label" style="color: #4f5a49;"></i> Terraza privada con asador, ​fogatero, muebles exteriores,
+                luces ​y pileta privada. Incluye leña.
+              </li>
+            </ul>
+          </div>
+
         </div>
 
       </div>
     </section><!-- End Amenidades Section -->
 
-    <!-- ======= New Gallery Section ======= -->
+    <!-- ======= Gallery Section ======= -->
     <section id="galeria" class="gallery">
       <div class="container" data-aos="fade-up">
     
@@ -323,14 +365,14 @@
       </div>
     </section>
 
-    <!-- End New Gallery Section -->
+    <!-- End Gallery Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonios" class="testimonials section-bg">
+    <section id="testimonios" class="testimonials section-bg" style="background-color: white;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 class="nagbuloe-font" style="color: #4f5a49;">Testimonios</h2>
+          <h2 class="nagbuloe-font" style="color: #FFF;">Testimonios</h2>
         </div>
 
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
@@ -341,7 +383,7 @@
     <!-- End Testimonials Section -->
 
     <!-- ======= Maps Section ======== -->
-    <section id="ubicacion" class="testimonials section-bg">
+    <section id="ubicacion" class="testimonials section-bg" style="background-color: white;">
       <div class="container" data-aos="fade-up">
     
         <div class="section-title">
@@ -374,16 +416,14 @@
               <div class="logo">
                 <!-- <h1><a href="index.html">Appland</a></h1> -->
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="100%"></a>
+                <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="90%"></a>
               </div>
         
               <div class="col-lg-3 col-md-6 footer-links">
                 <div class="social-links mt-3">
-                  <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-                  <!-- <a href="https://instagram.com/intothemoonmx" class="instagram mt-4" target="_blank"><i class="bx bxl-instagram"></i></a> -->
-                  <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+                  <a href="https://www.facebook.com/profile.php?id=100090518273207" class="facebook " target="_blank"><i class="bx bxl-facebook"></i></a> 
+                  <a href="https://instagram.com/intothemoonmx" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                  <a href="https://www.tiktok.com/@intothemoonmty" class="google-plus mt-2" target="_blank"><i class="bx bxl-tiktok"></i></a>
                 </div>
               </div>
         
@@ -398,7 +438,7 @@
     
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"></i><b>Reservar</b></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center pulse-button"></i><b>Reservar</b></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
