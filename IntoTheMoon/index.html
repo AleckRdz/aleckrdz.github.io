@@ -64,6 +64,19 @@
       font-weight: 100;
       /* Make sure the weight matches the @font-face declaration */
     }
+    @font-face {
+      font-family: 'Qanelas Soft';
+      src: url('assets/fonts/qanelas soft/QanelasSoftRegular.otf') format('opentype');
+      font-weight: 100;
+      /* Adjust according to the font's weight specification */
+      font-style: normal;
+    }
+
+    .qanelas-soft-font {
+      font-family: 'Qanelas Soft', sans-serif !important;
+      font-weight: 100;
+      /* Make sure the weight matches the @font-face declaration */
+    }
 
     @font-face {
       font-family: 'Bona Nova';
@@ -160,28 +173,20 @@
     }
 
     .pulse-button {
-      padding: 10px 20px;
-      font-size: 16px;
-      color: black !important;
-      background-color: rgb(233, 233, 37) !important;
-      /* Yellow background color */
-      border: none;
-      border-radius: 45px;
-      cursor: pointer;
-      outline: none;
-      animation: pulse 1.5s infinite;
-      /* 2-second animation, looping infinitely */
+      /* center in the middle of the screen */            
+      animation: pulse 1.7s infinite;
+      /* n-second animation, looping infinitely */
     }
 
     @keyframes pulse {
       0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(211, 163, 19, 0.7);
-        /* Yellow shadow */
+        box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.301);
+        /* shadow */
       }
 
       70% {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 0 0 0 20px rgba(255, 193, 7, 0);
         /* Fades the shadow */
       }
@@ -205,6 +210,7 @@
     .nav-link:hover, .nav-link:focus {
       color: #1b9732 !important;
     }
+
   </style>
 </head>
 
@@ -252,12 +258,12 @@
             <h2 class="mt-3" style="color: #E9E9E9;">Santiago, Nuevo León</h2>
             <div class="container d-flex align-items-center justify-content-center">
 
-              <nav class="navbar">
+              <!-- <nav class="navbar">
                 <ul>
                   <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="getstarted"
                       style="margin-left: 0 !important;" href="#reservar">Reservar</button></li>
                 </ul>
-              </nav><!-- navbar -->
+              </nav> -->
 
             </div>
           </div>
@@ -314,31 +320,29 @@
 
         <div class="row no-gutters">
 
-          <div class="col-lg-4 box" data-aos="fade-up">
-            <h3 class="bona-nova-font">Pileta Privada</h3>
+          <div class="col-lg-4" data-aos="fade-up">
+            <h3 class="bona-nova-font" style="color: #000000;">Pileta Privada</h3>
             <img src="assets/img/drive/alberca1.JPG" width="100%" alt="" class="mb-3 round-image">
             <ul>
-              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label"
-                  style="color: #4f5a49;"></i> Pileta privada con agua ​climatizada hasta 35 C.</li>
+              <li class="bona-nova-font mt-1" style="font-size: 20px;color:black;"><i class="bx bx-label" style="color: #000000;"></i> Pileta privada con agua ​climatizada hasta 35 C.</li>
             </ul>
           </div>
 
-          <div class="col-lg-4 box featured" data-aos="fade-right">
-            <h3 class="bona-nova-font">Recámara Queen</h3>
+          <div class="col-lg-4" data-aos="fade-right">
+            <h3 class="bona-nova-font" style="color: #000000;">Recámara Queen</h3>
             <img src="assets/img/drive/interior2.JPG" width="100%" alt="" class="mb-3 round-image">
             <ul>
-              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label"
-                  style="color: #4f5a49;"></i> Mini split, TV con streaming, ​baño privado, frigobar,
+              <li class="bona-nova-font mt-1" style="font-size: 20px;color:black;"><i class="bx bx-label" style="color: #000000;"></i> Mini split, TV con streaming, ​baño privado, frigobar,
                 fregadero, ​microondas, cafetera, utensilios.</li>
             </ul>
           </div>
 
-          <div class="col-lg-4 box" data-aos="fade-left">
-            <h3 class="bona-nova-font">Terraza Con Vista</h3>
+          <div class="col-lg-4" data-aos="fade-left">
+            <h3 class="bona-nova-font" style="color: #000000;">Terraza Con Vista</h3>
             <img src="assets/img/drive/patio11.JPG" width="100%" alt="" class="mb-3 round-image">
             <ul>
-              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label"
-                  style="color: #4f5a49;"></i> Terraza privada con asador, ​fogatero, muebles exteriores,
+              <li class="bona-nova-font mt-1" style="font-size: 20px;color:black;"><i class="bx bx-label"
+                  style="color: #000000;"></i> Terraza privada con asador, ​fogatero, muebles exteriores,
                 luces ​y pileta privada. Incluye leña.
               </li>
             </ul>
@@ -437,9 +441,9 @@
 
   </footer><!-- End Footer -->
 
-  <button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu"
-    class="back-to-top d-flex align-items-center justify-content-center pulse-button"></i><b>Reservar Ahora</b></button>
-
+  <!-- <button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="back-to-top d-flex align-items-center justify-content-center pulse-button"></i><b>Reservar Ahora</b></button> -->
+  <button class="back-to-top d-flex align-items-center justify-content-center" style="cursor:auto;"></i><script src="assets/js/cloudbeds-horiz.js"></script></button>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -451,7 +455,26 @@
   <script src="assets/js/main.js"></script>
 
   <!-- custom js -->
-  <script src="assets/js/cloudbeds.js"></script>
+  <script src="assets/js/cloudbeds-immersive.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+        // Get today's date
+        var today = new Date();
+
+        // Extract the day, month, and year
+        var day = String(today.getDate()).padStart(2, '0');
+        var month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        var year = String(today.getFullYear()); // Get the last two digits of the year
+
+        // Format the date as dd/mm/yy
+        var formattedDate = `${day}/${month}/${year}`;
+
+        // Set the value of the start and end date inputs to the formatted date
+        document.getElementById('start_date_mobile').value = formattedDate;
+        document.getElementById('end_date_mobile').value = formattedDate;
+      });
+
+  </script>
 
 </body>
 
