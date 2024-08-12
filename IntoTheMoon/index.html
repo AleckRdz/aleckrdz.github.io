@@ -145,52 +145,67 @@
     }
 
     .custom-section {
-    height: 100vh;
-    background-image: url('assets/img/drive/aerea1.JPG');
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
-    background-blend-mode: darken; /* This blends the image with the color */
-}
-
-.pulse-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: black !important;
-    background-color: rgb(233, 233, 37) !important; /* Yellow background color */
-    border: none;
-    border-radius: 45px;
-    cursor: pointer;
-    outline: none;
-    animation: pulse 1.5s infinite; /* 2-second animation, looping infinitely */
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(211, 163, 19, 0.7); /* Yellow shadow */
+      height: 100vh;
+      background-image: url('assets/img/drive/aerea1.JPG');
+      background-size: cover;
+      /* Cover the entire section */
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Prevent the image from repeating */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black color with 50% opacity */
+      background-blend-mode: darken;
+      /* This blends the image with the color */
     }
-    70% {
+
+    .pulse-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: black !important;
+      background-color: rgb(233, 233, 37) !important;
+      /* Yellow background color */
+      border: none;
+      border-radius: 45px;
+      cursor: pointer;
+      outline: none;
+      animation: pulse 1.5s infinite;
+      /* 2-second animation, looping infinitely */
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(211, 163, 19, 0.7);
+        /* Yellow shadow */
+      }
+
+      70% {
         transform: scale(1.1);
-        box-shadow: 0 0 0 20px rgba(255, 193, 7, 0); /* Fades the shadow */
-    }
-    100% {
+        box-shadow: 0 0 0 20px rgba(255, 193, 7, 0);
+        /* Fades the shadow */
+      }
+
+      100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); /* Back to original */
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+        /* Back to original */
+      }
     }
-}
 
-.round-image {
-    width: 87%; /* Width is 50% of the parent container */
-    height: auto; /* Height will adjust automatically */
-    border-radius: 5%;
-    object-fit: cover;
-}
+    .round-image {
+      width: 87%;
+      /* Width is 50% of the parent container */
+      height: auto;
+      /* Height will adjust automatically */
+      border-radius: 5%;
+      object-fit: cover;
+    }
 
-
-
-  </style>  
+    .nav-link:hover {
+      color: #1b9732 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -212,8 +227,9 @@
           <li><a class="nav-link scrollto" href="#amenidades">Amenidades</a></li>
           <li><a class="nav-link scrollto" href="#galeria">Galería</a></li>
           <li><a class="nav-link scrollto" href="#testimonios">Testimonios</a></li>
-          <li><a class="nav-link scrollto" href="#ubicacion">Ubicación</a></li>         
-          <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="getstarted scrollto">Reservar</button></li>
+          <li><a class="nav-link scrollto" href="#ubicacion">Ubicación</a></li>
+          <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu"
+              class="getstarted scrollto">Reservar</button></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- navbar -->
@@ -234,19 +250,20 @@
             <img src="assets/img/itm-logo-full.png" alt="" width="40%" class="">
             <h2 class="mt-3" style="color: #E9E9E9;">Modern Cabins</h2>
             <h2 class="mt-3" style="color: #E9E9E9;">Santiago, Nuevo León</h2>
-            <div class="container d-flex align-items-center justify-content-center">              
-            
+            <div class="container d-flex align-items-center justify-content-center">
+
               <nav class="navbar">
-                <ul>                  
-                  <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="getstarted" style="margin-left: 0 !important;" href="#reservar">Reservar</button></li>
+                <ul>
+                  <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="getstarted"
+                      style="margin-left: 0 !important;" href="#reservar">Reservar</button></li>
                 </ul>
               </nav><!-- navbar -->
-            
+
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
 
   </section><!-- End Hero -->
 
@@ -267,9 +284,12 @@
             </p>
             <ul>
               <li><i class="bi bi-check"></i> Ubicado a solo unos minutos ​de Monterrey.</li>
-              <li><i class="bi bi-check"></i> Nuestro glamping ofrece las ​mejores vistas y una experiencia única. 🌲🏞️</li>
-              <li><i class="bi bi-check"></i> Aquí podrás desconectarte de la ciudad y ​sumergirte en la tranquilidad y belleza del ​entorno.</li>
-              <li><i class="bi bi-check"></i> Nuestras cabañas están equipadas con ​todas las comodidades necesarias para que te ​sientas como en casa, mientras disfrutas de una ​escapada inolvidable. 🏡✨
+              <li><i class="bi bi-check"></i> Nuestro glamping ofrece las ​mejores vistas y una experiencia única. 🌲🏞️
+              </li>
+              <li><i class="bi bi-check"></i> Aquí podrás desconectarte de la ciudad y ​sumergirte en la tranquilidad y
+                belleza del ​entorno.</li>
+              <li><i class="bi bi-check"></i> Nuestras cabañas están equipadas con ​todas las comodidades necesarias
+                para que te ​sientas como en casa, mientras disfrutas de una ​escapada inolvidable. 🏡✨
               </li>
             </ul>
             <p>
@@ -277,9 +297,9 @@
             </p>
           </div>
         </div>
-    
-    
-    
+
+
+
       </div>
     </section>
     <!-- End Nosotros Section -->
@@ -292,21 +312,23 @@
           <h2 class="nagbuloe-font" style="color: #FFF;">Amenidades</h2>
         </div>
 
-        <div class="row no-gutters">                             
+        <div class="row no-gutters">
 
           <div class="col-lg-4 box" data-aos="fade-up">
             <h3 class="bona-nova-font">Pileta Privada</h3>
             <img src="assets/img/drive/alberca1.JPG" width="100%" alt="" class="mb-3 round-image">
             <ul>
-              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label" style="color: #4f5a49;"></i> Pileta privada con agua ​climatizada hasta 35 C.</li>
+              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label"
+                  style="color: #4f5a49;"></i> Pileta privada con agua ​climatizada hasta 35 C.</li>
             </ul>
           </div>
-        
+
           <div class="col-lg-4 box featured" data-aos="fade-right">
             <h3 class="bona-nova-font">Recámara Queen</h3>
             <img src="assets/img/drive/interior2.JPG" width="100%" alt="" class="mb-3 round-image">
             <ul>
-              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label" style="color: #4f5a49;"></i> Mini split, TV con streaming, ​baño privado, frigobar,
+              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label"
+                  style="color: #4f5a49;"></i> Mini split, TV con streaming, ​baño privado, frigobar,
                 fregadero, ​microondas, cafetera, utensilios.</li>
             </ul>
           </div>
@@ -315,7 +337,8 @@
             <h3 class="bona-nova-font">Terraza Con Vista</h3>
             <img src="assets/img/drive/patio11.JPG" width="100%" alt="" class="mb-3 round-image">
             <ul>
-              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label" style="color: #4f5a49;"></i> Terraza privada con asador, ​fogatero, muebles exteriores,
+              <li class="bona-nova-font mt-1" style="font-size: 20px;"><i class="bx bx-label"
+                  style="color: #4f5a49;"></i> Terraza privada con asador, ​fogatero, muebles exteriores,
                 luces ​y pileta privada. Incluye leña.
               </li>
             </ul>
@@ -329,7 +352,7 @@
     <!-- ======= Gallery Section ======= -->
     <section id="galeria" class="gallery">
       <div class="container" data-aos="fade-up">
-    
+
         <div class="section-title">
           <h2 class="nagbuloe-font" style="color: #4f5a49;">Galería</h2>
         </div>
@@ -349,7 +372,7 @@
         </div>
 
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-4e03a914-d066-45cc-8e8a-431e0afeb84e" data-elfsight-app-lazy></div>        
+        <div class="elfsight-app-4e03a914-d066-45cc-8e8a-431e0afeb84e" data-elfsight-app-lazy></div>
 
       </div>
     </section>
@@ -358,7 +381,7 @@
     <!-- ======= Maps Section ======== -->
     <section id="ubicacion" class="testimonials section-bg" style="background-color: white;">
       <div class="container" data-aos="fade-up">
-    
+
         <div class="section-title">
           <h2 class="nagbuloe-font" style="color: #4f5a49;">Ubicación</h2>
         </div>
@@ -368,7 +391,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.2735438814234!2d-100.17633145477153!3d25.462539897352165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c9af662455b5%3A0xf1224dd1d88af639!2sInto%20the%20moon!5e0!3m2!1ses-419!2smx!4v1723089445469!5m2!1ses-419!2smx"
             width="800" height="800" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>              
+        </div>
       </div>
     </section>
     <!-- End Maps Section -->
@@ -382,36 +405,40 @@
       <div class="container">
         <div class="row">
 
-        <div class="container py-4">
-          <header id="header" class="header-transparent  ">
-            <div class="container d-flex align-items-center justify-content-between">
-        
-              <div class="logo">
-                <!-- <h1><a href="index.html">Appland</a></h1> -->
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="90%"></a>
-              </div>
-        
-              <div class="col-lg-3 col-md-6 footer-links">
-                <div class="social-links mt-3">
-                  <a href="https://www.facebook.com/intothemoonmx/" class="facebook " target="_blank"><i class="bx bxl-facebook"></i></a> 
-                  <a href="https://instagram.com/intothemoonmx" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-                  <a href="https://www.tiktok.com/@intothemoonmty" class="google-plus mt-2" target="_blank"><i class="bx bxl-tiktok"></i></a>
+          <div class="container py-4">
+            <header id="header" class="header-transparent  ">
+              <div class="container d-flex align-items-center justify-content-between">
+
+                <div class="logo">
+                  <!-- <h1><a href="index.html">Appland</a></h1> -->
+                  <!-- Uncomment below if you prefer to use an image logo -->
+                  <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="90%"></a>
                 </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                  <div class="social-links mt-3">
+                    <a href="https://www.facebook.com/intothemoonmx/" class="facebook " target="_blank"><i
+                        class="bx bxl-facebook"></i></a>
+                    <a href="https://instagram.com/intothemoonmx" class="instagram" target="_blank"><i
+                        class="bx bxl-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@intothemoonmty" class="google-plus mt-2" target="_blank"><i
+                        class="bx bxl-tiktok"></i></a>
+                  </div>
+                </div>
+
               </div>
-        
-            </div>
-          </header><!-- End Header -->
-        </div>
+            </header><!-- End Header -->
+          </div>
 
         </div>
       </div>
     </div>
 
-    
+
   </footer><!-- End Footer -->
 
-  <button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="back-to-top d-flex align-items-center justify-content-center pulse-button"></i><b>Reservar Ahora</b></button>
+  <button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu"
+    class="back-to-top d-flex align-items-center justify-content-center pulse-button"></i><b>Reservar Ahora</b></button>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
