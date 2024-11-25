@@ -1,779 +1,1778 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Into The Moon</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/itm-favicon.png" rel="icon">
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Flatpickr -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Appland
-  * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
-  <!-- custom css -->
-  <style>
-    .whatsapp-widget {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      background-color: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-widget:hover {
-      background-color: #128C7E;
-    }
-
-    .whatsapp-widget img {
-      width: 35px;
-      height: 35px;
-    }
-
-    .whatsapp-modal {
-      position: fixed;
-      bottom: 160px;
-      right: 20px;
-      width: 350px;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: none;
-      flex-direction: column;
-      z-index: 1000;
-    }
-
-    .whatsapp-header {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      background-color: #075E54;
-      border-radius: 10px 10px 0 0;
-      color: white;
-      position: relative;
-      /* Make sure it is relative to position the close button */
-
-    }
-
-    .close-button {
-      position: absolute;
-      top: 2px;
-      right: 6px;
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .close-button:hover {
-      color: #ddd;
-    }
-
-    .profile-pic-container {
-      position: relative;
-      margin-right: 10px;
-    }
-
-    .profile-pic {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-image: url('assets/img/wpp-pp.jpg');
-      /* Profile Picture */
-      background-size: cover;
-      background-position: center;
-    }
-
-    .online-dot {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 10px;
-      height: 10px;
-      background-color: #25D366;
-      border: 2px solid white;
-      border-radius: 50%;
-    }
-
-    .chat-details {
-      flex: 1;
-    }
-
-    .chat-name {
-      font-weight: bold;
-    }
-
-    .chat-status {
-      font-size: 12px;
-    }
-
-    .whatsapp-body {
-      padding: 10px;
-      flex: 1;
-      overflow-y: auto;
-      background-image: url('assets/img/wpp-chat-bg.png');
-      /* Chat background */
-      background-size: cover;
-      background-position: center;
-    }
-
-    .message-bubble {
-      position: relative;
-      max-width: 80%;
-      background-color: white;
-      padding: 8px 12px;
-      border-radius: 15px;
-      margin-bottom: 10px;
-      margin-right: auto;
-      border: 1px solid #e5e5e5;
-    }
-
-    /* Spike for the message bubble */
-    .message-bubble::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: -10px;
-      width: 0;
-      height: 0;
-      border-top: 10px solid transparent;
-      border-right: 10px solid white;
-      border-bottom: 10px solid transparent;
-    }
-
-    .message-time {
-      position: absolute;
-      bottom: 5px;
-      right: 10px;
-      font-size: 12px;
-      color: #888;
-      white-space: nowrap;
-    }
-
-    .whatsapp-footer {
-      padding: 5px 10px 10px 10px;
-      display: flex;
-      align-items: center;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .whatsapp-input {
-      flex: 1;
-      padding: 8px;
-      border: none;
-      outline: none;
-      border-radius: 20px;
-      background-color: white;
-    }
-
-    .send-button {
-      margin-left: 10px;
-      background-color: #25D366;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      cursor: pointer;
-      transform: rotate(45deg);
-      /* Rotate the icon */
-    }
-
-    .send-button i {
-      color: white;
-      font-size: 18px;
-      margin-right: 2px;
-      margin-top: 4px;
-    }
-
-    .text-justify-center {
-      text-align: justify !important;
-      text-align-last: center !important;
-      /* Center the last line if needed */
-      max-width: 100% !important;
-      /* Make sure it does not exceed the width of the parent container */
-      margin: 0 auto !important;
-      /* Center the text block horizontally */
-      padding-left: 15px !important;
-      /* Adjust as needed */
-      padding-right: 15px !important;
-      /* Adjust as needed */
-      padding-bottom: 15px !important;
-      /* Adjust as needed */
-    }
-
-    .gallery-img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .gallery-container {
-      padding: 20px;
-    }
-
-    .theme-color {
-      background-color: #4f5a49;
-    }
-
-    @font-face {
-      font-family: 'Nagbuloe';
-      src: url('assets/fonts/nagbuloe/Nagbuloe-Thin.ttf') format('truetype'),
-        url('assets/fonts/nagbuloe/Nagbuloe-Thin.otf') format('opentype');
-      font-weight: 100;
-      /* Adjust according to the font's weight specification */
-      font-style: normal;
-    }
-
-    .nagbuloe-font {
-      font-family: 'Nagbuloe', sans-serif !important;
-      font-weight: 100;
-      /* Make sure the weight matches the @font-face declaration */
-    }
-
-    @font-face {
-      font-family: 'Qanelas Soft';
-      src: url('assets/fonts/qanelas soft/QanelasSoftRegular.otf') format('opentype');
-      font-weight: 100;
-      /* Adjust according to the font's weight specification */
-      font-style: normal;
-    }
-
-    .qanelas-soft-font {
-      font-family: 'Qanelas Soft', sans-serif !important;
-      font-weight: 100;
-      /* Make sure the weight matches the @font-face declaration */
-    }
-
-    @font-face {
-      font-family: 'Bona Nova';
-      src: url('assets/fonts/bona nova/BonaNova-Regular.ttf') format('truetype');
-      font-weight: 400;
-      /* Adjust according to the font's weight specification */
-      font-style: normal;
-    }
-
-    .bona-nova-font {
-      font-family: 'Bona Nova', sans-serif !important;
-      font-weight: 400;
-      /* Make sure the weight matches the @font-face declaration */
-    }
-
-    .chicle-regular {
-      font-family: "Chicle", serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    .container {
-      position: relative;
-      /* Ensure the floating bar is positioned relative to the container */
-      padding: 20px;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .hero-img {
-      position: relative;
-    }
-
-    .hero-img img {
-      width: 100%;
-    }
-
-    .floating-bar {
-      position: absolute;
-      bottom: 60px;
-      /* Adjust as needed */
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 80%;
-      /* Adjust width as needed */
-      background: rgb(255, 255, 255);
-      /* Semi-transparent background */
-      color: rgb(0, 0, 0);
-      padding: 7px 0;
-      border-radius: 30px;
-      z-index: 10;
-      /* Ensure it appears above the image */
-    }
-
-    .hero-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #525252;
-    }
-
-    .select-no-border-small {
-      border: none;
-      /* Removes the border */
-      outline: none;
-      /* Removes the outline (focus border) */
-      padding: 0.5rem 0.75rem;
-      /* Adjust padding for size */
-      font-size: 0.875rem;
-      /* Smaller font size */
-      border-radius: 0.25rem;
-      /* Optional: adjust border radius for rounded corners */
-      background-color: transparent;
-      /* Optional: transparent background */
-      box-shadow: none;
-      /* Removes any shadow */
-    }
-
-    .custom-section {
-      height: 100vh;
-      background-image: url('assets/img/drive/aerea1.JPG');
-      background-size: cover;
-      /* Cover the entire section */
-      background-position: center;
-      /* Center the image */
-      background-repeat: no-repeat;
-      /* Prevent the image from repeating */
-      background-color: rgba(0, 0, 0, 0.5);
-      /* Black color with 50% opacity */
-      background-blend-mode: darken;
-      /* This blends the image with the color */
-    }
-
-    .pulse-button {
-      /* center in the middle of the screen */
-      animation: pulse 1.7s infinite;
-      /* n-second animation, looping infinitely */
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.301);
-        /* shadow */
-      }
-
-      70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 20px rgba(255, 193, 7, 0);
-        /* Fades the shadow */
-      }
-
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
-        /* Back to original */
-      }
-    }
-
-    .round-image {
-      width: 87%;
-      /* Width is 50% of the parent container */
-      height: auto;
-      /* Height will adjust automatically */
-      border-radius: 5%;
-      object-fit: cover;
-    }
-
-    .nav-link:hover,
-    .nav-link:focus {
-      color: #1b9732 !important;
-    }
-
-    .text-justify-center {
-      text-align: justify;
-      text-align-last: center;
-      max-width: 100%;
-    }    
-  </style>
-
-  <!-- Pixel Code for https://www.widgetsquad.com/ -->
-  <!-- <script async src="https://www.widgetsquad.com/pixel/jz0r863leki4kthpjxrbtnf5mjfb85o9"></script> -->
-  <!-- END Pixel Code -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntoTheMoon</title>
+    <meta name="description" content="Laseta - Laseta is a luxurious and modern hotel website template, meticulously designed to provide users with an impressive experience.">
+    <meta name="keywords" content="hotel, Hostel, homestay, resort, gulp, Luxury, website, template, html5, template, site, bootstrap">
+    <meta name="author" content="Bithemer.com">
+    <link href="./assets/img/logos/favicon.png" rel="shortcut icon">
+    <link href="./assets/fonts/hotel-icons/hotel-icons.min.css" rel="stylesheet">
+    <link href="./assets/css/plugins.css" rel="stylesheet">
+    <link href="./assets/css/theme.css" rel="stylesheet">
 </head>
+<!-- /Head -->
+<!-- Set Body to full screen when Preloader is showing. -->
 
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  header-transparent  ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <!-- <h1><a href="index.html">Appland</a></h1> -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="80%"></a>
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="#nosotros">Nosotros</a></li>
-          <li><a class="nav-link scrollto" href="#amenidades">Amenidades</a></li>
-          <li><a class="nav-link scrollto" href="#galeria">Galería</a></li>
-          <li><a class="nav-link scrollto" href="#testimonios">Testimonios</a></li>
-          <li><a class="nav-link scrollto" href="#ubicacion">Ubicación</a></li>
-          <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu"
-              class="getstarted scrollto">Reservar</button></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- navbar -->
-
+<body class="vh-100 vw-100 overflow-hidden">
+    <!-- Header -->
+    <!-- Preloader -->
+    <div class="position-fixed top-0 bottom-0 bg-white vw-100 z-z1 d-flex align-items-center justify-content-center" id="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center theme-color custom-section">
-
-    <div class="container">
-      <div class="row">
-        <div
-          class="col-lg-12 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
-          data-aos="fade-up">
-          <div class="text-center">
-            <!-- <h1 class="nagbuloe-font mb-4">Welcome To</h1> -->
-            <img src="assets/img/itm-logo-full.png" alt="" width="40%" class="">
-            <h2 class="mt-3" style="color: #E9E9E9;">Modern Cabins</h2>
-            <h2 class="mt-3" style="color: #E9E9E9;">Santiago, Nuevo León</h2>
-            <div class="container d-flex align-items-center justify-content-center">
-
-              <!-- <nav class="navbar">
-                <ul>
-                  <li><button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="getstarted"
-                      style="margin-left: 0 !important;" href="#reservar">Reservar</button></li>
-                </ul>
-              </nav> -->
-
+    <!-- /Preloader -->
+    <!-- Right slider info -->
+    <div class="offcanvas offcanvas-end border-start-0" tabindex="-1" id="ocRightInfo" aria-labelledby="ocRightInfo">
+        <div class="offcanvas-header border-bottom">
+            <!-- Offcanvas header -->
+            <a href="./index.html" class="d-inline-flex align-items-center text-body-emphasis h-sub-font text-uppercase">
+                <img class="logo-light me-4" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="" height="56">
+                <img class="logo me-4" src="./assets/img/logos/logo.png" srcset="./assets/img/logos/logo@2x.png 2x" alt="" height="56">
+                <span class="h5 fw-semibold d-block ls-5 mb-0 lh-1">Laseta</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <!-- /Offcanvas header -->
+        </div>
+        <div class="offcanvas-body">
+            <!-- Contact Info -->
+            <div class="mb-10">
+                <h6 class=" text-uppercase ls-2">Contact Info</h6>
+                <div class="d-flex mb-3">
+                    <span class="me-3 flex-shrink-0">
+                        <i class="hicon hicon-flights-pin"></i>
+                    </span>
+                    <span class="flex-grow-1">610 Placer Loquen, Paris, France.</span>
+                </div>
+                <div class="d-flex mb-3">
+                    <span class="me-3 flex-shrink-0">
+                        <i class="hicon hicon-telephone"></i>
+                    </span>
+                    <span>+33 (0) 1 89 78 67 56</span>
+                </div>
+                <div class="d-flex mb-3">
+                    <span class="me-3 flex-shrink-0">
+                        <i class="hicon hicon-email-envelope"></i>
+                    </span>
+                    <span>Booking@example.com</span>
+                </div>
             </div>
-          </div>
+            <!-- /Contact Info -->
+            <!-- Learn more -->
+            <div class="mb-10">
+                <h6 class=" text-uppercase ls-2">Learn more</h6>
+                <ul class="list-unstyled">
+                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="./about.html">About Us</a></li>
+                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="./blank.html">Terms of Use</a></li>
+                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="./blank.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- /Learn more -->
+            <!-- Follow Us -->
+            <div>
+                <h6 class=" text-uppercase letter-spacing-1">Follow Us</h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                <path d="M10 9l5 3l-5 3z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 20l4 -9"></path>
+                                <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
+                                <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
+                                <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
+                                <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Follow Us -->
         </div>
-      </div>
     </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= Nosotros Section ======= -->
-    <section id="nosotros" class="details">
-      <div class="container">
-
-        <div class="row content">
-          <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/itm-cabanas.png" class="img-fluid" alt="" style="border-radius: 100%;">
-          </div>
-          <div class="col-md-8 pt-4" data-aos="fade-up">
-            <h2 class="nagbuloe-font" style="color:#4f5a49">Bienvenido a nuestro ​escape en ​Carretera Nacional</h2>
-            <p class="fst-italic">
-              ¡Estamos muy emocionados de recibirte en Into ​The Moon! 🌙✨
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i> Ubicado a solo unos minutos ​de Monterrey.</li>
-              <li><i class="bi bi-check"></i> Nuestro glamping ofrece las ​mejores vistas y una experiencia única. 🌲🏞️
-              </li>
-              <li><i class="bi bi-check"></i> Aquí podrás desconectarte de la ciudad y ​sumergirte en la tranquilidad y
-                belleza del ​entorno.</li>
-              <li><i class="bi bi-check"></i> Nuestras cabañas están equipadas con ​todas las comodidades necesarias
-                para que te ​sientas como en casa, mientras disfrutas de una ​escapada inolvidable. 🏡✨
-              </li>
-            </ul>
-            <p>
-              ¡Prepárate para relajarte, explorar y crear ​recuerdos mágicos con nosotros! 🌟
-            </p>
-          </div>
+    <!-- /Right slider info -->
+    <!-- Header -->
+    <header id="header" class="fixed-top">
+        <div class="header-navbar d-flex align-items-center bg-body bg-opacity-0">
+            <div class="w-100">
+                <!-- Brand -->
+                <a class="navbar-brand bg-primary d-inline-flex align-items-center position-absolute top-0 start-50 translate-middle-x z-1" id="brandHeader" href="./index.html" data-bs-theme="dark">
+                    <div class="text-center text-body-emphasis h-sub-font text-uppercase">
+                        <img class="brand-img" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="">
+                        <div class="brand-text">
+                            <span class="h5 fw-semibold d-block ls-5 mb-1 ms-2 ps-5 pe-5 lh-1">IntoTheMoon</span>
+                            <small class="ls-1 fsm-7 d-block ms-1 lh-1">Modern Cabins</small>
+                        </div>
+                    </div>
+                </a>
+                <!-- /Brand -->
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-xl">
+                    <div class="container-fluid">
+                        <!-- offcanvas Navbar -->
+                        <div class="offcanvas offcanvas-navbar offcanvas-start border-end-0" tabindex="-1" id="offcanvasNavbar">
+                            <!-- Offcanvas header -->
+                            <div class="offcanvas-header border-bottom">
+                                <a href="./index.html" class="d-inline-flex align-items-center text-body-emphasis h-sub-font text-uppercase">
+                                    <img class="logo-light me-4" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="" height="56">
+                                    <img class="logo me-4" src="./assets/img/logos/logo.png" srcset="./assets/img/logos/logo@2x.png 2x" alt="" height="56">
+                                    <span class="h5 fw-semibold d-block ls-5 mb-0 lh-1">IntoTheMoon</span>
+                                </a>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <!-- /Offcanvas header -->
+                            <div class="offcanvas-body justify-content-end">
+                                <!-- Navbar nav left -->
+                                <ul class="navbar-nav navbar-nav-left h-sub-font justify-content-xl-end pe-xl-25">                                    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link fw-medium " href="#inicio">Inicio</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link fw-medium " href="#nosotros">Nosotros</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link fw-medium " href="#amenidades">Amenidades</a>
+                                    </li>
+                                </ul>
+                                <!-- /Navbar nav left  -->
+                                <!-- Navbar nav right  -->
+                                <ul class="navbar-nav navbar-nav-right h-sub-font justify-content-xl-start ps-xl-25">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link fw-medium " href="#galeria">Galería</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link fw-medium " href="#testimonios">Testimonios</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link fw-medium " href="#ubicacion">Ubicación</a>
+                                    </li>
+                                    <!-- <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle-hover fw-medium " href="#" data-bs-display="static">
+                                            <span>Pages</span>
+                                            <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i>
+                                        </a>
+                                        <ul class="dropdown-menu border-0 mt-xl-8" data-bs-popper="static">
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./about.html">About</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./facilities.html">Facilities</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./contact.html">Contact</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./gallery.html">Gallery</a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./coming-soon.html">Coming Soon</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./error404.html">404 page</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item fw-medium " href="./blank.html">Blank page</a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                    
+                                    <li class="nav-item dropdown">
+                                        <span class="nav-link" role="button" id="toggle-theme" data-bs-theme-value></span>
+                                    </li>
+                                    <li class="nav-item dropdown d-none d-xl-inline-block">
+                                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#ocRightInfo">
+                                            <i class="hicon hicon-bold hicon-24hour-room-service"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- /Navbar nav right  -->
+                            </div>
+                        </div>
+                        <!-- /offcanvas Navbar -->
+                        <!-- Nav toggler -->
+                        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <i class="hicon hicon-130 hicon-hamburger-menu"></i>
+                        </button>
+                        <!-- /Nav toggler -->
+                        <!-- Info toggler -->
+                        <button class="navbar-toggler border-0 shadow-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#ocRightInfo" aria-controls="offcanvasNavbar">
+                            <i class="hicon hicon-140 hicon-24hour-room-service"></i>
+                        </button>
+                        <!-- /Info toggler -->
+                    </div>
+                </nav>
+                <!-- /Navbar -->
+            </div>
         </div>
-
-
-
-      </div>
-    </section>
-    <!-- End Nosotros Section -->
-
-    <!-- ======= Amenidades Section ======= -->
-    <section id="amenidades" class="pricing" style="background-color: #E2C842; padding-top: 20px !important;">
-      <div class="container">
-        <div class="section-title" style="padding-bottom: 10px !important;">
-          <h2 class="nagbuloe-font" style="color: #FFF; margin-bottom: 0px !important;">Amenidades</h2>
-        </div>
-        <div class="row no-gutters text-center"> <!-- Center titles and images -->
-          <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade-up">
-            <h3 class="bona-nova-font" style="color: #000000;">Pileta Privada</h3>
-            <img src="assets/img/drive/alberca1.JPG" width="100%" alt="" class="mb-3 round-image">
-            <ul class="text-justify-center" style="list-style-type: none;">
-              <li class="bona-nova-font mt-1" style="font-size: 20px; color:black;">🏊🏻♨️ Pileta privada con agua ​climatizada hasta 35 C.</li>
-            </ul>
-          </div>
-          <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade-right">
-            <h3 class="bona-nova-font" style="color: #000000;">Recámara Queen</h3>
-            <img src="assets/img/drive/interior2.JPG" width="100%" alt="" class="mb-3 round-image">
-            <ul class="text-justify-center" style="list-style-type: none;">
-              <li class="bona-nova-font mt-1" style="font-size: 20px; color:black;">🛏️📺 Mini split, TV con streaming, ​baño privado, frigobar, fregadero, ​microondas, cafetera, utensilios.</li>
-            </ul>
-          </div>
-          <div class="col-lg-4 d-flex flex-column align-items-center" data-aos="fade-left">
-            <h3 class="bona-nova-font" style="color: #000000;">Terraza Con Vista</h3>
-            <img src="assets/img/drive/patio11.JPG" width="100%" alt="" class="mb-3 round-image">
-            <ul class="text-justify-center" style="list-style-type: none;">
-              <li class="bona-nova-font mt-1" style="font-size: 20px; color:black;">🏕️🌄 Terraza privada con asador, ​fogatero, muebles exteriores, luces ​y pileta privada. Incluye leña.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- End Amenidades Section -->
-
-
-    <!-- ======= Gallery Section ======= -->
-    <section id="galeria" class="gallery">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2 class="nagbuloe-font" style="color: #4f5a49;">Galería</h2>
-        </div>
-        <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-91fa5340-03c4-4027-8179-3a0b7c00a306" data-elfsight-app-lazy></div> -->
-        <div class="row">
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/interior1.JPG" alt="Image 1" class="gallery-img">
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/fogata1.JPG" alt="Image 2" class="gallery-img">
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/asador1.JPG" alt="Image 3" class="gallery-img">
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/cabana1.JPG" alt="Image 4" class="gallery-img">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/interior10.JPG" alt="Image 1" class="gallery-img">
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/patio1.JPG" alt="Image 2" class="gallery-img">
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/patio5.JPG" alt="Image 3" class="gallery-img">
-          </div>
-          <div class="col-6 col-md-3 mb-4">
-            <img src="assets/img/drive/interior4.JPG" alt="Image 4" class="gallery-img">
-          </div>
-        </div>
-      </div>
-    </section><!-- End Gallery Section -->
-
-    <!-- End Gallery Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonios" class="testimonials section-bg" style="background-color: white;">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2 class="nagbuloe-font" style="color: #4f5a49;">Testimonios</h2>
-        </div>
-
-        <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-4e03a914-d066-45cc-8e8a-431e0afeb84e" data-elfsight-app-lazy></div> -->
-        <div class='sk-ww-airbnb-reviews' data-embed-id='25465621'></div>
-        <script src='https://widgets.sociablekit.com/airbnb-reviews/widget.js' async defer></script>
-
-      </div>
-    </section>
-    <!-- End Testimonials Section -->
-
-    <!-- ======= Maps Section ======== -->
-    <section id="ubicacion" class="testimonials section-bg" style="background-color: white;">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2 class="nagbuloe-font" style="color: #4f5a49;">Ubicación</h2>
-        </div>
-
-        <div class="container d-flex align-items-center justify-content-center">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.2735438814234!2d-100.17633145477153!3d25.462539897352165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c9af662455b5%3A0xf1224dd1d88af639!2sInto%20the%20moon!5e0!3m2!1ses-419!2smx!4v1723089445469!5m2!1ses-419!2smx"
-            width="800" height="800" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
-    <!-- End Maps Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" style="background-color: #4f5a49;">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="container py-4">
-            <header id="header" class="header-transparent  ">
-              <div class="container d-flex align-items-center justify-content-between">
-
-                <div class="logo">
-                  <!-- <h1><a href="index.html">Appland</a></h1> -->
-                  <!-- Uncomment below if you prefer to use an image logo -->
-                  <a href="index.html"><img src="assets/img/itm-logo.png" alt="" class="img-fluid" width="90%"></a>
+    </header>
+    <!-- /Header -->
+    <!-- /Header -->
+    <main>
+        <!-- Hero -->
+        <section id="hero">
+            <div id="heroCarousel" class="hero-carousel carousel slide carousel-fade">
+                <!-- Carousel indicators -->
+                <div class="carousel-indicators mb-6 mb-lg-14">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                  <div class="social-links mt-3">
-                    <a href="https://www.facebook.com/intothemoonmx/" class="facebook " target="_blank"><i
-                        class="bx bxl-facebook"></i></a>
-                    <a href="https://instagram.com/intothemoonmx" class="instagram" target="_blank"><i
-                        class="bx bxl-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@intothemoonmty" class="google-plus mt-2" target="_blank"><i
-                        class="bx bxl-tiktok"></i></a>
-                  </div>
+                <!-- /Carousel indicators -->
+                <!-- Carousel list -->
+                <div class="carousel-inner">
+                    <!-- Item -->
+                    <div class="carousel-item active">
+                        <div class="carousel-caption hero-caption">
+                            <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/hero/h1.jpg">
+                                <div class="bg-content">
+                                    <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
+                                        <div class="container">
+                                            <p class="text-uppercase ls-2 h-sub-font fw-medium mb-8">Santiago, Nuevo León </p>
+                                            <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4>
+                                            <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar" class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline h-sub-font">
+                                                <span>Reservar</span>
+                                                <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Item -->
+                    <!-- Item -->
+                    <div class="carousel-item">
+                        <div class="carousel-caption hero-caption">
+                            <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/hero/h2.jpg">
+                                <div class="bg-content">
+                                    <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
+                                        <div class="container">
+                                            <p class="text-uppercase ls-2 h-sub-font fw-medium mb-8">Santiago, Nuevo León </p>
+                                            <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4>
+                                            <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar"
+                                                class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline h-sub-font">
+                                                <span>Reservar</span>
+                                                <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Item -->
+                    <!-- Item -->
+                    <div class="carousel-item">
+                        <div class="carousel-caption hero-caption">
+                            <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/hero/h3.jpg">
+                                <div class="bg-content">
+                                    <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
+                                        <div class="container">
+                                            <p class="text-uppercase ls-2 h-sub-font fw-medium mb-8">Santiago, Nuevo León </p>
+                                            <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4>
+                                            <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar"
+                                                class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline h-sub-font">
+                                                <span>Reservar</span>
+                                                <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Item -->
                 </div>
-
-              </div>
-            </header><!-- End Header -->
-          </div>
-
+                <!-- /Carousel list -->
+                <!-- Carousel navs -->
+                <button class="carousel-control-prev d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <!-- /Carousel navs -->
+            </div>
+            <!-- Check rooms -->
+            <div id="checkRoomTop" class="check-room-top pt-4 pb-4 pt-lg-0 pb-lg-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5">
+                                    <form class="row g-4" method="post" action="./reservation.html">
+                                        <div class="col-12 col-lg-5 col-md-7">
+                                            <!-- Input date -->
+                                            <div class="mb-0">
+                                                <div class="position-relative">
+                                                    <label class="hicon hicon-menu-calendar hicon-bold text-secondary cursor-pointer position-absolute top-50 start-0 translate-middle-y ms-5 z-1" for="txtCheckDate"></label>
+                                                    <input id="txtCheckDate" type="text" class="check-date form-select bg-body-tertiary cursor-pointer shadow-none ps-11 fw-medium" placeholder="" readonly>
+                                                </div>
+                                            </div>
+                                            <!-- /Input date -->
+                                        </div>
+                                        <div class="col-12 col-lg-4 col-md-5">
+                                            <!-- Input number of guests -->
+                                            <div class="mb-0">
+                                                <div class="position-relative">
+                                                    <label class="hicon hicon-couple hicon-bold text-secondary cursor-pointer position-absolute top-50 start-0 translate-middle-y ms-5 z-1" for="btnCheckGuest"></label>
+                                                    <div class="dropdown" data-total-guest="">
+                                                        <button class="form-select w-100 text-start shadow-none bg-body-tertiary ps-11 fw-medium" id="btnCheckGuest" data-bs-auto-close="outside" type="button" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="text-nowrap">
+                                                                <span data-total-adults=""></span>, <span data-total-children=""></span>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu animate slideIn p-6 border-0 shadow">
+                                                            <li>
+                                                                <div class="mb-3">
+                                                                    <label for="txtCheckAdults" class="form-label">Adults</label>
+                                                                    <div class="input-group shadow-sm">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-adults="">
+                                                                            <i class="hicon hicon-minus-thin small"></i>
+                                                                        </button>
+                                                                        <input type="text" class="form-control text-center" placeholder="Adults" value="1" aria-label="Adults" id="txtCheckAdults" data-adults-max="10" data-input-adults="">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-adults="">
+                                                                            <i class="hicon hicon-plus-thin small"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mb-1">
+                                                                    <label for="txtCheckChildren" class="form-label">Children</label>
+                                                                    <div class="input-group shadow-sm">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="">
+                                                                            <i class="hicon hicon-minus-thin small"></i>
+                                                                        </button>
+                                                                        <input type="text" class="form-control text-center" placeholder="Children" value="0" aria-label="Children" id="txtCheckChildren" data-children-max="20" data-input-children="">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="">
+                                                                            <i class="hicon hicon-plus-thin small"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Input number of guests -->
+                                        </div>
+                                        <div class="col-12 col-lg-3 col-md-12">
+                                            <!-- Button -->
+                                            <div class="mb-0">
+                                                <button type="submit" class="btn btn-primary w-100 fw-medium">
+                                                    <i class="hicon hicon-mmb-my-booking hicon-md mr-1"></i>
+                                                    <span>Check room</span>
+                                                </button>
+                                            </div>
+                                            <!-- /Button -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Check rooms -->
+        </section>
+        <!-- /Hero -->
+        <!-- About -->
+        <section id="about" class="pt-20 pb-16 bg-body-tertiary position-relative">
+            <div class="position-absolute start-0 top-0 bottom-0 w-30 image-wrapper bg-image bg-cover d-none d-xl-block" data-image-src="./assets/img/background/bg2.png"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xxl-9 col-xl-10">
+                        <!-- Description -->
+                        <div class="text-center mb-10" data-cues="fadeIn">
+                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Experience the luxury</span>
+                            <h2 class="text-uppercase h-special-font mb-4 text-body-emphasis">Laseta Gallery Hotel</h2>
+                            <span class="star-rate-view star-rate-size-sm mb-6"><span class="star-value rate-50"></span></span>
+                            <p>Eam an assum dicant, quod augue nullam eos no. Pri ex habeo tractatos percipitur, option urbanitas eum ex, te possit aliquam utroque per. Dolorum detraxit ad eam, in usu quod omnesque consequuntur, dicit congue meliore vis ei. Ius nominati dissentiet eu, sit ut doming facilisis sententiae. Partiendo sententiae mel ea, duis saepe oblique vix in.</p>
+                        </div>
+                        <!-- /Description -->
+                        <!-- Featured -->
+                        <div class="text-center mb-8" data-cues="fadeIn">
+                            <div class="row g-2 g-md-6">
+                                <div class="col-6 col-md-3">
+                                    <div class="d-flex flex-column">
+                                        <div class="text-primary">
+                                            <i class="hicon hicon-200 hicon-flights-pin mb-4"></i>
+                                        </div>
+                                        <div>
+                                            <p class=" text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Located in the heart of city </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="d-flex flex-column">
+                                        <div class="text-primary">
+                                            <i class="hicon hicon-200 hicon-bed mb-4"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Palatial Signature Suites </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="d-flex flex-column">
+                                        <div class="text-primary">
+                                            <i class="hicon hicon-200 hicon-restaurant mb-4"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Reinvented French Dining </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="d-flex flex-column">
+                                        <div class="text-primary">
+                                            <i class="hicon hicon-200 hicon-regular-wedding-venue mb-4"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Sublime Parisian Weddings </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Featured -->
+                        <!-- Link -->
+                        <div class="text-center" data-cue="fadeIn">
+                            <a href="./about.html" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                                <span>Read more</span>
+                                <i class="hicon hicon-thin-circle-arrow-left"></i>
+                            </a>
+                        </div>
+                        <!-- Link -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /About -->
+        <!-- Rooms -->
+        <section id="rooms" class="pt-16 pb-13 bg-primary-650 text-body">
+            <!-- Heading -->
+            <div class="mb-10 text-center" data-cues="fadeIn">
+                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">The Exquisite Space</span>
+                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Rooms & Suites</h2>
+            </div>
+            <!-- /Heading -->
+            <!-- Rooms List -->
+            <div class="room-slide" data-cue="fadeIn">
+                <div class="room-slide-item mb-8">
+                    <div class="card card-overlay-bottom border-0 text-white">
+                        <img src="./assets/img/rooms/r1.jpg" srcset="./assets/img/rooms/r1@2x.jpg 2x" class="card-img" alt="...">
+                        <div class="card-img-overlay border-bottom p-md-10">
+                            <div class="d-xl-flex align-items-xl-end">
+                                <div class="me-xl-auto mb-6 mb-xl-0">
+                                    <div class="mb-3">
+                                        <span>From:</span>
+                                        <strong>$124</strong>
+                                    </div>
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Standard Room</h3>
+                                    <div class="card-text text-nowrap d-none d-md-block">
+                                        <div class="d-flex algin-item-center">
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-sqm me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-travelers me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-link text-nowrap">
+                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                    </a>
+                                    <a href="./contact.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Booking</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-slide-item mb-8">
+                    <div class="card card-overlay-bottom border-0 text-white">
+                        <img src="./assets/img/rooms/r3.jpg" srcset="./assets/img/rooms/r3@2x.jpg 2x" class="card-img" alt="...">
+                        <div class="card-img-overlay border-bottom p-md-10">
+                            <div class="d-xl-flex align-items-xl-end">
+                                <div class="me-xl-auto mb-6 mb-xl-0">
+                                    <div class="mb-3">
+                                        <span>From:</span>
+                                        <strong>$154</strong>
+                                    </div>
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Superior Room</h3>
+                                    <div class="card-text text-nowrap d-none d-md-block">
+                                        <div class="d-flex algin-item-center">
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-sqm me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-travelers me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-link text-nowrap">
+                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                    </a>
+                                    <a href="./reservation.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Booking</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-slide-item mb-8">
+                    <div class="card card-overlay-bottom border-0 text-white">
+                        <img src="./assets/img/rooms/r2.jpg" srcset="./assets/img/rooms/r2@2x.jpg 2x" class="card-img" alt="...">
+                        <div class="card-img-overlay border-bottom p-md-10">
+                            <div class="d-xl-flex align-items-xl-end">
+                                <div class="me-xl-auto mb-6 mb-xl-0">
+                                    <div class="mb-3">
+                                        <span>From:</span>
+                                        <strong>$164</strong>
+                                    </div>
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Deluxe Room</h3>
+                                    <div class="card-text text-nowrap d-none d-md-block">
+                                        <div class="d-flex algin-item-center">
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-sqm me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-travelers me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-link text-nowrap">
+                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                    </a>
+                                    <a href="./reservation.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Booking</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-slide-item mb-8">
+                    <div class="card card-overlay-bottom border-0 text-white">
+                        <img src="./assets/img/rooms/r4.jpg" srcset="./assets/img/rooms/r4@2x.jpg 2x" class="card-img" alt="...">
+                        <div class="card-img-overlay border-bottom p-md-10">
+                            <div class="d-xl-flex align-items-xl-end">
+                                <div class="me-xl-auto mb-6 mb-xl-0">
+                                    <div class="mb-3">
+                                        <span>From:</span>
+                                        <strong>$194</strong>
+                                    </div>
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Family Suite</h3>
+                                    <div class="card-text text-nowrap d-none d-md-block">
+                                        <div class="d-flex algin-item-center">
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-sqm me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-travelers me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-link text-nowrap">
+                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                    </a>
+                                    <a href="./reservation.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Booking</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Rooms List -->
+        </section>
+        <!-- /Rooms -->
+        <!-- Offers -->
+        <section id="offers" class="pt-16 pb-16 bg-body-tertiary position-relative">
+            <div class="bg-primary position-absolute end-0 top-0 bottom-0 w-20 image-wrapper bg-image bg-cover d-none d-xl-block" data-cue="fadeIn" data-image-src="./assets/img/background/bg1.png"></div>
+            <div class="container">
+                <div class="row g-0" data-cues="fadeIn">
+                    <div class="col-12 col-xl-4">
+                        <!-- Description -->
+                        <div class="mb-8">
+                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Enjoy the values</span>
+                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Special Offers</h2>
+                            <p class="mb-10">Lorem ipsum dolor sit amet, ne regione nominavi vel, te mea dicam ceteros necessitatibus. Vix ei civibus sapientem neglegentur, et probo feugiat molestie eum.</p>
+                            <div class="mb-8">
+                                <a href="./special-offers.html" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                                    <span>All Offers</span>
+                                    <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                </a>
+                            </div>
+                            <div class="d-inline-flex align-items-center fs-4 text-center justify-content-between">
+                                <span role="button" class="offer-prev-1 p-4 lh-1 text-primary">
+                                    <i class="hicon hicon-thin-arrow-right text-primary"></i>
+                                </span>
+                                <span class="offer-pagination-1 p-4 lh-1 fs-5"></span>
+                                <span role="button" class="offer-next-1 p-4 lh-1 text-primary">
+                                    <i class="hicon hicon-thin-arrow-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /Description -->
+                    </div>
+                    <div class="col-12 col-xl-8">
+                        <div class="ps-0 ps-xl-10">
+                            <!-- Offer list -->
+                            <div class="swiper offer-slider-1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- Offer item -->
+                                        <div class="card card-content-hover border-0 m-1">
+                                            <a href="./single-offer.html" title="">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/offers/o2.jpg" srcset="./assets/img/offers/o2@2x.jpg 2x" class="card-img-top" alt="">
+                                                    <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <div class="card-body shadow-sm">
+                                                <h3 class="card-title h5 text-uppercase h-sub-font ls-1">10% off Services </h3>
+                                                <p>Virtute appellantur mea integre, eos an dicant posidonium efficiendi.</p>
+                                                <a href="./single-offer.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                                    <span>Details</span>
+                                                    <i class="hicon hicon-flights-one-ways"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- /Offer item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Offer item -->
+                                        <div class="card card-content-hover border-0 m-1">
+                                            <a href="./single-offer.html" title="">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/offers/o1.jpg" srcset="./assets/img/offers/o1@2x.jpg 2x" class="card-img-top" alt="">
+                                                    <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <div class="card-body shadow-sm">
+                                                <h3 class="card-title h5 text-uppercase h-sub-font ls-1">15% Off Events</h3>
+                                                <p>Eos clita partem utroque ut, veri integre qui ut, id posidonium duo dolore.</p>
+                                                <a href="./single-offer.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                                    <span>Details</span>
+                                                    <i class="hicon hicon-flights-one-ways"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- /Offer item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Offer item -->
+                                        <div class="card card-content-hover border-0 m-1">
+                                            <a href="./single-offer.html" title="">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/offers/o3.jpg" srcset="./assets/img/offers/o3@2x.jpg 2x" class="card-img-top" alt="">
+                                                    <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <div class="card-body shadow-sm">
+                                                <h3 class="card-title h5 text-uppercase h-sub-font ls-1">15% Off Dinner </h3>
+                                                <p>Sed diam constituam ei, qui erat probo dissentiet ex volutpat, tacimates.</p>
+                                                <a href="./single-offer.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                                    <span>Details</span>
+                                                    <i class="hicon hicon-flights-one-ways"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- /Offer item -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Offer list -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Offers -->
+        <!-- Facilities -->
+        <section id="facilities" class="pt-16 pb-16 position-relative">
+            <div class="container">
+                <!-- Heading -->
+                <div class="mb-10 text-center" data-cue="fadeIn">
+                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Luxury & Modern</span>
+                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Laseta Facilities</h2>
+                </div>
+                <!-- /Heading -->
+                <!-- Features -->
+                <div class="row" data-cues="fadeIn">
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-7">
+                            <div class="text-center border p-6">
+                                <i class="hicon hicon-200 hicon-wifi text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">High Speed Wifi</h3>
+                                <p class="mb-0">Vix placerat no eam cu bonorum sententiae atomorum duo noster ad vel.</p>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-7">
+                            <div class="text-center border p-6">
+                                <i class="hicon hicon-200 hicon-reception text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Front desk 24H</h3>
+                                <p class="mb-0">Scripta apeirian in his accusa complect adipisci ocurreret an per.</p>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-7">
+                            <div class="text-center border p-6">
+                                <i class="hicon hicon-200 hicon-car-park-onsite text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Parking Space</h3>
+                                <p class="mb-0">An quis eligendi duo latine veritus vim placerat errem latine scribentur</p>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-7">
+                            <div class="text-center border p-6">
+                                <i class="hicon hicon-200 hicon-pool text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4"> Swimming Pool</h3>
+                                <p class="mb-0">Has et magna dolore dicit essent inermis nec prima similique pri at.</p>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-7">
+                            <div class="text-center border p-6">
+                                <i class="hicon hicon-200 hicon-spas text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Spa center</h3>
+                                <p class="mb-0">Mel graece consequ ex dicunt appareat duo vim errem augue placerat.</p>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-7">
+                            <div class="text-center border p-6">
+                                <i class="hicon hicon-200 hicon-fitness-center text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Fitness Center</h3>
+                                <p class="mb-0">Ne ius assentior te soluta mel placerat appareat duo splendide quo no.</p>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                </div>
+                <!-- /Features -->
+                <!-- Link -->
+                <div class="text-center pt-4" data-cue="fadeIn">
+                    <a href="./facilities.html" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                        <span>Read more</span>
+                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                    </a>
+                </div>
+                <!-- /Link -->
+            </div>
+        </section>
+        <!-- /Facilities -->
+        <!-- Services -->
+        <section id="services" class="pt-16 pb-14 bg-body-tertiary position-relative">
+            <div class="bg-primary position-absolute start-0 top-0 bottom-0 w-20 image-wrapper bg-image bg-cover d-none d-xl-block" data-cue="fadeIn" data-image-src="./assets/img/background/bg1.png"></div>
+            <div class="container" data-cues="fadeIn">
+                <!-- Heading -->
+                <div class="mb-10 text-center">
+                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">High-class service</span>
+                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Laseta Services</h2>
+                </div>
+                <!-- /Heading -->
+                <!-- Service List -->
+                <div class="swiper service-slider">
+                    <div class="swiper-wrapper mb-8">
+                        <div class="swiper-slide">
+                            <!-- Service item -->
+                            <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./meetings-events.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/services/s2.jpg" srcset="./assets/img/services/s2@2x.jpg 2x" class="card-img-top" alt="">
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body text-center shadow-sm">
+                                    <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Meetings & Events</h3>
+                                    <a href="./meetings-events.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Explore</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Service item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Service item -->
+                            <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./spa-wellness.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/services/s1.jpg" srcset="./assets/img/services/s1@2x.jpg 2x" class="card-img-top" alt="">
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body text-center shadow-sm">
+                                    <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Spa & Wellness</h3>
+                                    <a href="./spa-wellness.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Explore</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Service item -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Service item -->
+                            <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./restaurant.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/services/s3.jpg" srcset="./assets/img/services/s3@2x.jpg 2x" class="card-img-top" alt="">
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body text-center shadow-sm">
+                                    <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Restaurant & bar</h3>
+                                    <a href="./restaurant.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Explore</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Service item -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /Service List -->
+                <!-- Navs -->
+                <div class="text-center">
+                    <div class="d-inline-flex align-items-center fs-4">
+                        <span role="button" class="service-prev p-4 lh-1 text-primary">
+                            <i class="hicon hicon-thin-arrow-right"></i>
+                        </span>
+                        <span class="service-pagination p-4 lh-1 fs-5"></span>
+                        <span role="button" class="service-next p-4 lh-1 text-primary">
+                            <i class="hicon hicon-thin-arrow-left"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Navs -->
+            </div>
+        </section>
+        <!-- /Services -->
+        <!-- Client say -->
+        <section id="clientSay" class="pt-16 pb-16 overflow-x-hidden overflow-y-hidden">
+            <div class="container">
+                <div class="row g-0 g-lg-10">
+                    <div class="col-12 col-xl-6 col-lg-6" data-cues="fadeIn">
+                        <!-- Heading -->
+                        <div class="mb-8">
+                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Reviews on Tripadvisor</span>
+                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Our Clients Say</h2>
+                        </div>
+                        <!-- /Heading -->
+                        <!-- Testimonials -->
+                        <div class="position-relative mb-8">
+                            <div class="swiper client-say-slider pt-6 ps-6 pe-6 pb-3 border">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- Blockquote -->
+                                        <div class="d-md-flex">
+                                            <span class="flex-md-shrink-0 me-5">
+                                                <img src="./assets/img/avatars/a1.jpg" srcset="./assets/img/avatars/a1@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                            </span>
+                                            <div class="flex-md-grow-1">
+                                                <blockquote class="d-block blockquote fst-italic mb-2">
+                                                    <p>Lorem ipsum dolor sit amet, in etiam docendi quaestio vis, et laoreet eos utroque concludaturque mei. Vis no altera fierent dissentiet, ei sea augue morro etiam nam ei. Ei duis omnesque quo.</p>
+                                                </blockquote>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> John Doe <cite title="Source Title">(Italy)</cite>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /Blockquote -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Blockquote -->
+                                        <div class="d-md-flex">
+                                            <span class="flex-md-shrink-0 me-5">
+                                                <img src="./assets/img/avatars/a2.jpg" srcset="./assets/img/avatars/a2@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                            </span>
+                                            <div class="flex-md-grow-1">
+                                                <blockquote class="d-block blockquote fst-italic mb-2">
+                                                    <p>Saperet voluptatibus signiferumque no eam, laoreet eos pertinax dissentiet in. Fabulas voluptua tale movet mea tale mea te. Te per integre splendide ei sea augue Vis no altera fierent dissentiet.</p>
+                                                </blockquote>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Emily Smith <cite title="Source Title">(France)</cite>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /Blockquote -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Blockquote -->
+                                        <div class="d-md-flex">
+                                            <span class="flex-md-shrink-0 me-5">
+                                                <img src="./assets/img/avatars/a3.jpg" srcset="./assets/img/avatars/a3@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                            </span>
+                                            <div class="flex-md-grow-1">
+                                                <blockquote class="d-block blockquote fst-italic mb-2">
+                                                    <p>Rationibus incorrupte vim te. Choro nominati assentior te sit, mea tale movet tamquam ut. An vitae altera fierent alienum detraxit nam. Has laudem ubique doming eu definitiones ex vel. </p>
+                                                </blockquote>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Alex Mark <cite title="Source Title">(USA)</cite>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /Blockquote -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Blockquote -->
+                                        <div class="d-md-flex">
+                                            <span class="flex-md-shrink-0 me-5">
+                                                <img src="./assets/img/avatars/a4.jpg" srcset="./assets/img/avatars/a4@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                            </span>
+                                            <div class="flex-md-grow-1">
+                                                <blockquote class="d-block blockquote fst-italic mb-2">
+                                                    <p>Et vix affert animal disputationi, ut ignota sapientem consetetur in etiam docendi est. Graeco aliquando ex quo, probo antiopam ut mei, ex ridens constituto voluptatum site intellegat. </p>
+                                                </blockquote>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Ariol Deep <cite title="Source Title">(China)</cite>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /Blockquote -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-inline-flex align-items-center fs-4 text-center justify-content-between position-absolute bottom-0 end-0 z-3">
+                                <span role="button" class="client-say-prev text-primary p-4 lh-1">
+                                    <i class="hicon hicon-thin-arrow-right"></i>
+                                </span>
+                                <span class="client-say-pagination p-4 lh-1 fs-6"></span>
+                                <span role="button" class="client-say-next text-primary p-4 lh-1">
+                                    <i class="hicon hicon-thin-arrow-left"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /Testimonials -->
+                        <!-- Tripadvisor -->
+                        <div class="mb-8 mb-lg-0">
+                            <img src="./assets/img/logos/trip.png" srcset="./assets/img/logos/trip@2x.png 2x" class="logo mb-2" alt="">
+                            <img src="./assets/img/logos/trip-light.png" srcset="./assets/img/logos/trip-light@2x.png 2x" class="logo-light mb-2" alt="">
+                            <div class="small fw-medium">Based on more 3,900 reviews</div>
+                        </div>
+                        <!-- /Tripadvisor -->
+                    </div>
+                    <div class="col-12 col-xl-6 col-lg-6">
+                        <!-- Image -->
+                        <div class="position-relative mb-16" data-cues="fadeIn">
+                            <div class="position-absolute top-0 end-0 start-0 bottom-0 bg-body-tertiary h-100 w-100 mt-16 ms-16"></div>
+                            <figure class="figure mb-0 w-100 position-relative z-2">
+                                <img src="./assets/img/about/a1.jpg" srcset="./assets/img/about/a1@2x.jpg 2x" class="figure-img img-fluid mb-0 w-100" alt="...">
+                            </figure>
+                            <div class="position-absolute bottom-0 start-0 end-0 mb-6 ms-6 me-6 z-3">
+                                <div class="row g-6">
+                                    <div class="col-6 col-md-4">
+                                        <div class="bg-primary bg-opacity-85 p-4 text-center text-white">
+                                            <h4 class="mb-0">3,800+</h4>
+                                            <span class="d-inline-block text-uppercase ls-1 fsm-4">Clients</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="bg-secondary bg-opacity-85 p-4 text-center text-white">
+                                            <h4 class="mb-0">2,900+</h4>
+                                            <span class="d-inline-block text-uppercase ls-1 fsm-4">Booking</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Image -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Client say -->
+        <!-- Video -->
+        <section id="video" class="image-wrapper bg-image bg-overlay text-body pt-22 pb-20 text-center " data-image-src="./assets/img/background/bg4.jpg" data-bs-theme="dark">
+            <div class="bg-content">
+                <div class="container">
+                    <!-- Content -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-xl-8 col-lg-10" data-cues="fadeIn">
+                            <div class="mb-6">
+                                <a class="btn-video-play media-glightbox" href="./assets/media/v1.mp4"><span></span></a>
+                            </div>
+                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Explore Laseta Gallery</span>
+                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Laseta Gallery Video</h2>
+                            <p> Eos clita partem utroque ut, veri integre qui ut, id duo dolore tacimates. Modo detracto scribentur appellantur mea eos an dicant posidonium efficiendi. </p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                </div>
+            </div>
+        </section>
+        <!-- /Video -->
+        <!-- News events -->
+        <section id="news" class="pt-14 pb-14 bg-body-tertiary">
+            <div class="container" data-cues="fadeIn">
+                <!-- Heading -->
+                <div class="mb-8 text-center">
+                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Useful Information</span>
+                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">News & Events</h2>
+                </div>
+                <!-- /Heading -->
+                <!-- Article list -->
+                <div class="swiper swiper-pagination-number swiper-button-bottom news-slider">
+                    <div class="swiper-wrapper mb-8">
+                        <div class="swiper-slide">
+                            <!-- Article -->
+                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./single-post.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/news/n2.jpg" srcset="./assets/img/news/n2@2x.jpg 2x" class="card-img-top" alt="">
+                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
+                                            <small>11</small>
+                                            <small>Jul</small>
+                                            <small>22</small>
+                                        </span>
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body shadow-sm">
+                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1text-uppercase">Travel Guide</a>
+                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">Best Panoramic Views of the Paris Skyline </h3>
+                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </article>
+                            <!-- /Article -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Article -->
+                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./single-post.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/news/n5.jpg" srcset="./assets/img/news/n5@2x.jpg 2x" class="card-img-top" alt="">
+                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
+                                            <small>11</small>
+                                            <small>Jul</small>
+                                            <small>22</small>
+                                        </span>
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body shadow-sm">
+                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1 text-uppercase">Tour Info</a>
+                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">Around Bir Hakeim Bridge & Eiffel Tower </h3>
+                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </article>
+                            <!-- /Article -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Article -->
+                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./single-post.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/news/n3.jpg" srcset="./assets/img/news/n3@2x.jpg 2x" class="card-img-top" alt="">
+                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
+                                            <small>11</small>
+                                            <small>Jul</small>
+                                            <small>22</small>
+                                        </span>
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body shadow-sm">
+                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1 text-uppercase">Explore City</a>
+                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">Top-Rated Attractive destination in Paris </h3>
+                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </article>
+                            <!-- /Article -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Article -->
+                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
+                                <a href="./single-post.html" title="">
+                                    <figure class="image-hover-scale image-hover-overlay mb-0">
+                                        <img src="./assets/img/news/n1.jpg" srcset="./assets/img/news/n1@2x.jpg 2x" class="card-img-top" alt="">
+                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
+                                            <small>10</small>
+                                            <small>Jul</small>
+                                            <small>22</small>
+                                        </span>
+                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
+                                    </figure>
+                                </a>
+                                <div class="card-body bg-body shadow-sm">
+                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1 text-uppercase">Travel Guide</a>
+                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">The Complete Guide to Parisian Lifestyle</h3>
+                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                        <span>Details</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                            </article>
+                            <!-- /Article -->
+                        </div>
+                    </div>
+                    <!-- Navs -->
+                    <div class="text-center">
+                        <div class="d-inline-flex align-items-center fs-4">
+                            <span role="button" class="news-prev text-primary p-4 lh-1">
+                                <i class="hicon hicon-thin-arrow-right"></i>
+                            </span>
+                            <span class="news-pagination p-4 lh-1 fs-5"></span>
+                            <span role="button" class="news-next text-primary p-4 lh-1">
+                                <i class="hicon hicon-thin-arrow-left"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Navs -->
+                </div>
+                <!-- /Article list -->
+            </div>
+        </section>
+        <!-- /News events -->
+    </main>
+    <!-- Footer -->
+    <footer id="footer">
+        <!-- Heading -->
+        <div class="pt-14 pb-18 pb-md-14 pb-lg-10 border-top border-bottom text-center" data-cue="fadeIn">
+            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Start To Experience</span>
+            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Reservation</h2>
         </div>
-      </div>
+        <!-- /Heading -->
+        <!-- Check rooms -->
+        <div class="position-relative z-1" data-cue="fadeIn">
+            <div id="checkRoomBottom" class="check-room-bottom position-absolute start-0 end-0 top-0" data-bs-theme="light">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card bg-primary border-0 shadow-sm">
+                                <div class="card-body p-5">
+                                    <form class="row g-4" method="post" action="./reservation.html">
+                                        <div class="col-12 col-lg-5 col-md-7">
+                                            <!-- Input date -->
+                                            <div class="mb-0">
+                                                <div class="position-relative">
+                                                    <label class="hicon hicon-menu-calendar hicon-bold text-secondary cursor-pointer position-absolute top-50 start-0 translate-middle-y ms-5 z-1" for="txtCheckDate1"></label>
+                                                    <input id="txtCheckDate1" type="text" class="check-date form-select bg-body-tertiary cursor-pointer shadow-none ps-11 fw-medium" placeholder="" readonly>
+                                                </div>
+                                            </div>
+                                            <!-- /Input date -->
+                                        </div>
+                                        <div class="col-12 col-lg-4 col-md-5">
+                                            <!-- Input number of guests -->
+                                            <div class="mb-0">
+                                                <div class="position-relative">
+                                                    <label class="hicon hicon-couple hicon-bold text-secondary cursor-pointer position-absolute top-50 start-0 translate-middle-y ms-5 z-1" for="btnCheckGuest1"></label>
+                                                    <div class="dropdown" data-total-guest="">
+                                                        <button class="form-select w-100 text-start shadow-none bg-body-tertiary ps-11 fw-medium" id="btnCheckGuest1" data-bs-auto-close="outside" type="button" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="text-nowrap">
+                                                                <span data-total-adults=""></span>, <span data-total-children=""></span>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu animate slideIn p-6 border-0 shadow">
+                                                            <li>
+                                                                <div class="mb-3">
+                                                                    <label for="txtCheckAdults1" class="form-label">Adults</label>
+                                                                    <div class="input-group shadow-sm">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-adults="">
+                                                                            <i class="hicon hicon-minus-thin small"></i>
+                                                                        </button>
+                                                                        <input type="text" class="form-control text-center" placeholder="Adults" value="1" aria-label="Adults" id="txtCheckAdults1" data-adults-max="10" data-input-adults="">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-adults="">
+                                                                            <i class="hicon hicon-plus-thin small"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mb-1">
+                                                                    <label for="txtCheckChildren1" class="form-label">Children</label>
+                                                                    <div class="input-group shadow-sm">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="">
+                                                                            <i class="hicon hicon-minus-thin small"></i>
+                                                                        </button>
+                                                                        <input type="text" class="form-control text-center" placeholder="Children" value="0" aria-label="Children" id="txtCheckChildren1" data-children-max="20" data-input-children="">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="">
+                                                                            <i class="hicon hicon-plus-thin small"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Input number of guests -->
+                                        </div>
+                                        <div class="col-12 col-lg-3 col-md-12">
+                                            <!-- Button -->
+                                            <div class="mb-0">
+                                                <button type="submit" class="btn btn-secondary w-100 fw-medium">
+                                                    <i class="hicon hicon-mmb-my-booking hicon-md mr-1"></i>
+                                                    <span>Check room</span>
+                                                </button>
+                                            </div>
+                                            <!-- /Button -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Check rooms -->
+        <div class="bg-body text-body-tertiary pb-14" data-bs-theme="dark">
+            <div class="container">
+                <!-- Brands system -->
+                <div class="border-bottom border-white border-opacity-10 pt-24 pt-md-22 pt-lg-20 pb-6 mb-10">
+                    <div class="row" data-cues="fadeIn">
+                        <div class="col-6 col-lg-2 col-md-4">
+                            <a href="#">
+                                <figure>
+                                    <img class="img-fluid" src="./assets/img/logos/l1.png" srcset="./assets/img/logos/l1@2x.png 2x" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-2 col-md-4">
+                            <a href="#">
+                                <figure>
+                                    <img class="img-fluid" src="./assets/img/logos/l2.png" srcset="./assets/img/logos/l2@2x.png 2x" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-2 col-md-4">
+                            <a href="#">
+                                <figure>
+                                    <img class="img-fluid" src="./assets/img/logos/l3.png" srcset="./assets/img/logos/l3@2x.png 2x" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-2 col-md-4">
+                            <a href="#">
+                                <figure>
+                                    <img class="img-fluid" src="./assets/img/logos/l4.png" srcset="./assets/img/logos/l4@2x.png 2x" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-2 col-md-4">
+                            <a href="#">
+                                <figure>
+                                    <img class="img-fluid" src="./assets/img/logos/l5.png" srcset="./assets/img/logos/l5@2x.png 2x" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-2 col-md-4">
+                            <a href="#">
+                                <figure>
+                                    <img class="img-fluid" src="./assets/img/logos/l6.png" srcset="./assets/img/logos/l6@2x.png 2x" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Brands system -->
+                <!-- Footer top -->
+                <div class="border-bottom border-white border-opacity-10">
+                    <div class="row" data-cues="fadeIn">
+                        <div class="col-12 col-xl-3 col-lg-12 col-md-6">
+                            <!-- Brand -->
+                            <div class="mb-10">
+                                <a href="./index.html" class="d-flex align-items-center text-body-emphasis h-sub-font text-uppercase mb-6">
+                                    <img class="me-4" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="" height="48">
+                                    <span class="h5 fw-semibold d-block ls-5 mb-2 lh-1">Laseta</span>
+                                </a>
+                                <p>
+                                    <em>Sed diam constituam ei, qui erat probo dissentiet ex. Ius nominati dissentiet eu, sit ut doming facilisis sententiae. Id vim libris volutpat, pri cu errem timeam cotidieque, purto summo has te. An quis eligendi atomorum duo.</em>
+                                    <a href="./about.html" class="text-body link-hover-primary">[+]</a>
+                                </p>
+                            </div>
+                            <!-- /Brand -->
+                        </div>
+                        <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                            <!-- Contact Info -->
+                            <div class="mb-10">
+                                <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Contact Info</h6>
+                                <div class="pt-2">
+                                    <p>
+                                        <span>610 Placer Loquen, Paris, France.</span>
+                                    </p>
+                                    <p>
+                                        <span>+33 321-654-987 (Ext: 123).</span>
+                                    </p>
+                                    <p>
+                                        <a href="#" class="text-body link-hover-primary">Booking@example.com</a>
+                                    </p>
+                                    <p>
+                                        <a href="#" class="text-body link-hover-primary">www.example.com</a>
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                                    <path d="M10 9l5 3l-5 3z"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M8 20l4 -9"></path>
+                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-body link-hover-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                                    <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                                    <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
+                                                    <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
+                                                    <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
+                                                    <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Contact Info -->
+                        </div>
+                        <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                            <!-- Quick Links -->
+                            <div class="mb-10">
+                                <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Quick Links</h6>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./about.html">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./gallery.html">Gallery</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./facilities.html">Facilities</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./news.html">News</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./rooms-1.html">Rooms & Suites</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./special-offers.html">Special Offers</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./restaurant.html">Restaurant & Bar</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./spa-wellness.html">Spa & Wellness</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./meetings-events.html">Metting & Events</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Quick Links -->
+                        </div>
+                        <div class="col-12 col-xl-3 col-lg-4 col-md-6">
+                            <div class="mb-10">
+                                <!-- Mobile App -->
+                                <div class="mb-6">
+                                    <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Get the app</h6>
+                                    <div class="pt-4">
+                                        <div class="row g-3">
+                                            <div class="col-6">
+                                                <a href="#">
+                                                    <figure>
+                                                        <img src="./assets/img/icons/i1.svg" class="img-fluid w-100" alt="">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="#">
+                                                    <figure>
+                                                        <img src="./assets/img/icons/i2.svg" class="img-fluid w-100" alt="">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Mobile App -->
+                                <!-- Social -->
+                                <div class="mb-10 pt-4">
+                                    <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light mb-6 fsm-1">Language & currency</h6>
+                                    <div class="d-flex fsm-2 fw-medium">
+                                        <div>
+                                            <a class="d-flex align-items-center link-hover-primary" data-bs-toggle="modal" href="#mdlLanguage">
+                                                <img src="./assets/img/flags/en.svg" height="14" alt="" class="me-1">
+                                                <span>English</span>
+                                                <i class="hicon hicon-thin-arrow-down ms-1 fsm-6"></i>
+                                            </a>
+                                        </div>
+                                        <div class="ms-auto">
+                                            <a class="d-flex link-hover-primary" data-bs-toggle="modal" href="#mdlCurrency">
+                                                <span>USD (United States Dollar)</span>
+                                                <i class="hicon hicon-thin-arrow-down ms-1 fsm-6"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Social -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Footer top -->
+                <!-- Footer Bottom -->
+                <div class="mt-10">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <p>© 2023 Laseta Gallery Hotel. All rights reserved.</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="text-start text-md-end">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a class="text-body link-hover-primary" href="./blank.html">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="text-body link-hover-primary" href="./blank.html">Terms of Use</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Footer Bottom -->
+            </div>
+        </div>
+    </footer>
+    <!-- Currency -->
+    <div class="modal fade" id="mdlCurrency" tabindex="-1" aria-labelledby="h3Currency" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-4 text-uppercase ls-1 ff-sub" id="h3Currency">Select currency</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav small row mb-0">
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>USD</strong> (United States Dollar)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>EUR</strong> (Euro)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>GBP</strong> (Pound Sterling)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>AUD</strong> (Australian Dollar)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>NZD</strong> (New Zealand Dollar)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>CAD</strong> (Canadian Dollar)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>AUD</strong> (Australian Dollar)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>JPY</strong> (Japanese Yen)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>CNY</strong> (Chinese Yuan)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>VND</strong> (Vietnam Dong)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>SGD</strong> (Singapore Dollar)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-6">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <span class="me-1"><strong>THB</strong> (Thai Baht)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Currency -->
+    <!-- Language -->
+    <div class="modal fade" id="mdlLanguage" tabindex="-1" aria-labelledby="h3Language" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-4 text-uppercase ls-1 ff-sub" id="h3Language">Select language</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav small row mb-0">
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/en.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">English</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/fr.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Français</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/es.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Español</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/de.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Deutsch</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/it.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Italiano</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/nl.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Nederlands</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/pt.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Português</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/ru.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">Русский</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-4">
+                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
+                                <img src="./assets/img/flags/cn.svg" height="16" alt="" class="me-2">
+                                <span class="me-1">日本語</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- <button class="back-to-top d-flex align-items-center justify-content-center" style="cursor:auto;"></i>
+        <script src="assets/js/cloudbeds-horiz.js"></script>
+    </button> -->
 
-  </footer><!-- End Footer -->
-
-  <div class="whatsapp-widget" onclick="toggleModal()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <!-- WhatsApp Icon -->
-  </div>
-
-  <div class="whatsapp-modal" id="whatsappModal">
-    <div class="whatsapp-header">
-      <div class="profile-pic-container">
-        <div class="profile-pic"></div>
-        <div class="online-dot"></div>
-      </div>
-      <div class="chat-details">
-        <div class="chat-name">Into The Moon</div> <!-- Changed Name -->
-        <div class="chat-status">En Línea</div>
-      </div>
-      <button class="close-button" onclick="toggleModal()">&times;</button>
-    </div>
-    <div class="whatsapp-body">
-      <div class="message-bubble">
-        ¡Bienvenido!👋🏻 ¿En qué puedo ayudarte?
-        <div class="message-time"><span id="current-time"></span></div> <!-- Current Time -->
-      </div>
-    </div>
-    <div class="whatsapp-footer">
-      <input type="text" class="whatsapp-input" placeholder="Escribe un mensaje...">
-      <button class="send-button" onclick="redirectToWhatsApp()">
-        <i class="bi bi-send-fill"></i> <!-- Send fill icon -->
-      </button>
-    </div>
-  </div>
-
-  <!-- <button data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" class="back-to-top d-flex align-items-center justify-content-center pulse-button"></i><b>Reservar Ahora</b></button> -->
-  <button class="back-to-top d-flex align-items-center justify-content-center" style="cursor:auto;"></i>
-    <script src="assets/js/cloudbeds-horiz.js"></script>
-  </button>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://kit.fontawesome.com/b858070c46.js" crossorigin="anonymous"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- custom js -->
-  <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <div class="elfsight-app-a3109204-665f-4d92-b787-ca03ceb2db37" data-elfsight-app-lazy></div> -->
-
-  <script src="assets/js/cloudbeds-immersive.js"></script>
-  <script>
-    window.addEventListener('load', function () {
-      // Assign the current time to the span element in 12:34 PM mexico format
-      document.getElementById('current-time').textContent = new Date().toLocaleTimeString('es-MX', {
-        hour: 'numeric',
-        minute: 'numeric'
-      });
-
-      // Get today's date
-      var today = new Date();
-
-      // Extract the day, month, and year
-      var day = String(today.getDate()).padStart(2, '0');
-      var month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-      var year = String(today.getFullYear()); // Get the last two digits of the year
-
-      // Format the date as dd/mm/yy
-      var formattedDate = `${day}/${month}/${year}`;
-
-      // Set the value of the start and end date inputs to the formatted date
-      document.getElementById('start_date_mobile').value = formattedDate;
-      document.getElementById('end_date_mobile').value = formattedDate;
-    });
-
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.js"></script>
-  <script>
-    function toggleModal() {
-      var modal = document.getElementById('whatsappModal');
-      modal.style.display = modal.style.display === 'none' || modal.style.display === '' ? 'flex' : 'none';
-    }
-
-    function redirectToWhatsApp() {
-      var phoneNumber = '+528124383335'; // Replace with your WhatsApp number in international format
-      var message = document.querySelector('.whatsapp-input').value;
-      var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-  </script>
+    <!-- Language -->
+    <!-- Scroll top -->
+    <a href="#" class="scroll-top position-fixed bottom-0 end-0 mb-6 me-6 rounded-circle text-white d-flex align-items-center justify-content-center z-4">
+        <i class="hicon hicon-thin-arrow-up"></i>
+    </a>
+    <!-- /Scroll top -->
+    <!-- /Footer -->
+    <!-- Scripts -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/theme.js"></script>
+    <script src="assets/js/cloudbeds-immersive.js"></script>
+    <!-- /Scripts -->
 </body>
+
 </html>
