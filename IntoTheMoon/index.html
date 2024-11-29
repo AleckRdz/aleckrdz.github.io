@@ -9,10 +9,61 @@
     <meta name="description" content="Laseta - Laseta is a luxurious and modern hotel website template, meticulously designed to provide users with an impressive experience.">
     <meta name="keywords" content="hotel, Hostel, homestay, resort, gulp, Luxury, website, template, html5, template, site, bootstrap">
     <meta name="author" content="Bithemer.com">
-    <link href="./assets/img/logos/favicon.png" rel="shortcut icon">
+    <link href="./assets/img/logos/itm-favicon.ico" rel="shortcut icon">
     <link href="./assets/fonts/hotel-icons/hotel-icons.min.css" rel="stylesheet">
     <link href="./assets/css/plugins.css" rel="stylesheet">
     <link href="./assets/css/theme.css" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'ChivoMono';
+            src: url('./assets/fonts/ChivoMono.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'FeatureText';
+            src: url('./assets/fonts/FeatureText.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('./assets/fonts/Inter.ttf') format('truetype');
+        }
+
+        .chivo-font {
+            font-family: ChivoMono, sans-serif !important;
+        }
+
+        .feature-font {
+            font-family: FeatureText, sans-serif !important;
+        }
+
+        .inter-font {
+            font-family: Inter, sans-serif !important;
+        }
+
+        #immersive-experience-overlay {
+            z-index: 9999; /* Ensure it's above the navbar */
+            position: fixed; /* Make it stay in place */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Full-screen modal */
+            overflow: hidden; /* Prevent scrolling issues */
+        }
+        .text-justify {
+            text-align: justify;
+        }
+
+        .bg-primary {
+            background-color: #0D3B32 !important;
+        }
+
+        .btn-primary {
+            background-color: #0D3B32 !important;
+            border-color: #10493e !important;
+        }
+    </style>
 </head>
 <!-- /Head -->
 <!-- Set Body to full screen when Preloader is showing. -->
@@ -30,10 +81,10 @@
     <div class="offcanvas offcanvas-end border-start-0" tabindex="-1" id="ocRightInfo" aria-labelledby="ocRightInfo">
         <div class="offcanvas-header border-bottom">
             <!-- Offcanvas header -->
-            <a href="./index.html" class="d-inline-flex align-items-center text-body-emphasis h-sub-font text-uppercase">
-                <img class="logo-light me-4" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="" height="56">
-                <img class="logo me-4" src="./assets/img/logos/logo.png" srcset="./assets/img/logos/logo@2x.png 2x" alt="" height="56">
-                <span class="h5 fw-semibold d-block ls-5 mb-0 lh-1">Laseta</span>
+            <a href="#" class="d-inline-flex align-items-center text-body-emphasis h-sub-font text-uppercase me-3 pe-3">
+                <img class="logo-light me-4" src="./assets/img/logos/logo7.png" srcset="./assets/img/logos/logo7.png" alt="" height="100%" width="100%">
+                <img class="logo me-4" src="./assets/img/logos/logo2.png" srcset="./assets/img/logos/logo2.png" alt="" height="100%" width="100%">
+                <!-- <span class="h5 fw-semibold d-block ls-5 mb-0 lh-1">IntoTheMoon</span> -->
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <!-- /Offcanvas header -->
@@ -41,86 +92,58 @@
         <div class="offcanvas-body">
             <!-- Contact Info -->
             <div class="mb-10">
-                <h6 class=" text-uppercase ls-2">Contact Info</h6>
+                <h6 class=" text-uppercase ls-2">Contacto</h6>
                 <div class="d-flex mb-3">
                     <span class="me-3 flex-shrink-0">
-                        <i class="hicon hicon-flights-pin"></i>
+                        <i class="hicon hicon-email-envelope"></i>
                     </span>
-                    <span class="flex-grow-1">610 Placer Loquen, Paris, France.</span>
+                    <a href="mailto:Airbnbintothemoon@gmail.com" class="text-body link-hover-primary ms-2"><span>Airbnbintothemoon@gmail.com</span></a>
                 </div>
                 <div class="d-flex mb-3">
                     <span class="me-3 flex-shrink-0">
                         <i class="hicon hicon-telephone"></i>
                     </span>
-                    <span>+33 (0) 1 89 78 67 56</span>
+                    <span><a href="tel:+528124383335" class="text-body link-hover-primary ms-2">+52 812 438 3335</a></span>
                 </div>
                 <div class="d-flex mb-3">
                     <span class="me-3 flex-shrink-0">
-                        <i class="hicon hicon-email-envelope"></i>
+                        <i class="hicon hicon-flights-pin"></i>
                     </span>
-                    <span>Booking@example.com</span>
+                    <span class="flex-grow-1"><a href="https://maps.app.goo.gl/z1VTUfrzmRzZgCWt5" class="text-body link-hover-primary ms-2">104, Los Pinos, Quinta San Jorge, 67340 Santiago, Nuevo León</a></span>
                 </div>
+                <div class="d-flex mb-3">
+                    <span class="flex-grow-1"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.2729145903904!2d-100.17567301318887!3d25.46256091733404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c9af662455b5%3A0xf1224dd1d88af639!2sInto%20the%20moon!5e0!3m2!1ses-419!2smx!4v1732560564166!5m2!1ses-419!2smx"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></span>
+                </div>                
             </div>
             <!-- /Contact Info -->
-            <!-- Learn more -->
-            <div class="mb-10">
-                <h6 class=" text-uppercase ls-2">Learn more</h6>
-                <ul class="list-unstyled">
-                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="./about.html">About Us</a></li>
-                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="./blank.html">Terms of Use</a></li>
-                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="./blank.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <!-- /Learn more -->
             <!-- Follow Us -->
             <div>
-                <h6 class=" text-uppercase letter-spacing-1">Follow Us</h6>
+                <h6 class=" text-uppercase letter-spacing-1">Nuestras redes</h6>
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <a href="#" class="text-body link-hover-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                        <a href="https://www.facebook.com/intothemoonmx/" class="text-body link-hover-primary" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000">
+                                <path
+                                    d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm4 7.278V4.5h-2.286c-2.1 0-3.428 1.6-3.428 3.889v1.667H8v2.777h2.286V19.5h2.857v-6.667h2.286L16 10.056h-2.857V8.944c0-1.11.572-1.666 1.714-1.666H16z" />
                             </svg>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" class="text-body link-hover-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                        <a href="https://instagram.com/intothemoonmx" class="text-body link-hover-primary" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000">
+                                <path
+                                    d="M12 0c6.6274 0 12 5.3726 12 12s-5.3726 12-12 12S0 18.6274 0 12 5.3726 0 12 0zm3.115 4.5h-6.23c-2.5536 0-4.281 1.6524-4.3805 4.1552L4.5 8.8851v6.1996c0 1.3004.4234 2.4193 1.2702 3.2359.7582.73 1.751 1.1212 2.8818 1.1734l.2633.006h6.1694c1.3004 0 2.389-.4234 3.1754-1.1794.762-.734 1.1817-1.7576 1.2343-2.948l.0056-.2577V8.8851c0-1.2702-.4234-2.3589-1.2097-3.1452-.7338-.762-1.7575-1.1817-2.9234-1.2343l-.252-.0056zM8.9152 5.8911h6.2299c.9072 0 1.6633.2722 2.2076.8166.4713.499.7647 1.1758.8103 1.9607l.0063.2167v6.2298c0 .9375-.3327 1.6936-.877 2.2077-.499.4713-1.176.7392-1.984.7806l-.2237.0057H8.9153c-.9072 0-1.6633-.2722-2.2076-.7863-.499-.499-.7693-1.1759-.8109-2.0073l-.0057-.2306V8.885c0-.9073.2722-1.6633.8166-2.2077.4712-.4713 1.1712-.7392 1.9834-.7806l.2242-.0057h6.2299-6.2299zM12 8.0988c-2.117 0-3.871 1.7238-3.871 3.871A3.8591 3.8591 0 0 0 12 15.8408c2.1472 0 3.871-1.7541 3.871-3.871 0-2.117-1.754-3.871-3.871-3.871zm0 1.3911c1.3609 0 2.4798 1.119 2.4798 2.4799 0 1.3608-1.119 2.4798-2.4798 2.4798-1.3609 0-2.4798-1.119-2.4798-2.4798 0-1.361 1.119-2.4799 2.4798-2.4799zm4.0222-2.3589a.877.877 0 1 0 0 1.754.877.877 0 0 0 0-1.754z" />
                             </svg>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" class="text-body link-hover-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
-                                <path d="M10 9l5 3l-5 3z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-body link-hover-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M8 20l4 -9"></path>
-                                <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
-                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-body link-hover-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
-                                <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
-                                <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
-                                <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
-                                <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
-                                <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                        <a href="https://www.tiktok.com/@intothemoonmty" class="text-body link-hover-primary" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#000">
+                                <path
+                                    d="M12 0c6.6274 0 12 5.3726 12 12s-5.3726 12-12 12S0 18.6274 0 12 5.3726 0 12 0Zm3.1623 4h-2.7508v10.9209a2.3324 2.3324 0 0 1-3.0455 2.2209 2.3324 2.3324 0 0 1 1.4129-4.4459V9.8862a5.0812 5.0812 0 0 0-5.7481 5.5912 5.0805 5.0805 0 0 0 3.802 4.3668 5.0818 5.0818 0 0 0 5.423-2.0286c.5899-.8501.9062-1.86.9065-2.8947V9.3345A6.5666 6.5666 0 0 0 19 10.5614V7.83a3.796 3.796 0 0 1-2.0944-.6295 3.8188 3.8188 0 0 1-1.6852-2.5075 3.7856 3.7856 0 0 1-.058-.693Z" />
                             </svg>
                         </a>
                     </li>
@@ -135,12 +158,13 @@
         <div class="header-navbar d-flex align-items-center bg-body bg-opacity-0">
             <div class="w-100">
                 <!-- Brand -->
-                <a class="navbar-brand bg-primary d-inline-flex align-items-center position-absolute top-0 start-50 translate-middle-x z-1" id="brandHeader" href="./index.html" data-bs-theme="dark">
+                <a class="navbar-brand bg-primary d-inline-flex align-items-center position-absolute top-0 start-50 translate-middle-x z-1" id="brandHeader" href="#hero" data-bs-theme="dark">
                     <div class="text-center text-body-emphasis h-sub-font text-uppercase">
-                        <img class="brand-img" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="">
-                        <div class="brand-text">
-                            <span class="h5 fw-semibold d-block ls-5 mb-1 ms-2 ps-5 pe-5 lh-1">IntoTheMoon</span>
-                            <small class="ls-1 fsm-7 d-block ms-1 lh-1">Modern Cabins</small>
+                        <img class="brand-img" src="./assets/img/logos/favicon1.png" srcset="./assets/img/logos/favicon1.png" alt="">
+                        <div class="brand-text">                            
+                            <img class="h5 d-block ls-5 mb-1 ms-2 ps-5 pe-5 lh-1" src="./assets/img/logos/logoReducido2.png" srcset="./assets/img/logos/logoReducido2.png" alt="" height="50" width="250">
+                            <!-- <span class="h5 inter-font d-block ls-5 mb-1 ms-2 ps-5 pe-5 lh-1" style="color: #C2812A;">INTO THE MOON</span>
+                            <small class="ls-1 inter-font d-block ms-1 lh-1" style="color: #C2812A;">GLAMPING & HOLISTIC LIVING</small> -->
                         </div>
                     </div>
                 </a>
@@ -152,10 +176,12 @@
                         <div class="offcanvas offcanvas-navbar offcanvas-start border-end-0" tabindex="-1" id="offcanvasNavbar">
                             <!-- Offcanvas header -->
                             <div class="offcanvas-header border-bottom">
-                                <a href="./index.html" class="d-inline-flex align-items-center text-body-emphasis h-sub-font text-uppercase">
-                                    <img class="logo-light me-4" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="" height="56">
-                                    <img class="logo me-4" src="./assets/img/logos/logo.png" srcset="./assets/img/logos/logo@2x.png 2x" alt="" height="56">
-                                    <span class="h5 fw-semibold d-block ls-5 mb-0 lh-1">IntoTheMoon</span>
+                                <a href="#" class="d-inline-flex align-items-center text-body-emphasis h-sub-font text-uppercase me-3 pe-3">
+                                    <img class="logo-light me-4" src="./assets/img/logos/logo7.png" srcset="./assets/img/logos/logo7.png" alt=""
+                                        height="100%" width="100%">
+                                    <img class="logo me-4" src="./assets/img/logos/logo2.png" srcset="./assets/img/logos/logo2.png" alt="" height="100%"
+                                        width="100%">
+                                    <!-- <span class="h5 fw-semibold d-block ls-5 mb-0 lh-1">IntoTheMoon</span> -->
                                 </a>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
@@ -164,60 +190,27 @@
                                 <!-- Navbar nav left -->
                                 <ul class="navbar-nav navbar-nav-left h-sub-font justify-content-xl-end pe-xl-25">                                    
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link fw-medium " href="#inicio">Inicio</a>
+                                        <a class="nav-link fw-medium " href="#hero">Inicio</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link fw-medium " href="#nosotros">Nosotros</a>
+                                        <a class="nav-link fw-medium " href="#about">Nosotros</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link fw-medium " href="#amenidades">Amenidades</a>
+                                        <a class="nav-link fw-medium " href="#facilities">Amenidades</a>
                                     </li>
                                 </ul>
                                 <!-- /Navbar nav left  -->
                                 <!-- Navbar nav right  -->
                                 <ul class="navbar-nav navbar-nav-right h-sub-font justify-content-xl-start ps-xl-25">
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link fw-medium " href="#galeria">Galería</a>
+                                        <a class="nav-link fw-medium " href="#gallery">Galería</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link fw-medium " href="#testimonios">Testimonios</a>
+                                        <a class="nav-link fw-medium " href="#clientSay">Testimonios</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link fw-medium " href="#ubicacion">Ubicación</a>
-                                    </li>
-                                    <!-- <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle-hover fw-medium " href="#" data-bs-display="static">
-                                            <span>Pages</span>
-                                            <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i>
-                                        </a>
-                                        <ul class="dropdown-menu border-0 mt-xl-8" data-bs-popper="static">
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./about.html">About</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./facilities.html">Facilities</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./contact.html">Contact</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./gallery.html">Gallery</a>
-                                            </li>
-                                            <li>
-                                                <hr class="dropdown-divider">
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./coming-soon.html">Coming Soon</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./error404.html">404 page</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item fw-medium " href="./blank.html">Blank page</a>
-                                            </li>
-                                        </ul>
-                                    </li> -->
-                                    
+                                        <a class="nav-link fw-medium " href="#location">Ubicación</a>
+                                    </li>                                    
                                     <li class="nav-item dropdown">
                                         <span class="nav-link" role="button" id="toggle-theme" data-bs-theme-value></span>
                                     </li>
@@ -261,81 +254,88 @@
                 </div>
                 <!-- /Carousel indicators -->
                 <!-- Carousel list -->
-                <div class="carousel-inner">
-                    <!-- Item -->
-                    <div class="carousel-item active">
-                        <div class="carousel-caption hero-caption">
-                            <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/hero/h1.jpg">
-                                <div class="bg-content">
-                                    <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
-                                        <div class="container">
-                                            <p class="text-uppercase ls-2 h-sub-font fw-medium mb-8">Santiago, Nuevo León </p>
-                                            <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4>
-                                            <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar" class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline h-sub-font">
-                                                <span>Reservar</span>
-                                                <i class="hicon hicon-thin-circle-arrow-left"></i>
-                                            </button>
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-inner">
+                            <!-- Item -->
+                            <div class="carousel-item active">
+                                <div class="carousel-caption hero-caption">
+                                    <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/drive/interior14.JPG">
+                                        <div class="bg-content">
+                                            <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
+                                                <div class="container">
+                                                    <img class="me-4" src="./assets/img/logos/logo2.png" alt="" width="80%" height="100%">
+                                                    <!-- <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4> --> <br>
+                                                    <!-- <p class="text-uppercase ls-2 inter-font fw-medium mb-8" style="color: #C2812A;">Santiago, Nuevo León </p> -->
+                                                    <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar" class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline inter-font cloudbeds">
+                                                        <span>Reservar</span>
+                                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- /Item -->
-                    <!-- Item -->
-                    <div class="carousel-item">
-                        <div class="carousel-caption hero-caption">
-                            <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/hero/h2.jpg">
-                                <div class="bg-content">
-                                    <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
-                                        <div class="container">
-                                            <p class="text-uppercase ls-2 h-sub-font fw-medium mb-8">Santiago, Nuevo León </p>
-                                            <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4>
-                                            <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar"
-                                                class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline h-sub-font">
-                                                <span>Reservar</span>
-                                                <i class="hicon hicon-thin-circle-arrow-left"></i>
-                                            </button>
+                            <!-- /Item -->
+                            <!-- Item -->
+                            <div class="carousel-item">
+                                <div class="carousel-caption hero-caption">
+                                    <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/drive/patio11.JPG">
+                                        <div class="bg-content">
+                                            <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
+                                                <div class="container">
+                                                    <img class="me-4" src="./assets/img/logos/logo2.png" alt="" width="80%" height="100%">
+                                                    <!-- <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4> --> <br>
+                                                    <!-- <p class="text-uppercase ls-2 inter-font fw-medium mb-8" class="margin-left: 20px;">Santiago, Nuevo León </p> -->
+                                                    <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar"
+                                                        class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline inter-font cloudbeds">
+                                                        <span>Reservar</span>
+                                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- /Item -->
-                    <!-- Item -->
-                    <div class="carousel-item">
-                        <div class="carousel-caption hero-caption">
-                            <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/hero/h3.jpg">
-                                <div class="bg-content">
-                                    <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
-                                        <div class="container">
-                                            <p class="text-uppercase ls-2 h-sub-font fw-medium mb-8">Santiago, Nuevo León </p>
-                                            <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4>
-                                            <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar"
-                                                class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline h-sub-font">
-                                                <span>Reservar</span>
-                                                <i class="hicon hicon-thin-circle-arrow-left"></i>
-                                            </button>
+                            <!-- /Item -->
+                            <!-- Item -->
+                            <div class="carousel-item">
+                                <div class="carousel-caption hero-caption">
+                                    <div class="image-wrapper bg-image bg-overlay h-100" data-image-src="./assets/img/drive/cabanas2.JPG">
+                                        <div class="bg-content">
+                                            <div class="d-flex align-items-center h-100 pt-18 pt-lg-0">
+                                                <div class="container">
+                                                    <img class="me-4" src="./assets/img/logos/logo2.png" alt="" width="80%" height="100%">
+                                                    <!-- <h4 class="display-4 fw-semibold text-uppercase h-special-font mb-8"> MODERN CABINS </h4> --> <br>
+                                                    <!-- <p class="text-uppercase ls-2 inter-font fw-medium mb-8" class="margin-left: 20px;">Santiago, Nuevo León </p> -->
+                                                    <button style="background:none;" data-be-url="https://hotels.cloudbeds.com/reservation/RWyRAu" title="Reservar"
+                                                        class="btn btn-outline-light fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 d-inline inter-font cloudbeds">
+                                                        <span>Reservar</span>
+                                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- /Item -->
                         </div>
+                        <!-- /Carousel list -->
+                        <!-- Carousel navs -->
+                        <button class="carousel-control-prev d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                        <!-- /Carousel navs -->
                     </div>
-                    <!-- /Item -->
                 </div>
-                <!-- /Carousel list -->
-                <!-- Carousel navs -->
-                <button class="carousel-control-prev d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                <!-- /Carousel navs -->
             </div>
             <!-- Check rooms -->
             <div id="checkRoomTop" class="check-room-top pt-4 pb-4 pt-lg-0 pb-lg-0">
@@ -369,12 +369,12 @@
                                                         <ul class="dropdown-menu animate slideIn p-6 border-0 shadow">
                                                             <li>
                                                                 <div class="mb-3">
-                                                                    <label for="txtCheckAdults" class="form-label">Adults</label>
+                                                                    <label for="txtCheckAdults" class="form-label">Adultos</label>
                                                                     <div class="input-group shadow-sm">
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-adults="">
                                                                             <i class="hicon hicon-minus-thin small"></i>
                                                                         </button>
-                                                                        <input type="text" class="form-control text-center" placeholder="Adults" value="1" aria-label="Adults" id="txtCheckAdults" data-adults-max="10" data-input-adults="">
+                                                                        <input type="text" class="form-control text-center" placeholder="Adultos" value="1" aria-label="Adults" id="txtCheckAdults" data-adults-max="10" data-input-adults="">
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-adults="">
                                                                             <i class="hicon hicon-plus-thin small"></i>
                                                                         </button>
@@ -383,13 +383,13 @@
                                                             </li>
                                                             <li>
                                                                 <div class="mb-1">
-                                                                    <label for="txtCheckChildren" class="form-label">Children</label>
+                                                                    <label for="txtCheckChildren" class="form-label">Niños</label>
                                                                     <div class="input-group shadow-sm">
-                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="" disabled>
                                                                             <i class="hicon hicon-minus-thin small"></i>
                                                                         </button>
-                                                                        <input type="text" class="form-control text-center" placeholder="Children" value="0" aria-label="Children" id="txtCheckChildren" data-children-max="20" data-input-children="">
-                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="">
+                                                                        <input type="text" class="form-control text-center" placeholder="Niños" value="0" aria-label="Children" id="txtCheckChildren" data-children-max="20" data-input-children="" disabled>
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="" disabled>
                                                                             <i class="hicon hicon-plus-thin small"></i>
                                                                         </button>
                                                                     </div>
@@ -406,7 +406,7 @@
                                             <div class="mb-0">
                                                 <button type="submit" class="btn btn-primary w-100 fw-medium">
                                                     <i class="hicon hicon-mmb-my-booking hicon-md mr-1"></i>
-                                                    <span>Check room</span>
+                                                    <span>Ver Disponibilidad</span>
                                                 </button>
                                             </div>
                                             <!-- /Button -->
@@ -422,17 +422,22 @@
         </section>
         <!-- /Hero -->
         <!-- About -->
-        <section id="about" class="pt-20 pb-16 bg-body-tertiary position-relative">
+        <section id="about" class="pt-17 pb-16 bg-body-tertiary position-relative">
             <div class="position-absolute start-0 top-0 bottom-0 w-30 image-wrapper bg-image bg-cover d-none d-xl-block" data-image-src="./assets/img/background/bg2.png"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-xxl-9 col-xl-10">
                         <!-- Description -->
                         <div class="text-center mb-10" data-cues="fadeIn">
-                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Experience the luxury</span>
-                            <h2 class="text-uppercase h-special-font mb-4 text-body-emphasis">Laseta Gallery Hotel</h2>
+                            <h2 class="text-uppercase h-special-font mb-4 text-body-emphasis">Bienvenido a nuestro ​escape en ​Carretera Nacional</h2>
+                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">¡Estamos muy emocionados de recibirte en Into ​The Moon! 🌙</span>
+                            <p>
+                                Nuestro glamping ofrece las ​mejores vistas y una experiencia única. 🌲🏞️<br>
+                                Aquí podrás desconectarte de la ciudad y ​sumergirte en la tranquilidad y belleza del ​entorno.<br>
+                                Nuestras cabañas están equipadas con ​todas las comodidades necesarias para que te ​sientas como en casa, mientras
+                                disfrutas de una ​escapada inolvidable. 🏡✨<br>
+                                ¡Prepárate para relajarte, explorar y crear ​recuerdos mágicos con nosotros! 🌟</p>
                             <span class="star-rate-view star-rate-size-sm mb-6"><span class="star-value rate-50"></span></span>
-                            <p>Eam an assum dicant, quod augue nullam eos no. Pri ex habeo tractatos percipitur, option urbanitas eum ex, te possit aliquam utroque per. Dolorum detraxit ad eam, in usu quod omnesque consequuntur, dicit congue meliore vis ei. Ius nominati dissentiet eu, sit ut doming facilisis sententiae. Partiendo sententiae mel ea, duis saepe oblique vix in.</p>
                         </div>
                         <!-- /Description -->
                         <!-- Featured -->
@@ -444,7 +449,7 @@
                                             <i class="hicon hicon-200 hicon-flights-pin mb-4"></i>
                                         </div>
                                         <div>
-                                            <p class=" text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Located in the heart of city </p>
+                                            <p class=" text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Ubicado a solo unos minutos ​de Monterrey. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -454,7 +459,7 @@
                                             <i class="hicon hicon-200 hicon-bed mb-4"></i>
                                         </div>
                                         <div>
-                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Palatial Signature Suites </p>
+                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Todas las comodidades necesarias incluidas. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -464,7 +469,7 @@
                                             <i class="hicon hicon-200 hicon-restaurant mb-4"></i>
                                         </div>
                                         <div>
-                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Reinvented French Dining </p>
+                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Terraza privada con asador. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -474,7 +479,7 @@
                                             <i class="hicon hicon-200 hicon-regular-wedding-venue mb-4"></i>
                                         </div>
                                         <div>
-                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Sublime Parisian Weddings </p>
+                                            <p class="text-uppercase fsm-5 fw-semibold ls-1 h-sub-font text-body-secondary"> Disfruta tu estancia con tu pareja. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -483,8 +488,8 @@
                         <!-- /Featured -->
                         <!-- Link -->
                         <div class="text-center" data-cue="fadeIn">
-                            <a href="./about.html" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
-                                <span>Read more</span>
+                            <a href="#rooms" class="btn btn-primary bg-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                                <span>Ver Más</span>
                                 <i class="hicon hicon-thin-circle-arrow-left"></i>
                             </a>
                         </div>
@@ -495,39 +500,39 @@
         </section>
         <!-- /About -->
         <!-- Rooms -->
-        <section id="rooms" class="pt-16 pb-13 bg-primary-650 text-body">
+        <section id="rooms" class="pt-13 pb-9 bg-primary-650 text-body">
             <!-- Heading -->
             <div class="mb-10 text-center" data-cues="fadeIn">
-                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">The Exquisite Space</span>
-                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Rooms & Suites</h2>
+                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Disfruta de nuestras</span>
+                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Cabañas</h2>
             </div>
             <!-- /Heading -->
             <!-- Rooms List -->
             <div class="room-slide" data-cue="fadeIn">
                 <div class="room-slide-item mb-8">
                     <div class="card card-overlay-bottom border-0 text-white">
-                        <img src="./assets/img/rooms/r1.jpg" srcset="./assets/img/rooms/r1@2x.jpg 2x" class="card-img" alt="...">
+                        <img src="./assets/img/drive/interior9.JPG" srcset="./assets/img/drive/interior9.JPG 2x" class="card-img" alt="...">
                         <div class="card-img-overlay border-bottom p-md-10">
                             <div class="d-xl-flex align-items-xl-end">
                                 <div class="me-xl-auto mb-6 mb-xl-0">
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <span>From:</span>
                                         <strong>$124</strong>
-                                    </div>
-                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Standard Room</h3>
+                                    </div> -->
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Habitación</h3>
                                     <div class="card-text text-nowrap d-none d-md-block">
                                         <div class="d-flex algin-item-center">
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-sqm me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">? M²</span>
                                             </div>
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-bed me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Cama</span>
                                             </div>
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-travelers me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Máximo 2</span>
                                             </div>
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
@@ -537,13 +542,13 @@
                                     </div>
                                 </div>
                                 <div class="card-link text-nowrap">
-                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
-                                        <span>Details</span>
+                                    <a href="#galeria" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Ver Más</span>
                                         <i class="hicon hicon-thin-circle-arrow-left"></i>
                                     </a>
-                                    <a href="./contact.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                    <a href="" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
                                         <i class="hicon hicon-menu-calendar"></i>
-                                        <span>Booking</span>
+                                        <span>Reservar</span>
                                     </a>
                                 </div>
                             </div>
@@ -552,44 +557,82 @@
                 </div>
                 <div class="room-slide-item mb-8">
                     <div class="card card-overlay-bottom border-0 text-white">
-                        <img src="./assets/img/rooms/r3.jpg" srcset="./assets/img/rooms/r3@2x.jpg 2x" class="card-img" alt="...">
+                        <img src="./assets/img/drive/interior14.JPG" srcset="./assets/img/drive/interior14.JPG 2x" class="card-img"
+                            alt="...">
                         <div class="card-img-overlay border-bottom p-md-10">
                             <div class="d-xl-flex align-items-xl-end">
                                 <div class="me-xl-auto mb-6 mb-xl-0">
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
+                                                        <span>From:</span>
+                                                        <strong>$194</strong>
+                                                    </div> -->
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Comedor</h3>
+                                    <div class="card-text text-nowrap d-none d-md-block">
+                                        <div class="d-flex algin-item-center">
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-sqm me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">? M²</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-travelers me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Máximo 2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center me-6">
+                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-link text-nowrap">
+                                    <a href="#galeria"
+                                        class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Ver Más</span>
+                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
+                                    </a>
+                                    <a href=""
+                                        class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Reservar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-slide-item mb-8">
+                    <div class="card card-overlay-bottom border-0 text-white">
+                        <img src="./assets/img/drive/patio11.JPG" srcset="./assets/img/drive/patio11.JPG 2x" class="card-img" alt="...">
+                        <div class="card-img-overlay border-bottom p-md-10">
+                            <div class="d-xl-flex align-items-xl-end">
+                                <div class="me-xl-auto mb-6 mb-xl-0">
+                                    <!-- <div class="mb-3">
                                         <span>From:</span>
                                         <strong>$154</strong>
-                                    </div>
-                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Superior Room</h3>
+                                    </div> -->
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Terraza</h3>
                                     <div class="card-text text-nowrap d-none d-md-block">
                                         <div class="d-flex algin-item-center">
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-sqm me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">? M²</span>
                                             </div>
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-travelers me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Máximo 2</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-link text-nowrap">
-                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
-                                        <span>Details</span>
+                                    <a href="#galeria"
+                                        class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Ver Más</span>
                                         <i class="hicon hicon-thin-circle-arrow-left"></i>
                                     </a>
-                                    <a href="./reservation.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                    <a href="" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
                                         <i class="hicon hicon-menu-calendar"></i>
-                                        <span>Booking</span>
+                                        <span>Reservar</span>
                                     </a>
                                 </div>
                             </div>
@@ -598,210 +641,54 @@
                 </div>
                 <div class="room-slide-item mb-8">
                     <div class="card card-overlay-bottom border-0 text-white">
-                        <img src="./assets/img/rooms/r2.jpg" srcset="./assets/img/rooms/r2@2x.jpg 2x" class="card-img" alt="...">
+                        <img src="./assets/img/drive/alberca1.JPG" srcset="./assets/img/drive/alberca1.JPG 2x" class="card-img" alt="...">
                         <div class="card-img-overlay border-bottom p-md-10">
                             <div class="d-xl-flex align-items-xl-end">
                                 <div class="me-xl-auto mb-6 mb-xl-0">
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <span>From:</span>
                                         <strong>$164</strong>
-                                    </div>
-                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Deluxe Room</h3>
+                                    </div> -->
+                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Pileta</h3>
                                     <div class="card-text text-nowrap d-none d-md-block">
                                         <div class="d-flex algin-item-center">
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-sqm me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">? M²</span>
                                             </div>
                                             <div class="d-flex align-items-center me-6">
                                                 <i class="hicon hicon-lg hicon-travelers me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
+                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Máximo 2</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-link text-nowrap">
-                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
-                                        <span>Details</span>
+                                    <a href="#galeria"
+                                        class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                        <span>Ver Más</span>
                                         <i class="hicon hicon-thin-circle-arrow-left"></i>
                                     </a>
-                                    <a href="./reservation.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
+                                    <a href="" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
                                         <i class="hicon hicon-menu-calendar"></i>
-                                        <span>Booking</span>
+                                        <span>Reservar</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="room-slide-item mb-8">
-                    <div class="card card-overlay-bottom border-0 text-white">
-                        <img src="./assets/img/rooms/r4.jpg" srcset="./assets/img/rooms/r4@2x.jpg 2x" class="card-img" alt="...">
-                        <div class="card-img-overlay border-bottom p-md-10">
-                            <div class="d-xl-flex align-items-xl-end">
-                                <div class="me-xl-auto mb-6 mb-xl-0">
-                                    <div class="mb-3">
-                                        <span>From:</span>
-                                        <strong>$194</strong>
-                                    </div>
-                                    <h3 class="card-title text-uppercase ls-2 h-sub-font fw-semibold mb-5 h4">Family Suite</h3>
-                                    <div class="card-text text-nowrap d-none d-md-block">
-                                        <div class="d-flex algin-item-center">
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-sqm me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">57 M²</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-bed me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">1 Bed</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-travelers me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">Max 2</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-6">
-                                                <i class="hicon hicon-lg hicon-non-smoking-room me-2"></i>
-                                                <span class="text-uppercase fsm-5 letter-spacing-1 font-h">No</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-link text-nowrap">
-                                    <a href="./single-room-1.html" class="btn btn-small btn-light text-dark fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
-                                        <span>Details</span>
-                                        <i class="hicon hicon-thin-circle-arrow-left"></i>
-                                    </a>
-                                    <a href="./reservation.html" class="btn btn-small btn-primary fw-medium text-uppercase ls-1 fsm-4 h-sub-font text-nowrap">
-                                        <i class="hicon hicon-menu-calendar"></i>
-                                        <span>Booking</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>                
             </div>
             <!-- /Rooms List -->
         </section>
-        <!-- /Rooms -->
-        <!-- Offers -->
-        <section id="offers" class="pt-16 pb-16 bg-body-tertiary position-relative">
-            <div class="bg-primary position-absolute end-0 top-0 bottom-0 w-20 image-wrapper bg-image bg-cover d-none d-xl-block" data-cue="fadeIn" data-image-src="./assets/img/background/bg1.png"></div>
-            <div class="container">
-                <div class="row g-0" data-cues="fadeIn">
-                    <div class="col-12 col-xl-4">
-                        <!-- Description -->
-                        <div class="mb-8">
-                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Enjoy the values</span>
-                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Special Offers</h2>
-                            <p class="mb-10">Lorem ipsum dolor sit amet, ne regione nominavi vel, te mea dicam ceteros necessitatibus. Vix ei civibus sapientem neglegentur, et probo feugiat molestie eum.</p>
-                            <div class="mb-8">
-                                <a href="./special-offers.html" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
-                                    <span>All Offers</span>
-                                    <i class="hicon hicon-thin-circle-arrow-left"></i>
-                                </a>
-                            </div>
-                            <div class="d-inline-flex align-items-center fs-4 text-center justify-content-between">
-                                <span role="button" class="offer-prev-1 p-4 lh-1 text-primary">
-                                    <i class="hicon hicon-thin-arrow-right text-primary"></i>
-                                </span>
-                                <span class="offer-pagination-1 p-4 lh-1 fs-5"></span>
-                                <span role="button" class="offer-next-1 p-4 lh-1 text-primary">
-                                    <i class="hicon hicon-thin-arrow-left"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <!-- /Description -->
-                    </div>
-                    <div class="col-12 col-xl-8">
-                        <div class="ps-0 ps-xl-10">
-                            <!-- Offer list -->
-                            <div class="swiper offer-slider-1">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <!-- Offer item -->
-                                        <div class="card card-content-hover border-0 m-1">
-                                            <a href="./single-offer.html" title="">
-                                                <figure class="image-hover-scale image-hover-overlay mb-0">
-                                                    <img src="./assets/img/offers/o2.jpg" srcset="./assets/img/offers/o2@2x.jpg 2x" class="card-img-top" alt="">
-                                                    <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                                </figure>
-                                            </a>
-                                            <div class="card-body shadow-sm">
-                                                <h3 class="card-title h5 text-uppercase h-sub-font ls-1">10% off Services </h3>
-                                                <p>Virtute appellantur mea integre, eos an dicant posidonium efficiendi.</p>
-                                                <a href="./single-offer.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                                    <span>Details</span>
-                                                    <i class="hicon hicon-flights-one-ways"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- /Offer item -->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- Offer item -->
-                                        <div class="card card-content-hover border-0 m-1">
-                                            <a href="./single-offer.html" title="">
-                                                <figure class="image-hover-scale image-hover-overlay mb-0">
-                                                    <img src="./assets/img/offers/o1.jpg" srcset="./assets/img/offers/o1@2x.jpg 2x" class="card-img-top" alt="">
-                                                    <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                                </figure>
-                                            </a>
-                                            <div class="card-body shadow-sm">
-                                                <h3 class="card-title h5 text-uppercase h-sub-font ls-1">15% Off Events</h3>
-                                                <p>Eos clita partem utroque ut, veri integre qui ut, id posidonium duo dolore.</p>
-                                                <a href="./single-offer.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                                    <span>Details</span>
-                                                    <i class="hicon hicon-flights-one-ways"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- /Offer item -->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- Offer item -->
-                                        <div class="card card-content-hover border-0 m-1">
-                                            <a href="./single-offer.html" title="">
-                                                <figure class="image-hover-scale image-hover-overlay mb-0">
-                                                    <img src="./assets/img/offers/o3.jpg" srcset="./assets/img/offers/o3@2x.jpg 2x" class="card-img-top" alt="">
-                                                    <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                                </figure>
-                                            </a>
-                                            <div class="card-body shadow-sm">
-                                                <h3 class="card-title h5 text-uppercase h-sub-font ls-1">15% Off Dinner </h3>
-                                                <p>Sed diam constituam ei, qui erat probo dissentiet ex volutpat, tacimates.</p>
-                                                <a href="./single-offer.html" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                                    <span>Details</span>
-                                                    <i class="hicon hicon-flights-one-ways"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- /Offer item -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Offer list -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Offers -->
+        <!-- /Rooms -->        
         <!-- Facilities -->
         <section id="facilities" class="pt-16 pb-16 position-relative">
             <div class="container">
                 <!-- Heading -->
                 <div class="mb-10 text-center" data-cue="fadeIn">
-                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Luxury & Modern</span>
-                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Laseta Facilities</h2>
+                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Tenemos todas las</span>
+                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Amenidades</h2>
                 </div>
                 <!-- /Heading -->
                 <!-- Features -->
@@ -811,8 +698,8 @@
                         <div class="mb-7">
                             <div class="text-center border p-6">
                                 <i class="hicon hicon-200 hicon-wifi text-primary mb-4"></i>
-                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">High Speed Wifi</h3>
-                                <p class="mb-0">Vix placerat no eam cu bonorum sententiae atomorum duo noster ad vel.</p>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Wifi</h3>
+                                <p class="mb-0">De alta velocidad para el trabajo remoto.</p>
                             </div>
                         </div>
                         <!-- /Item -->
@@ -822,8 +709,8 @@
                         <div class="mb-7">
                             <div class="text-center border p-6">
                                 <i class="hicon hicon-200 hicon-reception text-primary mb-4"></i>
-                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Front desk 24H</h3>
-                                <p class="mb-0">Scripta apeirian in his accusa complect adipisci ocurreret an per.</p>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Personal las 24H</h3>
+                                <p class="mb-0">Disponible para recibir a los huéspedes.</p>
                             </div>
                         </div>
                         <!-- /Item -->
@@ -833,8 +720,8 @@
                         <div class="mb-7">
                             <div class="text-center border p-6">
                                 <i class="hicon hicon-200 hicon-car-park-onsite text-primary mb-4"></i>
-                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Parking Space</h3>
-                                <p class="mb-0">An quis eligendi duo latine veritus vim placerat errem latine scribentur</p>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Estacionamiento</h3>
+                                <p class="mb-0">Gratuito dentro de las instalaciones.</p>
                             </div>
                         </div>
                         <!-- /Item -->
@@ -843,9 +730,9 @@
                         <!-- Item -->
                         <div class="mb-7">
                             <div class="text-center border p-6">
-                                <i class="hicon hicon-200 hicon-pool text-primary mb-4"></i>
-                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4"> Swimming Pool</h3>
-                                <p class="mb-0">Has et magna dolore dicit essent inermis nec prima similique pri at.</p>
+                                <i class="hicon hicon-200 hicon-hot-spring-access text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4"> Pileta Privada</h3>
+                                <p class="mb-0">Con agua ​climatizada hasta 35 C.</p>
                             </div>
                         </div>
                         <!-- /Item -->
@@ -854,9 +741,9 @@
                         <!-- Item -->
                         <div class="mb-7">
                             <div class="text-center border p-6">
-                                <i class="hicon hicon-200 hicon-spas text-primary mb-4"></i>
-                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Spa center</h3>
-                                <p class="mb-0">Mel graece consequ ex dicunt appareat duo vim errem augue placerat.</p>
+                                <i class="hicon hicon-200 hicon-kitchenette text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Asador</h3>
+                                <p class="mb-0">Perfecto para reuniones al aire libre.</p>
                             </div>
                         </div>
                         <!-- /Item -->
@@ -865,9 +752,9 @@
                         <!-- Item -->
                         <div class="mb-7">
                             <div class="text-center border p-6">
-                                <i class="hicon hicon-200 hicon-fitness-center text-primary mb-4"></i>
-                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Fitness Center</h3>
-                                <p class="mb-0">Ne ius assentior te soluta mel placerat appareat duo splendide quo no.</p>
+                                <i class="hicon hicon-200 hicon-mountain-view text-primary mb-4"></i>
+                                <h3 class="h6 ff-sub text-uppercase ls-1 fw-semibold mb-4">Terraza con Vista</h3>
+                                <p class="mb-0">Con ​fogatero, muebles exteriores y luces.</p>
                             </div>
                         </div>
                         <!-- /Item -->
@@ -876,8 +763,8 @@
                 <!-- /Features -->
                 <!-- Link -->
                 <div class="text-center pt-4" data-cue="fadeIn">
-                    <a href="./facilities.html" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
-                        <span>Read more</span>
+                    <a href="https://www.airbnb.com.co/rooms/1040641098422619807/amenities?source_impression_id=p3_1721331836_P35RPu7nr80p66d7&guests=1&adults=1&_set_bev_on_new_domain=1732290095_EAOTE2MGQ1NmQ5OG" target="_blank" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font" rel="noopener">
+                        <span>Ver Todas</span>
                         <i class="hicon hicon-thin-circle-arrow-left"></i>
                     </a>
                 </div>
@@ -981,8 +868,8 @@
                     <div class="col-12 col-xl-6 col-lg-6" data-cues="fadeIn">
                         <!-- Heading -->
                         <div class="mb-8">
-                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Reviews on Tripadvisor</span>
-                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Our Clients Say</h2>
+                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Clientes dando sus</span>
+                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">TESTIMONIOS</h2>
                         </div>
                         <!-- /Heading -->
                         <!-- Testimonials -->
@@ -993,14 +880,18 @@
                                         <!-- Blockquote -->
                                         <div class="d-md-flex">
                                             <span class="flex-md-shrink-0 me-5">
-                                                <img src="./assets/img/avatars/a1.jpg" srcset="./assets/img/avatars/a1@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                                <img src="./assets/img/avatars/testimonio2.jpeg" srcset="./assets/img/avatars/testimonio2.jpeg"
+                                                    class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
                                             </span>
                                             <div class="flex-md-grow-1">
                                                 <blockquote class="d-block blockquote fst-italic mb-2">
-                                                    <p>Lorem ipsum dolor sit amet, in etiam docendi quaestio vis, et laoreet eos utroque concludaturque mei. Vis no altera fierent dissentiet, ei sea augue morro etiam nam ei. Ei duis omnesque quo.</p>
+                                                    <p>Recomiendo mucho el lugar! Súper cómodo y agradable para un escapada de la rutina! El personal del
+                                                        lugar y Paola siempre en la mejor disposición para atenderte. </p>
                                                 </blockquote>
-                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
-                                                <span class="d-block blockquote-footer text-body-secondary"> John Doe <cite title="Source Title">(Italy)</cite>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span
+                                                            class="star-value rate-50"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Amanda Fabiola <cite
+                                                        title="Source Title">(Monterrey, México)</cite>
                                                 </span>
                                             </div>
                                         </div>
@@ -1010,14 +901,18 @@
                                         <!-- Blockquote -->
                                         <div class="d-md-flex">
                                             <span class="flex-md-shrink-0 me-5">
-                                                <img src="./assets/img/avatars/a2.jpg" srcset="./assets/img/avatars/a2@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                                <img src="./assets/img/avatars/testimonio1.avif" srcset="./assets/img/avatars/testimonio1.avif"
+                                                    class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
                                             </span>
                                             <div class="flex-md-grow-1">
                                                 <blockquote class="d-block blockquote fst-italic mb-2">
-                                                    <p>Saperet voluptatibus signiferumque no eam, laoreet eos pertinax dissentiet in. Fabulas voluptua tale movet mea tale mea te. Te per integre splendide ei sea augue Vis no altera fierent dissentiet.</p>
+                                                    <p>Muy buena anfitriona, con recomendaciones de regalo porque íbamos de aniversario. Excelentes
+                                                        instrucciones y
+                                                        comunicación, así como el complejo limpio y en buen estado. Altamente recomendable.</p>
                                                 </blockquote>
-                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
-                                                <span class="d-block blockquote-footer text-body-secondary"> Emily Smith <cite title="Source Title">(France)</cite>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span
+                                                            class="star-value rate-50"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Rafael <cite title="Source Title">(Monterrey, México)</cite>
                                                 </span>
                                             </div>
                                         </div>
@@ -1027,14 +922,14 @@
                                         <!-- Blockquote -->
                                         <div class="d-md-flex">
                                             <span class="flex-md-shrink-0 me-5">
-                                                <img src="./assets/img/avatars/a3.jpg" srcset="./assets/img/avatars/a3@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                                <img src="./assets/img/avatars/testimonio4.avif" srcset="./assets/img/avatars/testimonio4.avif" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
                                             </span>
                                             <div class="flex-md-grow-1">
                                                 <blockquote class="d-block blockquote fst-italic mb-2">
-                                                    <p>Rationibus incorrupte vim te. Choro nominati assentior te sit, mea tale movet tamquam ut. An vitae altera fierent alienum detraxit nam. Has laudem ubique doming eu definitiones ex vel. </p>
+                                                    <p>Excelente lugar para despejarse del día a día, la cama super cómoda! Beny muy atento y amable. Vistas muy bonitas y aunque estén cerca las cabañas de al lado, aún así se siente muy privado.</p>
                                                 </blockquote>
-                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
-                                                <span class="d-block blockquote-footer text-body-secondary"> Alex Mark <cite title="Source Title">(USA)</cite>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-50"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Lilianna <cite title="Source Title">(Monterrey, México)</cite>
                                                 </span>
                                             </div>
                                         </div>
@@ -1044,19 +939,19 @@
                                         <!-- Blockquote -->
                                         <div class="d-md-flex">
                                             <span class="flex-md-shrink-0 me-5">
-                                                <img src="./assets/img/avatars/a4.jpg" srcset="./assets/img/avatars/a4@2x.jpg 2x" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
+                                                <img src="./assets/img/avatars/testimonio3.avif" srcset="./assets/img/avatars/testimonio3.avif" class="img-fluid rounded rounded-circle shadow-sm mb-6" width="80" alt="">
                                             </span>
                                             <div class="flex-md-grow-1">
                                                 <blockquote class="d-block blockquote fst-italic mb-2">
-                                                    <p>Et vix affert animal disputationi, ut ignota sapientem consetetur in etiam docendi est. Graeco aliquando ex quo, probo antiopam ut mei, ex ridens constituto voluptatum site intellegat. </p>
+                                                    <p>Un espacio muy tranquilo a 20min de Monterrey. Pero lo mejor fue la atención de Paola y Benny, realmente te hacen sentir como en casa!</p>
                                                 </blockquote>
-                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-45"></span></span></span>
-                                                <span class="d-block blockquote-footer text-body-secondary"> Ariol Deep <cite title="Source Title">(China)</cite>
+                                                <span class="d-block mb-5"><span class="star-rate-view star-rate-size-sm"><span class="star-value rate-50"></span></span></span>
+                                                <span class="d-block blockquote-footer text-body-secondary"> Cesar David <cite title="Source Title">(Tuxtla Gutiérrez, México)</cite>
                                                 </span>
                                             </div>
                                         </div>
                                         <!-- /Blockquote -->
-                                    </div>
+                                    </div>                                                                        
                                 </div>
                             </div>
                             <div class="d-inline-flex align-items-center fs-4 text-center justify-content-between position-absolute bottom-0 end-0 z-3">
@@ -1072,9 +967,17 @@
                         <!-- /Testimonials -->
                         <!-- Tripadvisor -->
                         <div class="mb-8 mb-lg-0">
-                            <img src="./assets/img/logos/trip.png" srcset="./assets/img/logos/trip@2x.png 2x" class="logo mb-2" alt="">
-                            <img src="./assets/img/logos/trip-light.png" srcset="./assets/img/logos/trip-light@2x.png 2x" class="logo-light mb-2" alt="">
-                            <div class="small fw-medium">Based on more 3,900 reviews</div>
+                            <a href="https://www.airbnb.com/rooms/1040641098422619807/reviews?source_impression_id=p3_1721331836_P35RPu7nr80p66d7&guests=1&adults=1&enable_auto_translate=false">
+                                <svg width="102" height="32" style="display:block">
+                                    <path
+                                        d="M29.3864 22.7101C29.2429 22.3073 29.0752 21.9176 28.9157 21.5565C28.6701 21.0011 28.4129 20.4446 28.1641 19.9067L28.1444 19.864C25.9255 15.0589 23.5439 10.1881 21.0659 5.38701L20.9607 5.18316C20.7079 4.69289 20.4466 4.18596 20.1784 3.68786C19.8604 3.0575 19.4745 2.4636 19.0276 1.91668C18.5245 1.31651 17.8956 0.833822 17.1853 0.502654C16.475 0.171486 15.7005 -9.83959e-05 14.9165 4.23317e-08C14.1325 9.84805e-05 13.3581 0.171877 12.6478 0.503224C11.9376 0.834571 11.3088 1.31742 10.8059 1.91771C10.3595 2.46476 9.97383 3.05853 9.65572 3.68858C9.38521 4.19115 9.12145 4.70278 8.8664 5.19757L8.76872 5.38696C6.29061 10.1884 3.90903 15.0592 1.69015 19.8639L1.65782 19.9338C1.41334 20.463 1.16057 21.0102 0.919073 21.5563C0.75949 21.9171 0.592009 22.3065 0.448355 22.7103C0.0369063 23.8104 -0.094204 24.9953 0.0668098 26.1585C0.237562 27.334 0.713008 28.4447 1.44606 29.3804C2.17911 30.3161 3.14434 31.0444 4.24614 31.4932C5.07835 31.8299 5.96818 32.002 6.86616 32C7.14824 31.9999 7.43008 31.9835 7.71027 31.9509C8.846 31.8062 9.94136 31.4366 10.9321 30.8639C12.2317 30.1338 13.5152 29.0638 14.9173 27.5348C16.3194 29.0638 17.6029 30.1338 18.9025 30.8639C19.8932 31.4367 20.9886 31.8062 22.1243 31.9509C22.4045 31.9835 22.6864 31.9999 22.9685 32C23.8664 32.002 24.7561 31.8299 25.5883 31.4932C26.6901 31.0444 27.6554 30.3161 28.3885 29.3804C29.1216 28.4447 29.5971 27.3341 29.7679 26.1585C29.9287 24.9952 29.7976 23.8103 29.3864 22.7101ZM14.9173 24.377C13.1816 22.1769 12.0678 20.1338 11.677 18.421C11.5169 17.7792 11.4791 17.1131 11.5656 16.4573C11.6339 15.9766 11.8105 15.5176 12.0821 15.1148C12.4163 14.6814 12.8458 14.3304 13.3374 14.0889C13.829 13.8475 14.3696 13.7219 14.9175 13.7219C15.4655 13.722 16.006 13.8476 16.4976 14.0892C16.9892 14.3307 17.4186 14.6817 17.7528 15.1151C18.0244 15.5181 18.201 15.9771 18.2693 16.4579C18.3556 17.114 18.3177 17.7803 18.1573 18.4223C17.7661 20.1349 16.6526 22.1774 14.9173 24.377ZM27.7406 25.8689C27.6212 26.6908 27.2887 27.4674 26.7762 28.1216C26.2636 28.7759 25.5887 29.2852 24.8183 29.599C24.0393 29.9111 23.1939 30.0217 22.3607 29.9205C21.4946 29.8089 20.6599 29.5239 19.9069 29.0824C18.7501 28.4325 17.5791 27.4348 16.2614 25.9712C18.3591 23.3846 19.669 21.0005 20.154 18.877C20.3723 17.984 20.4196 17.0579 20.2935 16.1475C20.1791 15.3632 19.8879 14.615 19.4419 13.9593C18.9194 13.2519 18.2378 12.6768 17.452 12.2805C16.6661 11.8842 15.798 11.6777 14.9175 11.6777C14.0371 11.6777 13.1689 11.8841 12.383 12.2803C11.5971 12.6765 10.9155 13.2515 10.393 13.9589C9.94707 14.6144 9.65591 15.3624 9.5414 16.1465C9.41524 17.0566 9.4623 17.9822 9.68011 18.8749C10.1648 20.9993 11.4748 23.384 13.5732 25.9714C12.2555 27.4348 11.0845 28.4325 9.92769 29.0825C9.17468 29.5239 8.34007 29.809 7.47395 29.9205C6.64065 30.0217 5.79525 29.9111 5.0162 29.599C4.24581 29.2852 3.57092 28.7759 3.05838 28.1217C2.54585 27.4674 2.21345 26.6908 2.09411 25.8689C1.97932 25.0334 2.07701 24.1825 2.37818 23.3946C2.49266 23.0728 2.62663 22.757 2.7926 22.3818C3.0274 21.851 3.27657 21.3115 3.51759 20.7898L3.54996 20.7197C5.75643 15.9419 8.12481 11.0982 10.5894 6.32294L10.6875 6.13283C10.9384 5.64601 11.1979 5.14267 11.4597 4.6563C11.7101 4.15501 12.0132 3.68171 12.3639 3.2444C12.6746 2.86903 13.0646 2.56681 13.5059 2.35934C13.9473 2.15186 14.4291 2.04426 14.9169 2.04422C15.4047 2.04418 15.8866 2.15171 16.3279 2.35911C16.7693 2.56651 17.1593 2.86867 17.4701 3.24399C17.821 3.68097 18.1242 4.15411 18.3744 4.65538C18.6338 5.13742 18.891 5.63623 19.1398 6.11858L19.2452 6.32315C21.7097 11.0979 24.078 15.9415 26.2847 20.7201L26.3046 20.7631C26.5498 21.2936 26.8033 21.8419 27.042 22.382C27.2082 22.7577 27.3424 23.0738 27.4566 23.3944C27.7576 24.1824 27.8553 25.0333 27.7406 25.8689Z"
+                                        fill="currentcolor"></path>
+                                    <path
+                                        d="M41.6847 24.1196C40.8856 24.1196 40.1505 23.9594 39.4792 23.6391C38.808 23.3188 38.2327 22.8703 37.7212 22.2937C37.2098 21.7172 36.8263 21.0445 36.5386 20.3078C36.2509 19.539 36.123 18.7062 36.123 17.8093C36.123 16.9124 36.2829 16.0475 36.5705 15.2787C36.8582 14.51 37.2737 13.8373 37.7852 13.2287C38.2966 12.6521 38.9039 12.1716 39.6071 11.8513C40.3103 11.531 41.0455 11.3708 41.8765 11.3708C42.6756 11.3708 43.3788 11.531 44.0181 11.8833C44.6574 12.2037 45.1688 12.6841 45.5843 13.2927L45.6802 11.7232H48.6209V23.7992H45.6802L45.5843 22.0375C45.1688 22.6781 44.6254 23.1906 43.9222 23.575C43.2829 23.9274 42.5158 24.1196 41.6847 24.1196ZM42.4519 21.2367C43.0272 21.2367 43.5386 21.0765 44.0181 20.7882C44.4656 20.4679 44.8172 20.0515 45.1049 19.539C45.3606 19.0265 45.4884 18.4179 45.4884 17.7452C45.4884 17.0725 45.3606 16.4639 45.1049 15.9514C44.8492 15.4389 44.4656 15.0225 44.0181 14.7022C43.5706 14.3818 43.0272 14.2537 42.4519 14.2537C41.8765 14.2537 41.3651 14.4139 40.8856 14.7022C40.4382 15.0225 40.0866 15.4389 39.7989 15.9514C39.5432 16.4639 39.4153 17.0725 39.4153 17.7452C39.4153 18.4179 39.5432 19.0265 39.7989 19.539C40.0546 20.0515 40.4382 20.4679 40.8856 20.7882C41.3651 21.0765 41.8765 21.2367 42.4519 21.2367ZM53.6392 8.4559C53.6392 8.80825 53.5753 9.12858 53.4154 9.38483C53.2556 9.64109 53.0319 9.86531 52.7442 10.0255C52.4565 10.1856 52.1369 10.2497 51.8173 10.2497C51.4976 10.2497 51.178 10.1856 50.8903 10.0255C50.6026 9.86531 50.3789 9.64109 50.2191 9.38483C50.0592 9.09654 49.9953 8.80825 49.9953 8.4559C49.9953 8.10355 50.0592 7.78323 50.2191 7.52697C50.3789 7.23868 50.6026 7.04649 50.8903 6.88633C51.178 6.72617 51.4976 6.66211 51.8173 6.66211C52.1369 6.66211 52.4565 6.72617 52.7442 6.88633C53.0319 7.04649 53.2556 7.27072 53.4154 7.52697C53.5433 7.78323 53.6392 8.07152 53.6392 8.4559ZM50.2191 23.7672V11.6911H53.4154V23.7672H50.2191V23.7672ZM61.9498 14.8623V14.8943C61.79 14.8303 61.5982 14.7982 61.4383 14.7662C61.2466 14.7342 61.0867 14.7342 60.895 14.7342C60 14.7342 59.3287 14.9904 58.8812 15.535C58.4018 16.0795 58.178 16.8483 58.178 17.8413V23.7672H54.9817V11.6911H57.9223L58.0182 13.517C58.3379 12.8763 58.7214 12.3958 59.2648 12.0435C59.7762 11.6911 60.3835 11.531 61.0867 11.531C61.3105 11.531 61.5342 11.563 61.726 11.595C61.8219 11.6271 61.8858 11.6271 61.9498 11.6591V14.8623ZM63.2283 23.7672V6.72617H66.4247V13.2287C66.8722 12.6521 67.3836 12.2036 68.0229 11.8513C68.6622 11.531 69.3654 11.3388 70.1645 11.3388C70.9635 11.3388 71.6987 11.4989 72.3699 11.8193C73.0412 12.1396 73.6165 12.588 74.128 13.1646C74.6394 13.7412 75.0229 14.4139 75.3106 15.1506C75.5983 15.9194 75.7261 16.7522 75.7261 17.6491C75.7261 18.546 75.5663 19.4109 75.2787 20.1796C74.991 20.9484 74.5755 21.6211 74.064 22.2297C73.5526 22.8063 72.9453 23.2867 72.2421 23.6071C71.5389 23.9274 70.8037 24.0875 69.9727 24.0875C69.1736 24.0875 68.4704 23.9274 67.8311 23.575C67.1918 23.2547 66.6804 22.7742 66.2649 22.1656L66.169 23.7352L63.2283 23.7672ZM69.3973 21.2367C69.9727 21.2367 70.4841 21.0765 70.9635 20.7882C71.411 20.4679 71.7626 20.0515 72.0503 19.539C72.306 19.0265 72.4339 18.4179 72.4339 17.7452C72.4339 17.0725 72.306 16.4639 72.0503 15.9514C71.7626 15.4389 71.411 15.0225 70.9635 14.7022C70.5161 14.3818 69.9727 14.2537 69.3973 14.2537C68.822 14.2537 68.3106 14.4139 67.8311 14.7022C67.3836 15.0225 67.032 15.4389 66.7443 15.9514C66.4886 16.4639 66.3608 17.0725 66.3608 17.7452C66.3608 18.4179 66.4886 19.0265 66.7443 19.539C67 20.0515 67.3836 20.4679 67.8311 20.7882C68.3106 21.0765 68.822 21.2367 69.3973 21.2367ZM76.9408 23.7672V11.6911H79.8814L79.9773 13.2607C80.3289 12.6841 80.8084 12.2357 81.4157 11.8833C82.023 11.531 82.7262 11.3708 83.5253 11.3708C84.4203 11.3708 85.1874 11.595 85.8267 12.0115C86.4979 12.4279 87.0094 13.0365 87.361 13.8053C87.7126 14.574 87.9043 15.5029 87.9043 16.56V23.7992H84.708V16.9764C84.708 16.1436 84.5162 15.4709 84.1326 14.9904C83.7491 14.51 83.2376 14.2537 82.5664 14.2537C82.0869 14.2537 81.6714 14.3498 81.2878 14.574C80.9362 14.7982 80.6486 15.0865 80.4248 15.503C80.2011 15.8873 80.1052 16.3678 80.1052 16.8483V23.7672H76.9408V23.7672ZM89.5025 23.7672V6.72617H92.6989V13.2287C93.1464 12.6521 93.6578 12.2036 94.2971 11.8513C94.9364 11.531 95.6396 11.3388 96.4387 11.3388C97.2378 11.3388 97.9729 11.4989 98.6442 11.8193C99.3154 12.1396 99.8907 12.588 100.402 13.1646C100.914 13.7412 101.297 14.4139 101.585 15.1506C101.873 15.9194 102 16.7522 102 17.6491C102 18.546 101.841 19.4109 101.553 20.1796C101.265 20.9484 100.85 21.6211 100.338 22.2297C99.8268 22.8063 99.2195 23.2867 98.5163 23.6071C97.8131 23.9274 97.0779 24.0875 96.2469 24.0875C95.4478 24.0875 94.7446 23.9274 94.1053 23.575C93.466 23.2547 92.9546 22.7742 92.5391 22.1656L92.4432 23.7352L89.5025 23.7672ZM95.7035 21.2367C96.2788 21.2367 96.7903 21.0765 97.2697 20.7882C97.7172 20.4679 98.0688 20.0515 98.3565 19.539C98.6122 19.0265 98.7401 18.4179 98.7401 17.7452C98.7401 17.0725 98.6122 16.4639 98.3565 15.9514C98.1008 15.4389 97.7172 15.0225 97.2697 14.7022C96.8222 14.3818 96.2788 14.2537 95.7035 14.2537C95.1281 14.2537 94.6167 14.4139 94.1373 14.7022C93.6898 15.0225 93.3382 15.4389 93.0505 15.9514C92.7628 16.4639 92.6669 17.0725 92.6669 17.7452C92.6669 18.4179 92.7948 19.0265 93.0505 19.539C93.3062 20.0515 93.6898 20.4679 94.1373 20.7882C94.6167 21.0765 95.0962 21.2367 95.7035 21.2367Z"
+                                        fill="currentcolor"></path>
+                                </svg>
+                                <div class="small fw-medium">Basado en más de 60 reseñas.</div>
+                            </a>
                         </div>
                         <!-- /Tripadvisor -->
                     </div>
@@ -1083,20 +986,20 @@
                         <div class="position-relative mb-16" data-cues="fadeIn">
                             <div class="position-absolute top-0 end-0 start-0 bottom-0 bg-body-tertiary h-100 w-100 mt-16 ms-16"></div>
                             <figure class="figure mb-0 w-100 position-relative z-2">
-                                <img src="./assets/img/about/a1.jpg" srcset="./assets/img/about/a1@2x.jpg 2x" class="figure-img img-fluid mb-0 w-100" alt="...">
+                                <img src="./assets/img/drive/cabanas2.JPG" srcset="./assets/img/drive/cabanas2.JPG" class="figure-img img-fluid mb-0 w-100" alt="...">
                             </figure>
                             <div class="position-absolute bottom-0 start-0 end-0 mb-6 ms-6 me-6 z-3">
                                 <div class="row g-6">
                                     <div class="col-6 col-md-4">
                                         <div class="bg-primary bg-opacity-85 p-4 text-center text-white">
-                                            <h4 class="mb-0">3,800+</h4>
-                                            <span class="d-inline-block text-uppercase ls-1 fsm-4">Clients</span>
+                                            <h4 class="mb-0">150+</h4>
+                                            <span class="d-inline-block text-uppercase ls-1 fsm-4">Clientes</span>
                                         </div>
                                     </div>
                                     <div class="col-6 col-md-4">
                                         <div class="bg-secondary bg-opacity-85 p-4 text-center text-white">
-                                            <h4 class="mb-0">2,900+</h4>
-                                            <span class="d-inline-block text-uppercase ls-1 fsm-4">Booking</span>
+                                            <h4 class="mb-0">100+</h4>
+                                            <span class="d-inline-block text-uppercase ls-1 fsm-4">Reservaciones</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1128,144 +1031,27 @@
             </div>
         </section>
         <!-- /Video -->
-        <!-- News events -->
-        <section id="news" class="pt-14 pb-14 bg-body-tertiary">
-            <div class="container" data-cues="fadeIn">
+        <section id="location" class="pt-16 ">
+            <div data-cues="fadeIn" data-disabled="true">
                 <!-- Heading -->
-                <div class="mb-8 text-center">
-                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Useful Information</span>
-                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">News & Events</h2>
+                <div class="text-center mb-10" data-cue="fadeIn" data-show="true"
+                    style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                    <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">A unos minutos de monterrey</span>
+                    <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Ubicación</h2>
                 </div>
                 <!-- /Heading -->
-                <!-- Article list -->
-                <div class="swiper swiper-pagination-number swiper-button-bottom news-slider">
-                    <div class="swiper-wrapper mb-8">
-                        <div class="swiper-slide">
-                            <!-- Article -->
-                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
-                                <a href="./single-post.html" title="">
-                                    <figure class="image-hover-scale image-hover-overlay mb-0">
-                                        <img src="./assets/img/news/n2.jpg" srcset="./assets/img/news/n2@2x.jpg 2x" class="card-img-top" alt="">
-                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
-                                            <small>11</small>
-                                            <small>Jul</small>
-                                            <small>22</small>
-                                        </span>
-                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                    </figure>
-                                </a>
-                                <div class="card-body bg-body shadow-sm">
-                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1text-uppercase">Travel Guide</a>
-                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">Best Panoramic Views of the Paris Skyline </h3>
-                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                        <span>Details</span>
-                                        <i class="hicon hicon-flights-one-ways"></i>
-                                    </a>
-                                </div>
-                            </article>
-                            <!-- /Article -->
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- Article -->
-                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
-                                <a href="./single-post.html" title="">
-                                    <figure class="image-hover-scale image-hover-overlay mb-0">
-                                        <img src="./assets/img/news/n5.jpg" srcset="./assets/img/news/n5@2x.jpg 2x" class="card-img-top" alt="">
-                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
-                                            <small>11</small>
-                                            <small>Jul</small>
-                                            <small>22</small>
-                                        </span>
-                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                    </figure>
-                                </a>
-                                <div class="card-body bg-body shadow-sm">
-                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1 text-uppercase">Tour Info</a>
-                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">Around Bir Hakeim Bridge & Eiffel Tower </h3>
-                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                        <span>Details</span>
-                                        <i class="hicon hicon-flights-one-ways"></i>
-                                    </a>
-                                </div>
-                            </article>
-                            <!-- /Article -->
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- Article -->
-                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
-                                <a href="./single-post.html" title="">
-                                    <figure class="image-hover-scale image-hover-overlay mb-0">
-                                        <img src="./assets/img/news/n3.jpg" srcset="./assets/img/news/n3@2x.jpg 2x" class="card-img-top" alt="">
-                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
-                                            <small>11</small>
-                                            <small>Jul</small>
-                                            <small>22</small>
-                                        </span>
-                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                    </figure>
-                                </a>
-                                <div class="card-body bg-body shadow-sm">
-                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1 text-uppercase">Explore City</a>
-                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">Top-Rated Attractive destination in Paris </h3>
-                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                        <span>Details</span>
-                                        <i class="hicon hicon-flights-one-ways"></i>
-                                    </a>
-                                </div>
-                            </article>
-                            <!-- /Article -->
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- Article -->
-                            <article class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
-                                <a href="./single-post.html" title="">
-                                    <figure class="image-hover-scale image-hover-overlay mb-0">
-                                        <img src="./assets/img/news/n1.jpg" srcset="./assets/img/news/n1@2x.jpg 2x" class="card-img-top" alt="">
-                                        <span class="position-absolute bg-secondary bg-opacity-85 z-3 start-0 top-0 text-white d-flex flex-column p-4 small text-uppercase text-center">
-                                            <small>10</small>
-                                            <small>Jul</small>
-                                            <small>22</small>
-                                        </span>
-                                        <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
-                                    </figure>
-                                </a>
-                                <div class="card-body bg-body shadow-sm">
-                                    <a href="./news.html" class="mb-4 fsm-4 fw-medium d-inline-block ls-1 text-uppercase">Travel Guide</a>
-                                    <h3 class="card-title fsm-1 ls-1 text-uppercase">The Complete Guide to Parisian Lifestyle</h3>
-                                    <a href="./single-post.html" class="card-link fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
-                                        <span>Details</span>
-                                        <i class="hicon hicon-flights-one-ways"></i>
-                                    </a>
-                                </div>
-                            </article>
-                            <!-- /Article -->
-                        </div>
-                    </div>
-                    <!-- Navs -->
-                    <div class="text-center">
-                        <div class="d-inline-flex align-items-center fs-4">
-                            <span role="button" class="news-prev text-primary p-4 lh-1">
-                                <i class="hicon hicon-thin-arrow-right"></i>
-                            </span>
-                            <span class="news-pagination p-4 lh-1 fs-5"></span>
-                            <span role="button" class="news-next text-primary p-4 lh-1">
-                                <i class="hicon hicon-thin-arrow-left"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- Navs -->
-                </div>
-                <!-- /Article list -->
+                <!-- Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.2729145903904!2d-100.17567301318887!3d25.46256091733404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c9af662455b5%3A0xf1224dd1d88af639!2sInto%20the%20moon!5e0!3m2!1ses-419!2smx!4v1732560564166!5m2!1ses-419!2smx" class="border-0 w-100 d-block rounded overflow-hidden" style="height: 400px; animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;" data-cue="fadeIn" data-show="true"></iframe>
+                <!-- Map -->
             </div>
         </section>
-        <!-- /News events -->
     </main>
     <!-- Footer -->
     <footer id="footer">
         <!-- Heading -->
         <div class="pt-14 pb-18 pb-md-14 pb-lg-10 border-top border-bottom text-center" data-cue="fadeIn">
-            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Start To Experience</span>
-            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Reservation</h2>
+            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Vive la experiencia</span>
+            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Reservación</h2>
         </div>
         <!-- /Heading -->
         <!-- Check rooms -->
@@ -1301,7 +1087,7 @@
                                                         <ul class="dropdown-menu animate slideIn p-6 border-0 shadow">
                                                             <li>
                                                                 <div class="mb-3">
-                                                                    <label for="txtCheckAdults1" class="form-label">Adults</label>
+                                                                    <label for="txtCheckAdults1" class="form-label">Adultos</label>
                                                                     <div class="input-group shadow-sm">
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-adults="">
                                                                             <i class="hicon hicon-minus-thin small"></i>
@@ -1315,7 +1101,7 @@
                                                             </li>
                                                             <li>
                                                                 <div class="mb-1">
-                                                                    <label for="txtCheckChildren1" class="form-label">Children</label>
+                                                                    <label for="txtCheckChildren1" class="form-label">Niños</label>
                                                                     <div class="input-group shadow-sm">
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="">
                                                                             <i class="hicon hicon-minus-thin small"></i>
@@ -1338,7 +1124,7 @@
                                             <div class="mb-0">
                                                 <button type="submit" class="btn btn-secondary w-100 fw-medium">
                                                     <i class="hicon hicon-mmb-my-booking hicon-md mr-1"></i>
-                                                    <span>Check room</span>
+                                                    <span>Ver Disponibilidad</span>
                                                 </button>
                                             </div>
                                             <!-- /Button -->
@@ -1354,67 +1140,21 @@
         <!-- /Check rooms -->
         <div class="bg-body text-body-tertiary pb-14" data-bs-theme="dark">
             <div class="container">
-                <!-- Brands system -->
-                <div class="border-bottom border-white border-opacity-10 pt-24 pt-md-22 pt-lg-20 pb-6 mb-10">
-                    <div class="row" data-cues="fadeIn">
-                        <div class="col-6 col-lg-2 col-md-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="img-fluid" src="./assets/img/logos/l1.png" srcset="./assets/img/logos/l1@2x.png 2x" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col-6 col-lg-2 col-md-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="img-fluid" src="./assets/img/logos/l2.png" srcset="./assets/img/logos/l2@2x.png 2x" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col-6 col-lg-2 col-md-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="img-fluid" src="./assets/img/logos/l3.png" srcset="./assets/img/logos/l3@2x.png 2x" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col-6 col-lg-2 col-md-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="img-fluid" src="./assets/img/logos/l4.png" srcset="./assets/img/logos/l4@2x.png 2x" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col-6 col-lg-2 col-md-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="img-fluid" src="./assets/img/logos/l5.png" srcset="./assets/img/logos/l5@2x.png 2x" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col-6 col-lg-2 col-md-4">
-                            <a href="#">
-                                <figure>
-                                    <img class="img-fluid" src="./assets/img/logos/l6.png" srcset="./assets/img/logos/l6@2x.png 2x" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Brands system -->
+                
                 <!-- Footer top -->
-                <div class="border-bottom border-white border-opacity-10">
+                <div class="border-bottom border-white border-opacity-10 pt-24 pt-md-22 pt-lg-20">
                     <div class="row" data-cues="fadeIn">
                         <div class="col-12 col-xl-3 col-lg-12 col-md-6">
                             <!-- Brand -->
                             <div class="mb-10">
-                                <a href="./index.html" class="d-flex align-items-center text-body-emphasis h-sub-font text-uppercase mb-6">
-                                    <img class="me-4" src="./assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="" height="48">
-                                    <span class="h5 fw-semibold d-block ls-5 mb-2 lh-1">Laseta</span>
-                                </a>
-                                <p>
-                                    <em>Sed diam constituam ei, qui erat probo dissentiet ex. Ius nominati dissentiet eu, sit ut doming facilisis sententiae. Id vim libris volutpat, pri cu errem timeam cotidieque, purto summo has te. An quis eligendi atomorum duo.</em>
-                                    <a href="./about.html" class="text-body link-hover-primary">[+]</a>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a href="#" class="d-flex align-items-center text-body-emphasis h-sub-font text-uppercase mb-6">
+                                        <img class="me-4" src="./assets/img/logos/logo2.png" srcset="./assets/img/logos/logo2.png" alt=""
+                                            height="40" width="250">
+                                    </a>
+                                </div>
+                                <p class="text-justify">
+                                    <em>Into The Moon es un refugio de paz, diseñado para aquellos que buscan una experiencia de inmersión en la naturaleza con un enfoque en el bienestar holístico. Enfocado en un público maduro y consciente, el espacio invita a los huéspedes a desconectarse del ajetreo cotidiano y reconectarse consigo mismos a través de experiencias de sanación y serenidad dentro del concepto de GLAMPING.</em>
                                 </p>
                             </div>
                             <!-- /Brand -->
@@ -1422,66 +1162,39 @@
                         <div class="col-12 col-xl-3 col-lg-4 col-md-6">
                             <!-- Contact Info -->
                             <div class="mb-10">
-                                <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Contact Info</h6>
+                                <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Contacto</h6>
                                 <div class="pt-2">
                                     <p>
-                                        <span>610 Placer Loquen, Paris, France.</span>
+                                        <span class="flex-grow-1"><a href="https://maps.app.goo.gl/z1VTUfrzmRzZgCWt5" class="text-body link-hover-primary ms-2">104, Los Pinos, Quinta San Jorge, 67340 Santiago, Nuevo León</a></span>
                                     </p>
                                     <p>
-                                        <span>+33 321-654-987 (Ext: 123).</span>
+                                        <a href="tel:+528124383335" class="text-body link-hover-primary">+52 812 438 3335</a>
                                     </p>
                                     <p>
-                                        <a href="#" class="text-body link-hover-primary">Booking@example.com</a>
-                                    </p>
-                                    <p>
-                                        <a href="#" class="text-body link-hover-primary">www.example.com</a>
+                                        <a href="mailto:Airbnbintothemoon@gmail.com" class="text-body link-hover-primary">Airbnbintothemoon@gmail.com</a>
                                     </p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a href="#" class="text-body link-hover-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                            <a href="https://www.facebook.com/intothemoonmx/" class="text-body link-hover-primary" target="_blank">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                                    <path
+                                                        d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm4 7.278V4.5h-2.286c-2.1 0-3.428 1.6-3.428 3.889v1.667H8v2.777h2.286V19.5h2.857v-6.667h2.286L16 10.056h-2.857V8.944c0-1.11.572-1.666 1.714-1.666H16z" />
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a href="#" class="text-body link-hover-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                            <a href="https://instagram.com/intothemoonmx" class="text-body link-hover-primary" target="_blank">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                                    <path
+                                                        d="M12 0c6.6274 0 12 5.3726 12 12s-5.3726 12-12 12S0 18.6274 0 12 5.3726 0 12 0zm3.115 4.5h-6.23c-2.5536 0-4.281 1.6524-4.3805 4.1552L4.5 8.8851v6.1996c0 1.3004.4234 2.4193 1.2702 3.2359.7582.73 1.751 1.1212 2.8818 1.1734l.2633.006h6.1694c1.3004 0 2.389-.4234 3.1754-1.1794.762-.734 1.1817-1.7576 1.2343-2.948l.0056-.2577V8.8851c0-1.2702-.4234-2.3589-1.2097-3.1452-.7338-.762-1.7575-1.1817-2.9234-1.2343l-.252-.0056zM8.9152 5.8911h6.2299c.9072 0 1.6633.2722 2.2076.8166.4713.499.7647 1.1758.8103 1.9607l.0063.2167v6.2298c0 .9375-.3327 1.6936-.877 2.2077-.499.4713-1.176.7392-1.984.7806l-.2237.0057H8.9153c-.9072 0-1.6633-.2722-2.2076-.7863-.499-.499-.7693-1.1759-.8109-2.0073l-.0057-.2306V8.885c0-.9073.2722-1.6633.8166-2.2077.4712-.4713 1.1712-.7392 1.9834-.7806l.2242-.0057h6.2299-6.2299zM12 8.0988c-2.117 0-3.871 1.7238-3.871 3.871A3.8591 3.8591 0 0 0 12 15.8408c2.1472 0 3.871-1.7541 3.871-3.871 0-2.117-1.754-3.871-3.871-3.871zm0 1.3911c1.3609 0 2.4798 1.119 2.4798 2.4799 0 1.3608-1.119 2.4798-2.4798 2.4798-1.3609 0-2.4798-1.119-2.4798-2.4798 0-1.361 1.119-2.4799 2.4798-2.4799zm4.0222-2.3589a.877.877 0 1 0 0 1.754.877.877 0 0 0 0-1.754z" />
                                                 </svg>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a href="#" class="text-body link-hover-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
-                                                    <path d="M10 9l5 3l-5 3z"></path>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#" class="text-body link-hover-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M8 20l4 -9"></path>
-                                                    <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
-                                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#" class="text-body link-hover-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
-                                                    <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
-                                                    <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
-                                                    <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
-                                                    <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
-                                                    <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                                            <a href="https://www.tiktok.com/@intothemoonmty" class="text-body link-hover-primary" target="_blank">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                                    <path
+                                                        d="M12 0c6.6274 0 12 5.3726 12 12s-5.3726 12-12 12S0 18.6274 0 12 5.3726 0 12 0Zm3.1623 4h-2.7508v10.9209a2.3324 2.3324 0 0 1-3.0455 2.2209 2.3324 2.3324 0 0 1 1.4129-4.4459V9.8862a5.0812 5.0812 0 0 0-5.7481 5.5912 5.0805 5.0805 0 0 0 3.802 4.3668 5.0818 5.0818 0 0 0 5.423-2.0286c.5899-.8501.9062-1.86.9065-2.8947V9.3345A6.5666 6.5666 0 0 0 19 10.5614V7.83a3.796 3.796 0 0 1-2.0944-.6295 3.8188 3.8188 0 0 1-1.6852-2.5075 3.7856 3.7856 0 0 1-.058-.693Z" />
                                                 </svg>
                                             </a>
                                         </li>
@@ -1493,43 +1206,31 @@
                         <div class="col-12 col-xl-3 col-lg-4 col-md-6">
                             <!-- Quick Links -->
                             <div class="mb-10">
-                                <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Quick Links</h6>
+                                <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Secciones</h6>
                                 <div class="row">
                                     <div class="col-5">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./about.html">About</a>
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="#hero">Inicio</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./gallery.html">Gallery</a>
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="#about">Nosotros</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./facilities.html">Facilities</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./news.html">News</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./contact.html">Contact</a>
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="#facilities">Amenidades</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-7">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./rooms-1.html">Rooms & Suites</a>
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="#galeria">Galería</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./special-offers.html">Special Offers</a>
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="#testimonios">Testimonios</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./restaurant.html">Restaurant & Bar</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./spa-wellness.html">Spa & Wellness</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="./meetings-events.html">Metting & Events</a>
+                                                <a class="nav-link text-body ps-0 pe-0 link-hover-primary" href="#location">Ubicación</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -1541,18 +1242,18 @@
                             <div class="mb-10">
                                 <!-- Mobile App -->
                                 <div class="mb-6">
-                                    <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Get the app</h6>
+                                    <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light fsm-1">Ver en aplicación</h6>
                                     <div class="pt-4">
                                         <div class="row g-3">
                                             <div class="col-6">
-                                                <a href="#">
+                                                <a href="airbnb://rooms/1040641098422619807" onclick="setTimeout(function() { window.location = 'https://www.airbnb.com/rooms/1040641098422619807'; }, 300);">
                                                     <figure>
                                                         <img src="./assets/img/icons/i1.svg" class="img-fluid w-100" alt="">
                                                     </figure>
                                                 </a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="#">
+                                                <a href="airbnb://rooms/1040641098422619807" onclick="setTimeout(function() { window.location = 'https://www.airbnb.com/rooms/1040641098422619807'; }, 300);">
                                                     <figure>
                                                         <img src="./assets/img/icons/i2.svg" class="img-fluid w-100" alt="">
                                                     </figure>
@@ -1562,26 +1263,6 @@
                                     </div>
                                 </div>
                                 <!-- /Mobile App -->
-                                <!-- Social -->
-                                <div class="mb-10 pt-4">
-                                    <h6 class="fw-semibold text-uppercase ls-1 h-sub-font text-light mb-6 fsm-1">Language & currency</h6>
-                                    <div class="d-flex fsm-2 fw-medium">
-                                        <div>
-                                            <a class="d-flex align-items-center link-hover-primary" data-bs-toggle="modal" href="#mdlLanguage">
-                                                <img src="./assets/img/flags/en.svg" height="14" alt="" class="me-1">
-                                                <span>English</span>
-                                                <i class="hicon hicon-thin-arrow-down ms-1 fsm-6"></i>
-                                            </a>
-                                        </div>
-                                        <div class="ms-auto">
-                                            <a class="d-flex link-hover-primary" data-bs-toggle="modal" href="#mdlCurrency">
-                                                <span>USD (United States Dollar)</span>
-                                                <i class="hicon hicon-thin-arrow-down ms-1 fsm-6"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Social -->
                             </div>
                         </div>
                     </div>
@@ -1591,171 +1272,14 @@
                 <div class="mt-10">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p>© 2023 Laseta Gallery Hotel. All rights reserved.</p>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="text-start text-md-end">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="text-body link-hover-primary" href="./blank.html">Privacy Policy</a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="text-body link-hover-primary" href="./blank.html">Terms of Use</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                            <p>© 2024 Into The Moon | Glamping & Holistic Living. Todos los derechos reservados.</p>
+                        </div>                        
                     </div>
                 </div>
                 <!-- /Footer Bottom -->
             </div>
         </div>
     </footer>
-    <!-- Currency -->
-    <div class="modal fade" id="mdlCurrency" tabindex="-1" aria-labelledby="h3Currency" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title fs-4 text-uppercase ls-1 ff-sub" id="h3Currency">Select currency</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav small row mb-0">
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>USD</strong> (United States Dollar)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>EUR</strong> (Euro)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>GBP</strong> (Pound Sterling)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>AUD</strong> (Australian Dollar)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>NZD</strong> (New Zealand Dollar)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>CAD</strong> (Canadian Dollar)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>AUD</strong> (Australian Dollar)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>JPY</strong> (Japanese Yen)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>CNY</strong> (Chinese Yuan)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>VND</strong> (Vietnam Dong)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>SGD</strong> (Singapore Dollar)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-12 col-lg-6">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <span class="me-1"><strong>THB</strong> (Thai Baht)</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Currency -->
-    <!-- Language -->
-    <div class="modal fade" id="mdlLanguage" tabindex="-1" aria-labelledby="h3Language" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title fs-4 text-uppercase ls-1 ff-sub" id="h3Language">Select language</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav small row mb-0">
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/en.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">English</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/fr.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Français</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/es.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Español</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/de.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Deutsch</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/it.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Italiano</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/nl.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Nederlands</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/pt.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Português</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/ru.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">Русский</span>
-                            </a>
-                        </li>
-                        <li class="nav-item col-6 col-lg-4">
-                            <a class="nav-link text-body link-hover-primary d-flex align-items-center ps-0 ps-0" href="#">
-                                <img src="./assets/img/flags/cn.svg" height="16" alt="" class="me-2">
-                                <span class="me-1">日本語</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- <button class="back-to-top d-flex align-items-center justify-content-center" style="cursor:auto;"></i>
         <script src="assets/js/cloudbeds-horiz.js"></script>
@@ -1773,6 +1297,96 @@
     <script src="./assets/js/theme.js"></script>
     <script src="assets/js/cloudbeds-immersive.js"></script>
     <!-- /Scripts -->
+
+    <script>
+
+        document.onload = function () {
+            var input = document.getElementById('txtCheckDate');
+            input.datepicker.destroy();
+            var datepicker = new HotelDatepicker(input, {
+                format: 'dddd D MMM YYYY',
+                startOfWeek: 'monday',
+                i18n: {
+                    selected: 'Tu estancia:',
+                    night: 'Noche',
+                    nights: 'Noches',
+                    button: 'Cerrar',
+                    clearButton: 'Borrar',
+                    submitButton: 'Enviar',
+                    'checkin-disabled': 'Check-in deshabilitado',
+                    'checkout-disabled': 'Check-out deshabilitado',
+                    'day-names-short': ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+                    'day-names': ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                    'month-names-short': ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                    'month-names': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    'error-more': 'El intervalo de fechas no debe tener más de 1 noche',
+                    'error-more-plural': 'El intervalo de fechas no debe tener más de %d noches',
+                    'error-less': 'El intervalo de fechas no debe tener menos de 1 noche',
+                    'error-less-plural': 'El intervalo de fechas no debe tener menos de %d noches',
+                    'info-more': 'Por favor selecciona un intervalo de fechas mayor a 1 noche',
+                    'info-more-plural': 'Por favor selecciona un intervalo de fechas mayor a %d noches',
+                    'info-range': 'Por favor selecciona un intervalo de fechas entre %d y %d noches',
+                    'info-range-equal': 'Por favor selecciona un intervalo de %d noches',
+                    'info-default': 'Por favor selecciona un intervalo de fechas',
+                    'aria-application': 'Calendario',
+                    'aria-selected-checkin': 'Fecha seleccionada como check-in, %s',
+                    'aria-selected-checkout': 'Fecha seleccionada como check-out, %s',
+                    'aria-selected': 'Fecha seleccionada, %s',
+                    'aria-disabled': 'No disponible, %s',
+                    'aria-choose-checkin': 'Elige %s como fecha de check-in',
+                    'aria-choose-checkout': 'Elige %s como fecha de check-out',
+                    'aria-prev-month': 'Mueve hacia atrás para ver el mes anterior',
+                    'aria-next-month': 'Mueve hacia adelante para ver el mes siguiente',
+                    'aria-close-button': 'Cerrar el selector de fechas',
+                    'aria-clear-button': 'Borrar las fechas seleccionadas',
+                    'aria-submit-button': 'Enviar el formulario'
+                }
+            });
+
+        }        
+
+
+        function verificarDisponibilidad() {
+            var adultos = document.getElementById('txtCheckAdults1').value;
+            var ninos = 0;
+
+            if (fechaInicio == "" || fechaFin == "" || adultos == "") {
+                alert("Por favor, complete todos los campos");
+            } else {
+                var url = "https://hotels.cloudbeds.com/en/reservation/RWyRAu?start_date=" + fechaInicio + "&end_date=" + fechaFin + "&adults=" + adultos + "&children=" + ninos;
+            }
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toISOString().split("T")[0]; // Converts to YYYY-MM-DD
+        }
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const [checkIn, checkOut] = (document.getElementById("txtCheckDate").value.trim().split(" - ") || ["", ""]).map(formatDate);
+
+            const adults = document.getElementById("txtCheckAdults").value || 1;
+            const children = document.getElementById("txtCheckChildren").value || 0;
+            const totalGuests = parseInt(adults) + parseInt(children);
+
+            // Construct the URL
+            const baseUrl = "https://www.airbnb.com/rooms/1040641098422619807";            
+            const params = new URLSearchParams({
+                source_impression_id: "p3_1721331836_P35RPu7nr80p66d7",
+                guests: totalGuests,
+                adults: adults,
+                children: children,
+                check_in: checkIn,
+                check_out: checkOut,
+            });
+
+            // open new window to the URL
+            window.open(`${baseUrl}?${params.toString()}`);
+        });
+
+    </script>
 </body>
 
 </html>
