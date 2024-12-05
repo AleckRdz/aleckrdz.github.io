@@ -358,7 +358,7 @@
                         <div class="col-12">
                             <div class="card border-0 shadow-sm">
                                 <div class="card-body p-5">
-                                    <form class="row g-4" method="post" action="./reservation.html">
+                                    <form class="row g-4" method="post" onsubmit="reservacion(event)">
                                         <div class="col-12 col-lg-5 col-md-7">
                                             <!-- Input date -->
                                             <div class="mb-0">
@@ -402,7 +402,7 @@
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="" disabled>
                                                                             <i class="hicon hicon-minus-thin small"></i>
                                                                         </button>
-                                                                        <input type="text" class="form-control text-center" placeholder="Niños" value="0" aria-label="Children" id="txtCheckChildren" data-children-max="20" data-input-children="" disabled>
+                                                                        <input type="text" class="form-control text-center" placeholder="Niños" value="0" aria-label="Children" id="txtCheckChildren" data-children-max="0" data-input-children="" disabled>
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="" disabled>
                                                                             <i class="hicon hicon-plus-thin small"></i>
                                                                         </button>
@@ -1034,7 +1034,7 @@
         </section> -->
         <!-- /Video -->
          <!-- Location -->
-        <section id="location" class="pt-16 ">
+        <section id="location" class="pt-16 pb-10">
             <div data-cues="fadeIn" data-disabled="true">
                 <!-- Heading -->
                 <div class="text-center mb-10" data-cue="fadeIn" data-show="true"
@@ -1066,19 +1066,16 @@
                         <div class="col-12">
                             <div class="card bg-primary border-0 shadow-sm">
                                 <div class="card-body p-5">
-                                    <form class="row g-4" method="post" action="./reservation.html">
+                                    <form class="row g-4" method="post" onsubmit="reservacion1(event)">
                                         <div class="col-12 col-lg-5 col-md-7">
-                                            <!-- Input date -->
                                             <div class="mb-0">
                                                 <div class="position-relative">
                                                     <label class="hicon hicon-menu-calendar hicon-bold text-secondary cursor-pointer position-absolute top-50 start-0 translate-middle-y ms-5 z-1" for="txtCheckDate1"></label>
                                                     <input id="txtCheckDate1" type="text" class="check-date form-select bg-body-tertiary cursor-pointer shadow-none ps-11 fw-medium" placeholder="" readonly>
                                                 </div>
                                             </div>
-                                            <!-- /Input date -->
                                         </div>
                                         <div class="col-12 col-lg-4 col-md-5">
-                                            <!-- Input number of guests -->
                                             <div class="mb-0">
                                                 <div class="position-relative">
                                                     <label class="hicon hicon-couple hicon-bold text-secondary cursor-pointer position-absolute top-50 start-0 translate-middle-y ms-5 z-1" for="btnCheckGuest1"></label>
@@ -1096,7 +1093,7 @@
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-adults="">
                                                                             <i class="hicon hicon-minus-thin small"></i>
                                                                         </button>
-                                                                        <input type="text" class="form-control text-center" placeholder="Adults" value="1" aria-label="Adults" id="txtCheckAdults1" data-adults-max="10" data-input-adults="">
+                                                                        <input type="text" class="form-control text-center" placeholder="Adultos" value="1" aria-label="Adults" id="txtCheckAdults1" data-adults-max="2" data-input-adults="">
                                                                         <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-adults="">
                                                                             <i class="hicon hicon-plus-thin small"></i>
                                                                         </button>
@@ -1107,11 +1104,11 @@
                                                                 <div class="mb-1">
                                                                     <label for="txtCheckChildren1" class="form-label">Niños</label>
                                                                     <div class="input-group shadow-sm">
-                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="">
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-minus-children="" disabled>
                                                                             <i class="hicon hicon-minus-thin small"></i>
                                                                         </button>
-                                                                        <input type="text" class="form-control text-center" placeholder="Children" value="0" aria-label="Children" id="txtCheckChildren1" data-children-max="20" data-input-children="">
-                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="">
+                                                                        <input type="text" class="form-control text-center" placeholder="Niños" value="0" aria-label="Children" id="txtCheckChildren1" data-children-max="0" data-input-children="" disabled>
+                                                                        <button class="btn btn-light bg-body-tertiary text-secondary border" type="button" data-plus-children="" disabled>
                                                                             <i class="hicon hicon-plus-thin small"></i>
                                                                         </button>
                                                                     </div>
@@ -1121,17 +1118,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- /Input number of guests -->
                                         </div>
                                         <div class="col-12 col-lg-3 col-md-12">
-                                            <!-- Button -->
                                             <div class="mb-0">
                                                 <button type="submit" class="btn btn-secondary w-100 fw-medium">
                                                     <i class="hicon hicon-mmb-my-booking hicon-md mr-1"></i>
                                                     <span>Ver Disponibilidad</span>
                                                 </button>
                                             </div>
-                                            <!-- /Button -->
                                         </div>
                                     </form>
                                 </div>
@@ -1925,6 +1919,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             var input = document.getElementById('txtCheckDate');
+            var input2 = document.getElementById('txtCheckDate1');
             if (input) { // Ensure the input element exists
                 // Destroy any existing datepicker instance safely
                 if (input.datepicker) {
@@ -1933,6 +1928,61 @@
 
                 // Initialize the HotelDatepicker
                 var datepicker = new HotelDatepicker(input, {
+                    format: 'dddd D MMM YYYY',
+                    startOfWeek: 'monday',
+                    i18n: {
+                        selected: 'Tu estancia:',
+                        night: 'Noche',
+                        nights: 'Noches',
+                        button: 'Cerrar',
+                        clearButton: 'Borrar',
+                        submitButton: 'Enviar',
+                        'checkin-disabled': 'Check-in deshabilitado',
+                        'checkout-disabled': 'Check-out deshabilitado',
+                        'day-names-short': ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+                        'day-names': ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                        'month-names-short': ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                        'month-names': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                        'error-more': 'El intervalo de fechas no debe tener más de 1 noche',
+                        'error-more-plural': 'El intervalo de fechas no debe tener más de %d noches',
+                        'error-less': 'El intervalo de fechas no debe tener menos de 1 noche',
+                        'error-less-plural': 'El intervalo de fechas no debe tener menos de %d noches',
+                        'info-more': 'Por favor selecciona un intervalo de fechas de al menos 1 noche',
+                        'info-more-plural': 'Por favor selecciona un intervalo de fechas mayor a %d noches',
+                        'info-range': 'Por favor selecciona un intervalo de fechas entre %d y %d noches',
+                        'info-range-equal': 'Por favor selecciona un intervalo de %d noches',
+                        'info-default': 'Por favor selecciona un intervalo de fechas',
+                        'aria-application': 'Calendario',
+                        'aria-selected-checkin': 'Fecha seleccionada como check-in, %s',
+                        'aria-selected-checkout': 'Fecha seleccionada como check-out, %s',
+                        'aria-selected': 'Fecha seleccionada, %s',
+                        'aria-disabled': 'No disponible, %s',
+                        'aria-choose-checkin': 'Elige %s como fecha de check-in',
+                        'aria-choose-checkout': 'Elige %s como fecha de check-out',
+                        'aria-prev-month': 'Mueve hacia atrás para ver el mes anterior',
+                        'aria-next-month': 'Mueve hacia adelante para ver el mes siguiente',
+                        'aria-close-button': 'Cerrar el selector de fechas',
+                        'aria-clear-button': 'Borrar las fechas seleccionadas',
+                        'aria-submit-button': 'Enviar el formulario'
+                    }
+                });
+
+                var today = new Date();
+                var tomorrow = new Date();
+                tomorrow.setDate(today.getDate() + 1);
+
+                // Set the range programmatically (if needed after init)
+                datepicker.setRange(today, tomorrow);
+            }
+            
+            if (input2) { // Ensure the input element exists
+                // Destroy any existing datepicker instance safely
+                if (input2.datepicker) {
+                    input2.datepicker.destroy();
+                }
+
+                // Initialize the HotelDatepicker
+                var datepicker = new HotelDatepicker(input2, {
                     format: 'dddd D MMM YYYY',
                     startOfWeek: 'monday',
                     i18n: {
@@ -2016,10 +2066,10 @@
             return `${year}-${month}-${day}`;
         }
 
-        document.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault();
+        function reservacion(e) {
+            e.preventDefault(); // Prevent default form submission (if called from a form)
 
-            // Get the value from the datepicker and split by " - "
+            // Get values from inputs
             const dateRange = document.getElementById("txtCheckDate").value.trim();
             const [checkIn, checkOut] = dateRange.split(" - ").map(date => formatDate(date));
 
@@ -2043,9 +2093,40 @@
                 check_out: checkOut,
             });
 
-            // open new window to the URL
+            // Open a new window with the URL
             window.open(`${baseUrl}?${params.toString()}`);
-        });
+        }
+
+        function reservacion1(e) {
+            e.preventDefault(); // Prevent default form submission (if called from a form)
+
+            // Get values from inputs (specific to reservacion1)
+            const dateRange = document.getElementById("txtCheckDate1").value.trim();
+            const [checkIn, checkOut] = dateRange.split(" - ").map(date => formatDate(date));
+
+            if (!checkIn || !checkOut) {
+                alert("Por favor selecciona un intervalo de fechas válido.");
+                return;
+            }
+
+            const adults = document.getElementById("txtCheckAdults1").value || 1;
+            const children = document.getElementById("txtCheckChildren1").value || 0;
+            const totalGuests = parseInt(adults) + parseInt(children);
+
+            // Construct the URL
+            const baseUrl = "https://www.airbnb.com/rooms/1040641098422619807";
+            const params = new URLSearchParams({
+                source_impression_id: "p3_1721331836_P35RPu7nr80p66d7",
+                guests: totalGuests,
+                adults: adults,
+                children: children,
+                check_in: checkIn,
+                check_out: checkOut,
+            });
+
+            // Open a new window with the URL
+            window.open(`${baseUrl}?${params.toString()}`);
+        }
 
         document.getElementById("btnContactoSorpresas").addEventListener("click", function (e) {
             e.preventDefault();
