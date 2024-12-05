@@ -817,38 +817,34 @@
                         </div>
                         <div class="swiper-slide">
                             <!-- Service item -->
-                            <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
-                                <a href="services" title="">
+                            <a href="" title="servicio2" data-bs-toggle="modal" data-bs-target="#modalEventos">
+                                <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
                                     <figure class="image-hover-scale image-hover-overlay mb-0">
                                         <img src="./assets/img/services/s3.jpg" srcset="./assets/img/services/s3@2x.jpg 2x" class="card-img-top" alt="">
                                     </figure>
-                                </a>
-                                <div class="card-body bg-body text-center shadow-sm">
-                                    <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Eventos Corporativos</h3>
-                                    <a href="services" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                    <div class="card-body bg-body text-center shadow-sm">
+                                        <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Eventos Corporativos</h3>
                                         <span>Ver Más</span>
                                         <i class="hicon hicon-flights-one-ways"></i>
-                                    </a>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <!-- /Service item -->
                         </div>
                         <div class="swiper-slide">
                             <!-- Service item -->
-                            <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
-                                <a href="services" title="">
+                            <a href="" title="servicio3" data-bs-toggle="modal" data-bs-target="#modalRetiros">
+                                <div class="card card-float-bottom card-content-hover border-0 bg-transparent mb-1">
                                     <figure class="image-hover-scale image-hover-overlay mb-0">
                                         <img src="./assets/img/services/s1.jpg" srcset="./assets/img/services/s1@2x.jpg 2x" class="card-img-top" alt="">
                                     </figure>
-                                </a>
-                                <div class="card-body bg-body text-center shadow-sm">
-                                    <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Retiros Holísticos</h3>
-                                    <a href="services" class="fw-semibold d-inline-block fsm-4 text-uppercase ls-1 h-sub-font">
+                                    <div class="card-body bg-body text-center shadow-sm">
+                                        <h3 class="card-title h6 text-uppercase h-sub-font ls-1 mb-3">Retiros Holísticos</h3>
                                         <span>Ver Más</span>
                                         <i class="hicon hicon-flights-one-ways"></i>
-                                    </a>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <!-- /Service item -->
                         </div>
                     </div>
@@ -1037,6 +1033,7 @@
             </div>
         </section> -->
         <!-- /Video -->
+         <!-- Location -->
         <section id="location" class="pt-16 ">
             <div data-cues="fadeIn" data-disabled="true">
                 <!-- Heading -->
@@ -1051,6 +1048,7 @@
                 <!-- Map -->
             </div>
         </section>
+        <!-- /Location -->
     </main>
     <!-- Footer -->
     <footer id="footer">
@@ -1288,7 +1286,7 @@
     </footer>
 
     <!-- Modal sorpresas -->
-    <div class="modal fade" id="modalSorpresas" tabindex="-1" aria-labelledby="modalFullscreenLabel" aria-hidden="true">
+    <div class="modal fade" id="modalSorpresas" tabindex="-1" aria-labelledby="modalSorpresasLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1302,7 +1300,7 @@
                     <section id="about" class="pt-16 pb-16 bg-body-tertiary position-relative text-center">
                         <div class="position-absolute start-0 top-0 bottom-0 w-25 image-wrapper bg-image bg-full d-none d-xl-block"
                             data-image-src="./assets/img/background/bg2.png"></div>
-                        <div class="container" data-cues="fadeIn">
+                        <div class="container">
                             <!-- Description -->
                             <div class="mb-6">
                                 <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Servicio de</span>
@@ -1319,23 +1317,26 @@
                             <div class="row justify-content-center mb-6">
                                 <div class="col-12 col-xl-3 col-lg-4 col-md-5">
                                     <div class="text-center mb-6">
-                                        <i class="hicon hicon-200 hicon-telephone text-primary mb-4"></i>
-                                        <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
-                                            <a href="tel:+528124383335">+52 812 438 3335</a>
-                                        </span>
+                                        <a href="tel:+528124383335">
+                                            <i class="hicon hicon-200 hicon-telephone text-primary mb-4"></i>
+                                            <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
+                                                +52 812 438 3335
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-3 col-lg-4 col-md-5">
                                     <div class="text-center mb-6">
-                                        <i class="hicon hicon-200 hicon-email-envelope text-primary mb-4"></i>
-                                        <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
-                                            <a href="mailto:airbnbintothemoon@gmail.com">airbnbintothemoon@gmail.com</a>
-                                        </span>
+                                        <a href="mailto:airbnbintothemoon@gmail.com">
+                                            <i class="hicon hicon-200 hicon-email-envelope text-primary mb-4"></i>
+                                            <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
+                                                airbnbintothemoon@gmail.com
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#"
-                                class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                            <a href="#" id="btnContactoSorpresas" class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
                                 <i class="hicon hicon-mmb-my-booking"></i>
                                 <span>Contáctanos</span>
                             </a>
@@ -1346,7 +1347,7 @@
                     <!-- About 1 -->
                     <section id="about1" class="pt-16 pb-14 overflow-x-hidden overflow-y-hidden">
                         <div class="container">
-                            <div class="row g-0 g-lg-10" data-cues="fadeIn">
+                            <div class="row g-0 g-lg-10">
                                 <div class="col-12 col-xl-6 col-lg-6">
                                     <div class="mb-10">
                                         <!-- Description -->
@@ -1377,7 +1378,7 @@
                     <!-- About 2 -->
                     <section id="about2" class="pt-16 pb-14 overflow-x-hidden overflow-y-hidden bg-body-tertiary">
                         <div class="container">
-                            <div class="row g-0 g-lg-10" data-cues="fadeIn">
+                            <div class="row g-0 g-lg-10">
                                 <div class="col-12 col-xl-6 col-lg-6">
                                     <!-- Image -->
                                     <div class="position-relative mb-16">
@@ -1409,7 +1410,7 @@
                     <!-- About 3 -->
                     <section id="about3" class="pt-16 pb-14 overflow-x-hidden overflow-y-hidden">
                         <div class="container">
-                            <div class="row g-0 g-lg-10" data-cues="fadeIn">
+                            <div class="row g-0 g-lg-10">
                                 <div class="col-12 col-xl-6 col-lg-6">
                                     <div class="mb-10">
                                         <!-- Description -->
@@ -1445,9 +1446,467 @@
         </div>
     </div>
 
-    <!-- <button class="back-to-top d-flex align-items-center justify-content-center" style="cursor:auto;"></i>
-        <script src="assets/js/cloudbeds-horiz.js"></script>
-    </button> -->
+    <!-- Modal eventos -->
+    <div class="modal fade" id="modalEventos" tabindex="-1" aria-labelledby="modalEventosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- insert logo image -->
+                    <img src="./assets/img/logos/logo2.png" srcset="./assets/img/logos/logo2.png" alt="" height="40"
+                        width="250">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 0px !important;">
+    
+                    <!-- Booking -->
+                    <section id="about" class="pt-16 pb-16 bg-body-tertiary position-relative text-center">
+                        <div class="position-absolute start-0 top-0 bottom-0 w-25 image-wrapper bg-image bg-full d-none d-xl-block"
+                            data-image-src="./assets/img/background/bg2.png"></div>
+                        <div class="container">
+                            <!-- Description -->
+                            <div class="mb-6">
+                                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Servicio de</span>
+                                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Eventos Corporativos y Reuniones en Into the Moon 🌙</h2>
+                            </div>
+                            <p class="mb-8"> En Into the Moon, ofrecemos un espacio exclusivo y profesional diseñado para eventos corporativos, reuniones estratégicas y conferencias. <br>
+                                Nuestro complejo combina un entorno natural único con instalaciones adaptables para satisfacer las necesidades de tu equipo.<br><br>
+                                Reserva tu Espacio<br>
+                                Para más información o para agendar tu evento, contáctanos. Estamos comprometidos en garantizar que tu reunión sea un
+                                éxito en todos los sentidos. 🌟
+                            </p>
+                            <div class="row justify-content-center mb-6">
+                                <div class="col-12 col-xl-3 col-lg-4 col-md-5">
+                                    <div class="text-center mb-6">
+                                        <a href="tel:+528124383335">
+                                            <i class="hicon hicon-200 hicon-telephone text-primary mb-4"></i>
+                                            <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
+                                                +52 812 438 3335
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-lg-4 col-md-5">
+                                    <div class="text-center mb-6">
+                                        <a href="mailto:airbnbintothemoon@gmail.com">
+                                            <i class="hicon hicon-200 hicon-email-envelope text-primary mb-4"></i>
+                                            <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
+                                                airbnbintothemoon@gmail.com
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" id="btnContactoEventos"
+                                class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                                <i class="hicon hicon-mmb-my-booking"></i>
+                                <span>Contáctanos</span>
+                            </a>
+                            <!-- Description -->
+                        </div>
+                    </section>
+                    <!-- /Booking -->                    
+                    <!-- Amenities  -->
+                    <section id="amenities" class="pt-10 pb-16 bg-body-primary">
+                        <div class="container">
+                            <!-- Heading -->
+                            <div class="mb-10 text-center">
+                                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Nuestras</span>
+                                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Instalaciones</h2>
+                            </div>
+                            <!-- /Heading -->
+                            <!-- Photos -->
+                            <section id="roomPhotos" class="pt-10 pb-12">
+                                <!-- Heading -->
+                                <!-- <div class="mb-10 text-center position-relative">
+                                        <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4"></span>
+                                        <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis"></h2>
+                                        <span class="room-photo-pagination-2 p-4 lh-1 fs-5 position-absolute end-0 top-0 z-3 w-auto start-unset mt-4 me-4"></span>
+                                    </div> -->
+                                <!-- /Heading -->
+                                <div class="swiper room-photo-slider-2">
+                                    <!-- Photo list -->
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <!-- Photo -->
+                                            <a href="./assets/img/drive/servicios6.jpeg" class="glightbox" data-glightbox="title:"
+                                                data-gallery="room-photo">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/drive/servicios6.jpeg" srcset="./assets/img/drive/servicios6.jpeg"
+                                                        class="card-img-top" alt="">
+                                                    <i class="hicon hicon-zoom-bold image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <!-- /Photo -->
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Photo -->
+                                            <a href="./assets/img/drive/servicios2.jpeg" class="glightbox" data-glightbox="title:"
+                                                data-gallery="room-photo">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/drive/servicios2.jpeg" srcset="./assets/img/drive/servicios2.jpeg"
+                                                        class="card-img-top" alt="">
+                                                    <i class="hicon hicon-zoom-bold image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <!-- /Photo -->
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Photo -->
+                                            <a href="./assets/img/drive/servicios3.jpeg" class="glightbox" data-glightbox="title:"
+                                                data-gallery="room-photo">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/drive/servicios3.jpeg" srcset="./assets/img/drive/servicios3.jpeg"
+                                                        class="card-img-top" alt="">
+                                                    <i class="hicon hicon-zoom-bold image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <!-- /Photo -->
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Photo -->
+                                            <a href="./assets/img/drive/servicios4.jpeg" class="glightbox" data-glightbox="title:"
+                                                data-gallery="room-photo">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/drive/servicios4.jpeg" srcset="./assets/img/drive/servicios4.jpeg"
+                                                        class="card-img-top" alt="">
+                                                    <i class="hicon hicon-zoom-bold image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <!-- /Photo -->
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Photo -->
+                                            <a href="./assets/img/drive/servicios5.jpeg" class="glightbox" data-glightbox="title:"
+                                                data-gallery="room-photo">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/drive/servicios5.jpeg" srcset="./assets/img/drive/servicios5.jpeg"
+                                                        class="card-img-top" alt="">
+                                                    <i class="hicon hicon-zoom-bold image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <!-- /Photo -->
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Photo -->
+                                            <a href="./assets/img/drive/servicios1.jpeg" class="glightbox" data-glightbox="title:"
+                                                data-gallery="room-photo">
+                                                <figure class="image-hover-scale image-hover-overlay mb-0">
+                                                    <img src="./assets/img/drive/servicios1.jpeg" srcset="./assets/img/drive/servicios1.jpeg"
+                                                        class="card-img-top" alt="">
+                                                    <i class="hicon hicon-zoom-bold image-hover-icon fs-4"></i>
+                                                </figure>
+                                            </a>
+                                            <!-- /Photo -->
+                                        </div>
+                                    </div>
+                                    <!-- /Photos list -->
+                                    <!-- Navs -->
+                                    <div class="position-absolute top-50 start-0 translate-middle-y z-3 ms-5 ms-xl-8 ms-lg-6">
+                                        <span role="button"
+                                            class="room-photo-prev-2 p-4 p-xl-5 fs-4 lh-1 text-primary text-white bg-black bg-opacity-75">
+                                            <i class="hicon hicon-thin-arrow-right"></i>
+                                        </span>
+                                    </div>
+                                    <div class="position-absolute top-50 end-0 translate-middle-y z-3 me-5 me-xl-8 me-lg-6">
+                                        <span role="button"
+                                            class="room-photo-next-2 p-4 p-xl-5 fs-4 lh-1 text-primary text-white bg-black bg-opacity-75">
+                                            <i class="hicon hicon-thin-arrow-left"></i>
+                                        </span>
+                                    </div>
+                                    <!-- Navs -->
+                                </div>
+                            </section>
+                            <!-- /Photos -->
+                            <!--  Tabs Nav -->
+                            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-uppercase fs-6 ls-1 fw-semibold ps-8 pe-8 pt-4 pb-4 active" id="cacial-tab"
+                                        data-bs-toggle="tab" data-bs-target="#cacial-tab-pane" type="button" role="tab"
+                                        aria-controls="cacial-tab-pane" aria-selected="true"> Amenidades </button>
+                                </li>
+                            </ul>
+                            <!-- Tabs Nav -->
+                            <!-- Tabs Content  -->
+                            <div class="tab-content bg-body p-8 p-lg-10 border-end border-start border-bottom" id="myTabContent">
+                                <div class="tab-pane fade show active" id="cacial-tab-pane" role="tabpanel" aria-labelledby="cacial-tab"
+                                    tabindex="0">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <h6>🏡 Alojamiento:</h6>
+                                            <p> 4 cabañas de lujo, completamente equipadas.<br>
+                                            3 cabañas tipo glamping, ideales para una experiencia diferente y cómoda. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🏊 Alberca privada:</h6>
+                                            <p> Perfecta para momentos de relajación o dinámicas de equipo. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🌴 Palapa:</h6>
+                                            <p> Con capacidad para hasta 60 personas, ideal para eventos al aire libre. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🛋️ Salón interior:</h6>
+                                            <p> Diseñado para juntas o conferencias, con capacidad para 40 - 60 personas. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🍳 Cocina:</h6>
+                                            <p> Disponible para uso durante tu evento. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🚻 Baños exteriores:</h6>
+                                            <p> Cómodos y accesibles para los asistentes. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🚘 Estacionamiento:</h6>
+                                            <p> Capacidad para aproximadamente 10 vehículos. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🔒 Seguridad 24/7:</h6>
+                                            <p> Garantizando tranquilidad para todos los asistentes. </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Tabs Content  -->
+                        </div>
+                    </section>
+                    <!-- /Amenities -->                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal retiros -->
+    <div class="modal fade" id="modalRetiros" tabindex="-1" aria-labelledby="modalRetirosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- insert logo image -->
+                    <img src="./assets/img/logos/logo2.png" srcset="./assets/img/logos/logo2.png" alt="" height="40"
+                        width="250">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 0px !important;">
+    
+                    <!-- Booking -->
+                    <section id="about" class="pt-16 pb-16 bg-body-tertiary position-relative text-center">
+                        <div class="position-absolute start-0 top-0 bottom-0 w-25 image-wrapper bg-image bg-full d-none d-xl-block"
+                            data-image-src="./assets/img/background/bg2.png"></div>
+                        <div class="container">
+                            <!-- Description -->
+                            <div class="mb-6">
+                                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Servicio de</span>
+                                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Retiros Holísticos en Into the Moon 🌙✨</h2>
+                            </div>
+                            <p class="mb-8"> Descubre el equilibrio y la conexión en un entorno diseñado para el bienestar. <br>
+                                Into the Moon ofrece un espacio exclusivo para retiros holísticos, adaptado a las necesidades de grupos que buscan actividades de sanación, crecimiento personal y reconexión con la naturaleza.<br><br>                                
+                            
+                                Para más información o para agendar una visita, contáctanos. 🌿✨
+                            </p>
+    
+                            <div class="row justify-content-center mb-6">
+                                <div class="col-12 col-xl-3 col-lg-4 col-md-5">
+                                    <div class="text-center mb-6">
+                                        <a href="tel:+528124383335">
+                                            <i class="hicon hicon-200 hicon-telephone text-primary mb-4"></i>
+                                            <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
+                                                +52 812 438 3335
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-lg-4 col-md-5">
+                                    <div class="text-center mb-6">
+                                        <a href="mailto:airbnbintothemoon@gmail.com">
+                                            <i class="hicon hicon-200 hicon-email-envelope text-primary mb-4"></i>
+                                            <span class="d-block text-uppercase h-sub-font fsm-2 fw-semibold ls-1">
+                                                airbnbintothemoon@gmail.com
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" id="btnContactoRetiros"
+                                class="btn btn-primary fw-medium text-uppercase ls-1 fsm-1 pt-4 pb-4 ps-8 pe-8 h-sub-font">
+                                <i class="hicon hicon-mmb-my-booking"></i>
+                                <span>Contáctanos</span>
+                            </a>
+                            <!-- Description -->
+                        </div>
+                    </section>
+                    <!-- /Booking -->
+                    <!-- About 1 -->
+                    <section id="about1" class="pt-16 pb-14 overflow-x-hidden overflow-y-hidden">
+                        <div class="container">
+                            <div class="row g-0 g-lg-10">
+                                <div class="col-12 col-xl-6 col-lg-6">
+                                    <div class="mb-10">
+                                        <!-- Description -->
+                                        <div class="mb-6">
+                                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">¿Por Qué Elegir Into the Moon para Tu Retiro?</h2>
+                                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Entorno Inspirador:</span>
+                                        </div>
+                                        <p class="mb-6"> Ubicado en las montañas de Santiago, NL, nuestro espacio ofrece vistas espectaculares y una conexión profunda con la naturaleza. </p>
+                                        <div class="mb-6">
+                                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Instalaciones Versátiles:</span>
+                                        </div>
+                                        <p class="mb-6"> Diseñadas para adaptarse a diferentes tipos de actividades, desde yoga y meditación hasta talleres espirituales y dinámicas grupales. </p>
+                                        <div class="mb-6">
+                                            <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Exclusividad y Privacidad:</span>
+                                        </div>
+                                        <p class="mb-6"> Todo el complejo está disponible para tu grupo, asegurando una experiencia íntima y sin
+                                        distracciones. </p>
+                                        <!-- Description -->
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6 col-lg-6">
+                                    <div class="position-relative mb-16">
+                                        <div
+                                            class="position-absolute top-0 end-0 start-0 bottom-0 bg-body-tertiary h-100 w-100 mt-16 ms-16">
+                                        </div>
+                                        <figure class="figure mb-0 w-100 position-relative z-2">
+                                            <img src="./assets/img/drive/servicios6.jpeg" srcset="./assets/img/drive/servicios6.jpeg"
+                                                class="figure-img img-fluid mb-0 w-100" alt="...">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /About 1 -->
+                    <!-- About 2 -->
+                    <section id="about2" class="pt-16 pb-14 overflow-x-hidden overflow-y-hidden bg-body-tertiary">
+                        <div class="container">
+                            <div class="row g-0 g-lg-10">
+                                <div class="col-12 col-xl-6 col-lg-6">
+                                    <!-- Image -->
+                                    <div class="position-relative mb-16">
+                                        <div class="position-absolute top-0 end-0 bottom-0 bg-body h-100 w-100 mt-16 me-16"></div>
+                                        <figure class="figure mb-0 w-100 position-relative z-2">
+                                            <img src="./assets/img/drive/servicios2.jpeg" srcset="./assets/img/drive/servicios2.jpeg"
+                                                class="figure-img img-fluid mb-0 w-100" alt="...">
+                                        </figure>
+                                    </div>
+                                    <!-- /Image -->
+                                </div>
+                                <div class="col-12 col-xl-6 col-lg-6">
+                                    <div class="mb-10">
+                                        <!-- Description -->
+                                        <div class="mb-6">
+                                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Actividades Comunes para Retiros</h2>
+                                        </div>
+                                        <p class="mb-6"> 🧘🏻‍♂️ Clases de yoga y meditación. <br>
+                                        ✨ Talleres de crecimiento personal y espiritualidad. <br>
+                                        🎶 Terapias de sonido o ceremonias especiales. <br>
+                                        ❤️‍🩹 Dinámicas grupales enfocadas en el bienestar. </p>
+                                        <!-- Description -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /About 2 -->
+                    <!-- About 3 -->
+                    <section id="about3" class="pt-16 pb-14 overflow-x-hidden overflow-y-hidden">
+                        <div class="container">
+                            <div class="row g-0 g-lg-10">
+                                <div class="col-12 col-xl-6 col-lg-6">
+                                    <div class="mb-10">
+                                        <!-- Description -->
+                                        <div class="mb-6">
+                                            <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Haz Tu Retiro con Nosotros</h2>
+                                        </div>
+                                        <p class="mb-6"> Nuestro equipo está listo para ayudarte a planificar y personalizar cada detalle de tu retiro. <br>
+                                            Aprovecha las instalaciones y el ambiente único de Into the Moon para crear una experiencia transformadora. </p>
+                                        <!-- Description -->
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6 col-lg-6">
+                                    <!-- Image -->
+                                    <div class="position-relative mb-16">
+                                        <div
+                                            class="position-absolute top-0 end-0 start-0 bottom-0 bg-body-tertiary h-100 w-100 mt-16 ms-16">
+                                        </div>
+                                        <figure class="figure mb-0 w-100 position-relative z-2">
+                                            <img src="./assets/img/drive/servicios3.jpeg" srcset="./assets/img/drive/servicios3.jpeg"
+                                                class="figure-img img-fluid mb-0 w-100" alt="...">
+                                        </figure>
+                                    </div>
+                                    <!-- /Image -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Amenities  -->
+                    <section id="amenities" class="pt-6 pb-16 bg-body-tertiary">
+                        <div class="container">
+                            <!-- Heading -->
+                            <div class="mb-6 text-center">
+                                <span class="text-uppercase h-sub-font fsm-1 fw-medium ls-2 d-block mb-4">Nuestras</span>
+                                <h2 class="text-uppercase h-special-font mb-6 text-body-emphasis">Instalaciones</h2>
+                            </div>
+                            <!-- /Heading -->
+                            <!--  Tabs Nav -->
+                            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-uppercase fs-6 ls-1 fw-semibold ps-8 pe-8 pt-4 pb-4 active"
+                                        id="cacial-tab" data-bs-toggle="tab" data-bs-target="#cacial-tab-pane" type="button"
+                                        role="tab" aria-controls="cacial-tab-pane" aria-selected="true"> Amenidades
+                                    </button>
+                                </li>
+                            </ul>
+                            <!-- Tabs Nav -->
+                            <!-- Tabs Content  -->
+                            <div class="tab-content bg-body p-8 p-lg-10 border-end border-start border-bottom"
+                                id="myTabContent">
+                                <div class="tab-pane fade show active" id="cacial-tab-pane" role="tabpanel"
+                                    aria-labelledby="cacial-tab" tabindex="0">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <h6>🛋️ Salón interior:</h6>
+                                            <p> Capacidad para 40 - 60 personas, ideal para sesiones grupales y talleres. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🌴 Palapa al aire libre:</h6>
+                                            <p> Perfecta para clases de yoga, meditaciones o dinámicas grupales. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🏡 Alojamiento:</h6>
+                                            <p> 4 cabañas de lujo, completamente equipadas.<br>
+                                                3 cabañas tipo glamping, ideales para una experiencia más cercana a la naturaleza.
+                                            </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🏊 Alberca privada:</h6>
+                                            <p> Espacio para relajación o actividades de integración. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🍳 Cocina disponible:</h6>
+                                            <p> Para la preparación de alimentos saludables adaptados a las necesidades del grupo. </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h6>🚻 Baños exteriores:</h6>
+                                            <p> Prácticos y accesibles para todos los asistentes. </p>
+                                        </li>
+                                        <!-- <li class="list-group-item">
+                                            <h6>🚘 Estacionamiento:</h6>
+                                            <p> Capacidad para aproximadamente 10 vehículos. </p>
+                                        </li> -->
+                                        <li class="list-group-item">
+                                            <h6>🔒 Seguridad 24/7:</h6>
+                                            <p> Garantizando tranquilidad durante toda la estancia. </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Tabs Content  -->                            
+                        </div>
+                    </section>
+                    <!-- /Amenities -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Language -->
     <!-- Scroll top -->
@@ -1464,79 +1923,117 @@
 
     <script>
 
-        document.onload = function () {
+        document.addEventListener('DOMContentLoaded', function () {
             var input = document.getElementById('txtCheckDate');
-            input.datepicker.destroy();
-            var datepicker = new HotelDatepicker(input, {
-                format: 'dddd D MMM YYYY',
-                startOfWeek: 'monday',
-                i18n: {
-                    selected: 'Tu estancia:',
-                    night: 'Noche',
-                    nights: 'Noches',
-                    button: 'Cerrar',
-                    clearButton: 'Borrar',
-                    submitButton: 'Enviar',
-                    'checkin-disabled': 'Check-in deshabilitado',
-                    'checkout-disabled': 'Check-out deshabilitado',
-                    'day-names-short': ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
-                    'day-names': ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-                    'month-names-short': ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-                    'month-names': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-                    'error-more': 'El intervalo de fechas no debe tener más de 1 noche',
-                    'error-more-plural': 'El intervalo de fechas no debe tener más de %d noches',
-                    'error-less': 'El intervalo de fechas no debe tener menos de 1 noche',
-                    'error-less-plural': 'El intervalo de fechas no debe tener menos de %d noches',
-                    'info-more': 'Por favor selecciona un intervalo de fechas mayor a 1 noche',
-                    'info-more-plural': 'Por favor selecciona un intervalo de fechas mayor a %d noches',
-                    'info-range': 'Por favor selecciona un intervalo de fechas entre %d y %d noches',
-                    'info-range-equal': 'Por favor selecciona un intervalo de %d noches',
-                    'info-default': 'Por favor selecciona un intervalo de fechas',
-                    'aria-application': 'Calendario',
-                    'aria-selected-checkin': 'Fecha seleccionada como check-in, %s',
-                    'aria-selected-checkout': 'Fecha seleccionada como check-out, %s',
-                    'aria-selected': 'Fecha seleccionada, %s',
-                    'aria-disabled': 'No disponible, %s',
-                    'aria-choose-checkin': 'Elige %s como fecha de check-in',
-                    'aria-choose-checkout': 'Elige %s como fecha de check-out',
-                    'aria-prev-month': 'Mueve hacia atrás para ver el mes anterior',
-                    'aria-next-month': 'Mueve hacia adelante para ver el mes siguiente',
-                    'aria-close-button': 'Cerrar el selector de fechas',
-                    'aria-clear-button': 'Borrar las fechas seleccionadas',
-                    'aria-submit-button': 'Enviar el formulario'
+            if (input) { // Ensure the input element exists
+                // Destroy any existing datepicker instance safely
+                if (input.datepicker) {
+                    input.datepicker.destroy();
                 }
-            });
 
-        }        
+                // Initialize the HotelDatepicker
+                var datepicker = new HotelDatepicker(input, {
+                    format: 'dddd D MMM YYYY',
+                    startOfWeek: 'monday',
+                    i18n: {
+                        selected: 'Tu estancia:',
+                        night: 'Noche',
+                        nights: 'Noches',
+                        button: 'Cerrar',
+                        clearButton: 'Borrar',
+                        submitButton: 'Enviar',
+                        'checkin-disabled': 'Check-in deshabilitado',
+                        'checkout-disabled': 'Check-out deshabilitado',
+                        'day-names-short': ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+                        'day-names': ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                        'month-names-short': ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                        'month-names': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                        'error-more': 'El intervalo de fechas no debe tener más de 1 noche',
+                        'error-more-plural': 'El intervalo de fechas no debe tener más de %d noches',
+                        'error-less': 'El intervalo de fechas no debe tener menos de 1 noche',
+                        'error-less-plural': 'El intervalo de fechas no debe tener menos de %d noches',
+                        'info-more': 'Por favor selecciona un intervalo de fechas de al menos 1 noche',
+                        'info-more-plural': 'Por favor selecciona un intervalo de fechas mayor a %d noches',
+                        'info-range': 'Por favor selecciona un intervalo de fechas entre %d y %d noches',
+                        'info-range-equal': 'Por favor selecciona un intervalo de %d noches',
+                        'info-default': 'Por favor selecciona un intervalo de fechas',
+                        'aria-application': 'Calendario',
+                        'aria-selected-checkin': 'Fecha seleccionada como check-in, %s',
+                        'aria-selected-checkout': 'Fecha seleccionada como check-out, %s',
+                        'aria-selected': 'Fecha seleccionada, %s',
+                        'aria-disabled': 'No disponible, %s',
+                        'aria-choose-checkin': 'Elige %s como fecha de check-in',
+                        'aria-choose-checkout': 'Elige %s como fecha de check-out',
+                        'aria-prev-month': 'Mueve hacia atrás para ver el mes anterior',
+                        'aria-next-month': 'Mueve hacia adelante para ver el mes siguiente',
+                        'aria-close-button': 'Cerrar el selector de fechas',
+                        'aria-clear-button': 'Borrar las fechas seleccionadas',
+                        'aria-submit-button': 'Enviar el formulario'
+                    }
+                });
 
+                var today = new Date();
+                var tomorrow = new Date();
+                tomorrow.setDate(today.getDate() + 1);
 
-        function verificarDisponibilidad() {
-            var adultos = document.getElementById('txtCheckAdults1').value;
-            var ninos = 0;
-
-            if (fechaInicio == "" || fechaFin == "" || adultos == "") {
-                alert("Por favor, complete todos los campos");
-            } else {
-                var url = "https://hotels.cloudbeds.com/en/reservation/RWyRAu?start_date=" + fechaInicio + "&end_date=" + fechaFin + "&adults=" + adultos + "&children=" + ninos;
+                // Set the range programmatically (if needed after init)
+                datepicker.setRange(today, tomorrow);
             }
-        }
+        });
 
+        // Helper function to format the human-readable date to YYYY-MM-DD
         function formatDate(dateString) {
-            const date = new Date(dateString);
-            return date.toISOString().split("T")[0]; // Converts to YYYY-MM-DD
+            // Parse the HotelDatepicker format 'dddd D MMM YYYY'
+            const months = {
+                'Enero': '01', 'Febrero': '02', 'Marzo': '03', 'Abril': '04', 'Mayo': '05', 'Junio': '06',
+                'Julio': '07', 'Agosto': '08', 'Septiembre': '09', 'Octubre': '10', 'Noviembre': '11', 'Diciembre': '12',
+                'Ene': '01', 'Feb': '02', 'Mar': '03', 'Abr': '04', 'May': '05', 'Jun': '06',
+                'Jul': '07', 'Ago': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dic': '12'
+            };
+
+            // Extract parts of the date string (e.g., "Lunes 4 Dic 2024")
+            const regex = /(\w+) (\d{1,2}) (\w+) (\d{4})/; // Matches "dddd D MMM YYYY"
+            const match = dateString.match(regex);
+
+            if (!match) {
+                console.error('Invalid date format:', dateString);
+                return "";
+            }
+
+            // Day is the second part of the match (ensure it's two digits)
+            const day = match[2].padStart(2, '0');
+
+            // Month is the third part (convert month name to number)
+            const month = months[match[3]];
+            const year = match[4]; // Year is the fourth part
+
+            if (!month) {
+                console.error('Invalid month:', match[3]);
+                return "";
+            }
+
+            // Return in YYYY-MM-DD format
+            return `${year}-${month}-${day}`;
         }
 
         document.querySelector("form").addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const [checkIn, checkOut] = (document.getElementById("txtCheckDate").value.trim().split(" - ") || ["", ""]).map(formatDate);
+            // Get the value from the datepicker and split by " - "
+            const dateRange = document.getElementById("txtCheckDate").value.trim();
+            const [checkIn, checkOut] = dateRange.split(" - ").map(date => formatDate(date));
+
+            if (!checkIn || !checkOut) {
+                alert("Por favor selecciona un intervalo de fechas válido.");
+                return;
+            }
 
             const adults = document.getElementById("txtCheckAdults").value || 1;
             const children = document.getElementById("txtCheckChildren").value || 0;
             const totalGuests = parseInt(adults) + parseInt(children);
 
             // Construct the URL
-            const baseUrl = "https://www.airbnb.com/rooms/1040641098422619807";            
+            const baseUrl = "https://www.airbnb.com/rooms/1040641098422619807";
             const params = new URLSearchParams({
                 source_impression_id: "p3_1721331836_P35RPu7nr80p66d7",
                 guests: totalGuests,
@@ -1549,6 +2046,32 @@
             // open new window to the URL
             window.open(`${baseUrl}?${params.toString()}`);
         });
+
+        document.getElementById("btnContactoSorpresas").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.open("https://wa.me/528124383335?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20las%20sorpresas%20románticas%20en%20Into%20the%20Moon");
+        });
+
+        document.getElementById("btnContactoEventos").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.open("https://wa.me/528124383335?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20los%20eventos%20corporativos%20en%20Into%20the%20Moon");
+        });
+
+        document.getElementById("btnContactoRetiros").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.open("https://wa.me/528124383335?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20los%20retiros%20holísticos%20en%20Into%20the%20Moon");
+        });
+
+        // function verificarDisponibilidad() {
+        //     var adultos = document.getElementById('txtCheckAdults1').value;
+        //     var ninos = 0;
+
+        //     if (fechaInicio == "" || fechaFin == "" || adultos == "") {
+        //         alert("Por favor, complete todos los campos");
+        //     } else {
+        //         var url = "https://hotels.cloudbeds.com/en/reservation/RWyRAu?start_date=" + fechaInicio + "&end_date=" + fechaFin + "&adults=" + adultos + "&children=" + ninos;
+        //     }
+        // }
 
     </script>
 </body>

@@ -45,7 +45,7 @@ var theme = {
         theme.selectGuest();
 
         // Hotel datepicker
-        theme.hotelDatePicker();
+        // theme.hotelDatePicker();
 
         // Hotel datepicker
         theme.datePicker();
@@ -256,8 +256,8 @@ var theme = {
                     }
 
                     // Display the total number of adults and children
-                    totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adults' : 'Adult'}`;
-                    totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value > 1) ? 'Children' : 'Child'}`;
+                    totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adultos' : 'Adulto'}`;
+                    totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value != 1) ? 'Niños' : 'Niño'}`;
 
                     // This is an adult number input event
                     adultsInput.addEventListener('input', () => {
@@ -269,7 +269,7 @@ var theme = {
                             adultsInput.value = 1;
                         }
                         // Update the total number of adults
-                        totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adults' : 'Adult'}`;
+                        totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adultos' : 'Adulto'}`;
                     });
 
                     // This is an children number input event
@@ -279,7 +279,7 @@ var theme = {
                             childrenInput.value = maxChildren;
                         }
                         // Update the total number of children
-                        totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value > 1) ? 'Children' : 'Child'}`;
+                        totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value != 1) ? 'Niños' : 'Niño'}`;
                     });
 
                     // This is a click event that reduces the number of adults
@@ -288,7 +288,7 @@ var theme = {
                         if (currentValue > 1) {
                             adultsInput.value = currentValue - 1;
                             // Update the total number of adults
-                            totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adults' : 'Adult'}`;
+                            totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adultos' : 'Adulto'}`;
                         }
                     });
 
@@ -299,7 +299,7 @@ var theme = {
                         if (currentValue < maxAdults) {
                             adultsInput.value = currentValue + 1;
                             // Update the total number of adults
-                            totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adults' : 'Adult'}`;
+                            totalAdultsSpan.innerText = `${adultsInput.value} ${(adultsInput.value > 1) ? 'Adultos' : 'Adulto'}`;
                         }
                     });
 
@@ -309,7 +309,7 @@ var theme = {
                         if (currentValue > 0) {
                             childrenInput.value = currentValue - 1;
                             // Update the total number of children
-                            totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value > 1) ? 'Children' : 'Child'}`;
+                            totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value != 1) ? 'Niños' : 'Niño'}`;
                         }
                     });
 
@@ -320,7 +320,7 @@ var theme = {
                         if (currentValue < maxChildren) {
                             childrenInput.value = currentValue + 1;
                             // Update the total number of children
-                            totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value > 1) ? 'Children' : 'Child'}`;
+                            totalChildrenSpan.innerText = `${childrenInput.value} ${(childrenInput.value != 1) ? 'Niños' : 'Niño'}`;
                         }
                     });
 
@@ -399,10 +399,10 @@ var theme = {
         if (countdownEl) {
             const countdown_timer = new countdown({
                 target: '.countdown',
-                dayWord: 'days',
-                hourWord: 'hours',
+                dayWord: 'días',
+                hourWord: 'horas',
                 minWord: 'mins',
-                secWord: 'secs'
+                secWord: 'segs'
             });
         }
     },
