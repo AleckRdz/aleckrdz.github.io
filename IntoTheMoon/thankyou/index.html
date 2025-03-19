@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Into The Moon</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P5J8K36R');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- custom css -->
+  <style>
+    #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #0E3B32;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+    .bg-image-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('assets/img/drive/cabanas2.JPG') center/cover no-repeat;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Overlay */
+    .bg-image-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(65, 93, 74, 0.5);
+      z-index: 1;
+    }
+
+    /* Ensure content is above the overlay */
+    .floating-text-box,
+    .bottom-banner-title {
+      position: absolute;
+      z-index: 2;
+    }
+
+    /* Responsive Floating Text */
+    .floating-text-box {
+      top: 2rem;
+      right: 2rem;
+      max-width: 40%;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      /* Scales between 1rem and 1.5rem */
+    }
+
+    /* Responsive Title at Bottom */
+    .bottom-banner-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Adjustments for Smaller Screens */
+    @media (max-width: 768px) {
+      .floating-text-box {
+        max-width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+      }
+    }
+
+    #wifi,
+    #masajes {
+      padding: 0 !important;
+      margin: 0 !important;
+      height: auto;
+      min-height: 300px;
+      /* Ajusta el valor según sea necesario */
+    }
+
+    /* Contenedor de la fila, para mantener un diseño en columnas */
+    .custom-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* Contenedor de la imagen */
+    .image-container {
+      position: relative;
+      width: 100%;
+      /* Ocupa todo el ancho */
+      height: auto;
+      /* Se ajusta según el contenido */
+      min-height: 200px;
+      /* Altura mínima reducida */
+      max-height: 400px;
+      /* Evita que sea demasiado grande */
+      overflow: hidden;
+      /* Evita espacios adicionales */
+      display: flex;
+      /* Centrar imagen */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Imagen que se ajusta sin cortar contenido */
+    .image-container img {
+      width: 100%;
+      height: auto;
+      /* Mantiene la proporción sin cortar */
+      object-fit: contain;
+      /* Muestra la imagen completa */
+      max-height: 100%;
+      /* Asegura que no sobrepase el contenedor */
+    }
+
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+      .image-container {
+        min-height: 150px;
+        /* Reduce en móviles */
+        max-height: 300px;
+      }
+    }
+
+    /* Contenedor de texto */
+    .text-container {
+      width: 100%;
+      padding: 20px;
+      color: #E9E9E9;
+    }
+
+    /* En pantallas grandes, la imagen toma un 50% y el texto el otro 50% */
+    @media (min-width: 768px) {
+      .image-container {
+        width: 50%;
+        /* La imagen ocupa la mitad de la pantalla */
+        min-height: 400px;
+        /* Ajusta según lo que necesites */
+      }
+
+      .text-container {
+        width: 50%;
+        /* El texto ocupa la otra mitad */
+      }
+    }
+
+    /* Responsividad en pantallas pequeñas */
+    @media (max-width: 768px) {
+      .image-container {
+        width: 100%;
+        min-height: 300px;
+        /* Ajusta según lo que necesites */
+      }
+
+      .text-container {
+        width: 100%;
+        /* El texto ocupará todo el ancho */
+        padding: 10px;
+        /* Menos padding en pantallas pequeñas */
+      }
+    }
+
+
+
+    #ubicacion {
+      position: relative;
+      /* Allows absolute positioning of the images inside */
+    }
+
+    .bottom-left-image,
+    .bottom-right-image {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .bottom-left-image {
+      left: 0;
+      bottom: 0;
+      width: 30%;
+      /* Adjust based on your needs */
+      max-width: 240px;
+      /* Prevents oversized images */
+    }
+
+    .bottom-right-image {
+      right: 0;
+      top: 0;
+      width: 30%;
+      /* Adjust based on your needs */
+      max-width: 320px;
+      /* Prevents oversized images */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+
+      .bottom-left-image,
+      .bottom-right-image {
+        width: 40%;
+        /* Increase size slightly on smaller screens */
+        max-width: 150px;
+      }
+
+      .bottom-right-image {
+        right: 0;
+        top: 130px;
+        width: 30%;
+        /* Adjust based on your needs */
+        max-width: 320px;
+        /* Prevents oversized images */
+      }
+    }
+
+    #wifi {
+      position: relative;
+      /* Allows absolute positioning of the images inside */
+    }
+
+    .bottom-right-image2 {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .bottom-right-image2 {
+      right: 60px;
+      top: 60px;
+      width: 20%;
+      /* Adjust based on your needs */
+      max-width: 200px;
+      /* Prevents oversized images */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .bottom-right-image2 {
+        width: 40%;
+        /* Increase size slightly on smaller screens */
+        max-width: 150px;
+      }
+
+      .bottom-right-image2 {
+        right: 0;
+        top: 600px;
+        width: 20%;
+        /* Adjust based on your needs */
+        max-width: 270px;
+        /* Prevents oversized images */
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .recommendation-card {
+      background-color: #E2C842;
+      color: #FFF;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      /* Outer rounding */
+      border-width: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .recommendation-card::before,
+    .recommendation-card::after,
+    .recommendation-card .corner-cutout-1,
+    .recommendation-card .corner-cutout-2 {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #EFEDE7;
+      /* Same as background to create the cutout effect */
+      border-radius: 50%;
+    }
+
+    /* Top-left */
+    .recommendation-card::before {
+      top: -20px;
+      left: -20px;
+    }
+
+    /* Bottom-right */
+    .recommendation-card::after {
+      bottom: -20px;
+      right: -20px;
+    }
+
+    /* Top-right */
+    .recommendation-card .corner-cutout-1 {
+      top: -20px;
+      right: -20px;
+    }
+
+    /* Bottom-left */
+    .recommendation-card .corner-cutout-2 {
+      bottom: -20px;
+      left: -20px;
+    }
+
+
+
+    .custom-ordered-list {
+      list-style: none;
+      /* Removes default numbering */
+      counter-reset: list-counter;
+      /* Resets counter */
+      padding-left: 0;
+    }
+
+    .custom-ordered-list li {
+      counter-increment: list-counter;
+      /* Increments counter */
+      margin-bottom: 10px;
+    }
+
+    .custom-ordered-list li h3 {
+      color: #FFF;
+      /* White text */
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+    }
+
+    .custom-ordered-list li h3::before {
+      content: counter(list-counter) ".";
+      /* Adds custom numbering */
+      color: #FED716;
+      /* Gold color */
+      font-family: "nagbuloe-font";
+      /* Keeps the custom font */
+      font-size: 1.3em;
+      margin-right: 8px;
+    }
+
+    .text-justify-center {
+      text-align: justify !important;
+      text-align-last: center !important;
+      /* Center the last line if needed */
+      max-width: 100% !important;
+      /* Make sure it does not exceed the width of the parent container */
+      margin: 0 auto !important;
+      /* Center the text block horizontally */
+      padding-left: 15px !important;
+      /* Adjust as needed */
+      padding-right: 15px !important;
+      /* Adjust as needed */
+      padding-bottom: 15px !important;
+      /* Adjust as needed */
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .gallery-container {
+      padding: 20px;
+    }
+
+    .theme-color {
+      background-color: #4f5a49;
+    }
+
+    @font-face {
+      font-family: 'BD Sans';
+      src: url('assets/fonts/BD/BDSans-Regular.otf') format('opentype');
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    .BD-font {
+      font-family: 'BD Sans', sans-serif !important;
+      font-weight: 100;
+    }
+
+    @font-face {
+      font-family: 'Nagbuloe';
+      src: url('assets/fonts/nagbuloe/Nagbuloe-Thin.ttf') format('truetype'),
+        url('assets/fonts/nagbuloe/Nagbuloe-Thin.otf') format('opentype');
+      font-weight: 100;
+      /* Adjust according to the font's weight specification */
+      font-style: normal;
+    }
+
+    .nagbuloe-font {
+      font-family: 'Nagbuloe', sans-serif !important;
+      font-weight: 100;
+      /* Make sure the weight matches the @font-face declaration */
+    }
+
+    @font-face {
+      font-family: 'Qanelas Soft';
+      src: url('assets/fonts/qanelas soft/QanelasSoftRegular.otf') format('opentype');
+      font-weight: 100;
+      /* Adjust according to the font's weight specification */
+      font-style: normal;
+    }
+
+    .qanelas-soft-font {
+      font-family: 'Qanelas Soft', sans-serif !important;
+      font-weight: 100;
+      /* Make sure the weight matches the @font-face declaration */
+    }
+
+    @font-face {
+      font-family: 'Bona Nova';
+      src: url('assets/fonts/bona nova/BonaNova-Regular.ttf') format('truetype');
+      font-weight: 400;
+      /* Adjust according to the font's weight specification */
+      font-style: normal;
+    }
+
+    .bona-nova-font {
+      font-family: 'Bona Nova', sans-serif !important;
+      font-weight: 400;
+      /* Make sure the weight matches the @font-face declaration */
+    }
+
+    .chicle-regular {
+      font-family: "Chicle", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .container {
+      position: relative;
+      /* Ensure the floating bar is positioned relative to the container */
+      padding: 20px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .hero-img {
+      position: relative;
+    }
+
+    .hero-img img {
+      width: 100%;
+    }
+
+    .floating-bar {
+      position: absolute;
+      bottom: 60px;
+      /* Adjust as needed */
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 80%;
+      /* Adjust width as needed */
+      background: rgb(255, 255, 255);
+      /* Semi-transparent background */
+      color: rgb(0, 0, 0);
+      padding: 7px 0;
+      border-radius: 30px;
+      z-index: 10;
+      /* Ensure it appears above the image */
+    }
+
+    .hero-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #525252;
+    }
+
+    .select-no-border-small {
+      border: none;
+      /* Removes the border */
+      outline: none;
+      /* Removes the outline (focus border) */
+      padding: 0.5rem 0.75rem;
+      /* Adjust padding for size */
+      font-size: 0.875rem;
+      /* Smaller font size */
+      border-radius: 0.25rem;
+      /* Optional: adjust border radius for rounded corners */
+      background-color: transparent;
+      /* Optional: transparent background */
+      box-shadow: none;
+      /* Removes any shadow */
+    }
+
+    .custom-section {
+      height: 100vh;
+      background-image: url('assets/img/drive/aerea1.JPG');
+      background-size: cover;
+      /* Cover the entire section */
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Prevent the image from repeating */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black color with 50% opacity */
+      background-blend-mode: darken;
+      /* This blends the image with the color */
+      padding: 0;
+      margin: 0;
+    }
+
+    .pulse-button {
+      /* center in the middle of the screen */
+      animation: pulse 1.7s infinite;
+      /* n-second animation, looping infinitely */
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.301);
+        /* shadow */
+      }
+
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(255, 193, 7, 0);
+        /* Fades the shadow */
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+        /* Back to original */
+      }
+    }
+
+    .round-image {
+      width: 87%;
+      /* Width is 50% of the parent container */
+      height: auto;
+      /* Height will adjust automatically */
+      border-radius: 5%;
+      object-fit: cover;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #1b9732 !important;
+    }
+
+    .text-justify-center {
+      text-align: justify;
+      text-align-last: center;
+      max-width: 100%;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Appland
+  * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5J8K36R" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+   
+  <div id="loader"></div>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center theme-color custom-section">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-lg-12 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
+          data-aos="zoom-in">
+          <div class="text-center">
+            <h5 class="BD-font mb-5" style="color: #E9E9E9;">BIENVENIDO A</h5>
+            <img src="assets/img/itm-logo-full.png" alt="" width="40%" class="">
+            <h6 class="BD-font mt-3 mb-5" style="color: #E9E9E9;">MODERN CABINS</h6>
+            <h5 class="BD-font mb-5" style="color: #E9E9E9;">SANTIAGO, NUEVO LEÓN</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Nosotros Section ======= -->
+    <section id="nosotros"
+      style="background-color: #0D3B32;padding-top: 20px !important;padding-bottom: 20px !important;" class="details">
+      <div class="container">
+
+        <div class="row content justify-content-center align-items-center text-md-start text-center">
+          <!-- Text Section -->
+          <div class="col-12 col-md-7" data-aos="fade-up">
+            <h1 class="nagbuloe-font" style="color:#FED716">¡Gracias por tu reserva!</h1>
+            <br>
+            <p style="color: #E9E9E9;">
+              ¡Estamos emocionados de recibirte en Into The Moon! 🌙✨<br><br>
+              Nuestro glamping ubicado en Santigo, NL ofrece vistas increíbles y una experiencia única para
+              desconectarte y disfrutar de la vista.<br><br>
+              ¡Prepárate para relajarte, explorar y crear recuerdos mágicos! 🌟
+            </p>
+          </div>
+
+          <!-- Image Section -->
+          <div class="col-12 col-md-5" data-aos="flip-left">
+            <img src="assets/img/drive/patio2.JPG" alt="" class="round-image mt-4 img-fluid mx-auto d-block">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Nosotros Section -->
+
+    <!-- ======= Amenidades Section ======= -->
+    <section id="amenidades" class="pricing"
+      style="background-color: #E2C842; padding-top: 20px !important;padding-bottom: 20px !important;">
+      <div class="container">
+        <div class="section-title" style="padding-bottom: 10px !important;">
+          <h2 class="nagbuloe-font" style="color: #FFF; margin-bottom: 0px !important;">Conoce tu cabaña</h2>
+        </div>
+        <div class="row no-gutters text-center"> <!-- Center titles and images -->
+          <div class="col-lg-4 d-flex flex-column align-items-center mt-4" data-aos="flip-right"
+          >
+            <img src="assets/img/drive/interior2.JPG" width="100%" alt="" class="mb-3 round-image">
+            <h3 class="bona-nova-font" style="color: #000000;">Recámara Queen</h3>
+            <ul class="text-justify-center" style="list-style-type: none;">
+              <li class="bona-nova-font mt-1" style="font-size: 20px; color:black;">🛏️📺 Mini split, TV con streaming,
+                ​baño privado, frigobar, fregadero, ​microondas, cafetera, utensilios.</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 d-flex flex-column align-items-center mt-4" data-aos="flip-up">
+            <img src="assets/img/drive/alberca1.JPG" width="100%" alt="" class="mb-3 round-image">
+            <h3 class="bona-nova-font" style="color: #000000;">Pileta Privada</h3>
+            <ul class="text-justify-center" style="list-style-type: none;">
+              <li class="bona-nova-font mt-1" style="font-size: 20px; color:black;">🏊🏻♨️ Pileta privada con agua
+                ​climatizada
+                hasta 35 C.</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 d-flex flex-column align-items-center mt-4" data-aos="flip-left"
+          >
+            <img src="assets/img/drive/patio11.JPG" width="100%" alt="" class="mb-3 round-image">
+            <h3 class="bona-nova-font" style="color: #000000;">Terraza Con Vista</h3>
+            <ul class="text-justify-center" style="list-style-type: none;">
+              <li class="bona-nova-font mt-1" style="font-size: 20px; color:black;">🏕️🌄 Terraza privada con asador,
+                ​fogatero, muebles exteriores, luces ​y pileta privada. Incluye leña.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Amenidades Section -->
+
+    <!-- ======= Maps Section ======== -->
+    <section id="ubicacion" class="testimonials section-bg"
+      style="background-color: #EFEDE7;padding-top: 20px !important;padding-bottom: 20px !important;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Column: Text -->
+            <div class="col-12 col-md-6" data-aos="fade-right">
+              <div class="section-title">
+                <h1 class="nagbuloe-font" style="color: #586053;">El acceso</h1>
+              </div>
+              <p>
+                ¡El acceso a nuestro glamping es muy fácil! 🚗✨
+                <br><br>
+                Busca “Into the Moon” en Google Maps y te llevará directamente al portón en la foto. Por favor, no
+                utilices
+                otras
+                aplicaciones como Waze o Maps, ni escribas la dirección manualmente en Google, ya que esto podría
+                llevarte a una
+                ubicación incorrecta.
+                <br><br>
+                Nuestro glamping está completamente bardeado y cuenta con cámaras de seguridad en todas las entradas,
+                así como
+                vigilancia 24/7, para que puedas disfrutar de tu estancia con total tranquilidad. 🏞️
+                <br><br>
+                Aunque estamos cerca de la ciudad, ten en cuenta que estamos en la montaña. Es posible que te encuentres
+                con
+                animales e
+                insectos, lo cual es parte de la experiencia natural. 🐿️🦋 Si te topas con ellos, solo salúdalos y deja
+                que
+                sigan su
+                camino. 🌲
+              </p>
+            </div>
+
+            <!-- Right Column: Google Maps Iframe -->
+            <div class="col-12 col-md-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.2735438814234!2d-100.17633145477153!3d25.462539897352165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c9af662455b5%3A0xf1224dd1d88af639!2sInto%20the%20moon!5e0!3m2!1ses-419!2smx!4v1723089445469!5m2!1ses-419!2smx"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" data-aos="flip-down">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Maps Section -->
+
+    <!-- reglas -->
+    <section id="nosotros"
+      style="background-color: #586053;padding-top: 20px !important;padding-bottom: 20px !important;" class="details">
+      <div class="container">
+
+        <div class="row content justify-content-center align-items-center text-md-start text-center">
+          <!-- Text Section -->
+          <div class="col-12 pt-4" data-aos="fade-up">
+            <h1 class="nagbuloe-font text-center" style="color:#FED716">Reglas</h1>
+            <br>
+            <ol class="custom-ordered-list" style="color: #FFF;">
+              <li>
+                <h3 class="bona-nova-font" style="color: #FFF;">Respetar a los vecinos.</h3>
+              </li>
+              <li>
+                <h3 class="bona-nova-font" style="color: #FFF;">Estrictamente prohibido fumar dentro de los cuartos. Se
+                  cobrará una multa de $2,000.00 al
+                  que sorprendamos rompiendo esta regla.</h3>
+              </li>
+              <li>
+                <h3 class="bona-nova-font" style="color: #FFF;">Evitar daños o mal uso, ya que puede resultar en la
+                  suspensión de la estancia y cargos
+                  adicionales.</h3>
+              </li>
+              <li>
+                <h3 class="bona-nova-font" style="color: #FFF;">No se permiten visitas, eventos ni huéspedes
+                  adicionales.</h3>
+              </li>
+              <li>
+                <h3 class="bona-nova-font" style="color: #FFF;">No nos hacemos responsables por objetos olvidados,
+                  perdidos o extraviados.</h3>
+              </li>
+              <li>
+                <h3 class="bona-nova-font" style="color: #FFF;">Limpieza para estancias largas se realiza una vez a la
+                  semana.</h3>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End reglas -->
+
+    <!-- recomendaciones -->
+    <section id="ubicacion" class="testimonials section-bg"
+      style="background-color: #EFEDE7;padding-top: 20px !important;padding-bottom: 20px !important;">
+      <div class="container" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title" style="padding-bottom: 10px !important;">
+            <h1 class="nagbuloe-font" style="color: #E2C842; margin-bottom: 0px !important;">Recomendaciones</h1>
+            <h6 class="text-center nagbuloe-font mt-3"><i>No olvidar traer...</i></h6>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="row">
+              <div class="col-md-4 mt-3">
+                <div class="recommendation-card" data-aos="flip-right">
+                  <div class="corner-cutout-1"></div>
+                  <div class="corner-cutout-2"></div>
+                  <h3 class="nagbuloe-font">Comida</h3>
+                  <ul style="color: #586053; text-align: start;">
+                    <li>
+                      <h5>Carne y carbón</h5>
+                    </li>
+                    <li>
+                      <h5>Snacks y drinks</h5>
+                    </li>
+                    <li>
+                      <h5>Condimentos</h5>
+                    </li>
+                    <li>
+                      <h5>Recipientes para preparar la carne</h5>
+                    </li>
+                    <li>
+                      <h5>Desayuno</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 mt-3">
+                <div class="recommendation-card" data-aos="flip-up">
+                  <div class="corner-cutout-1"></div>
+                  <div class="corner-cutout-2"></div>
+                  <h3 class="nagbuloe-font">Cuidado personal</h3>
+                  <ul style="color: #586053; text-align: start;">
+                    <li>
+                      <h5>Acondicionador</h5>
+                    </li>
+                    <li>
+                      <h5>Pasta de dientes</h5>
+                    </li>
+                    <li>
+                      <h5>Repelente de mosquitos</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 mt-3">
+                <div class="recommendation-card" data-aos="flip-left">
+                  <div class="corner-cutout-1"></div>
+                  <div class="corner-cutout-2"></div>
+                  <h3 class="nagbuloe-font">Diversión</h3>
+                  <ul style="color: #586053; text-align: start;">
+                    <li>
+                      <h5>Juego de mesa</h5>
+                    </li>
+                    <li>
+                      <h5>Bocina</h5>
+                    </li>
+                    <li>
+                      <h5>Hielerita</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Left Image -->
+      <img src="assets/img/leña.png" alt="Decorative left" class="bottom-left-image" data-aos="zoom-in"
+        data-aos-delay="100">
+
+      <!-- Bottom Right Image -->
+      <img src="assets/img/asador.png" alt="Decorative right" class="bottom-right-image" data-aos="zoom-in"
+        data-aos-delay="100">
+    </section>
+    <!-- end recomendaciones -->
+
+    <!-- connected -->
+    <section id="wifi" style="background-color: #586053;" class="details">
+      <div class="custom-container">
+        <div class="custom-row">
+          <!-- Image Section -->
+          <div class="image-container" data-aos="flip-right">
+            <img src="assets/img/laptop.jpg" alt="WiFi Area">
+          </div>
+          <!-- Text Section -->
+          <div class="text-container ps-5" data-aos="fade-up">
+            <h1 class="nagbuloe-font" style="color:#fff">STAY CONNECTED</h1>
+            <p style="color: #E9E9E9;">
+              WIFI: Infinitum<br>
+              Contraseña: Intotemun1234
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <img src="assets/img/sparkle.png" alt="Decorative right" class="bottom-right-image2">
+    </section>
+    <!-- end connected -->
+
+    <!-- masajes -->
+    <section id="masajes" style="background-color: #EFEDE7;" class="details">
+      <div class="custom-container">
+        <div class="custom-row">
+          <!-- Text Section -->
+          <div class="text-container ps-5 mt-5" data-aos="fade-up">
+            <div class="section-title">
+              <h5 class="nagbuloe-font" style="color: #586053;">Servicios adicionales</h5>
+              <h1 class="nagbuloe-font" style="color: #E2C842;">Masajes</h1>
+            </div>
+            <p style="color: #586053;">
+              Descubre nuestros exclusivos masajes diseñados para equilibrar tu energía y cuerpo:<br>
+            <ul style="color: #586053;">
+              <li>
+                Relajante 😌: Libera endorfinas (la hormona de la felicidad) para aliviar tensiones, mejorar la
+                circulación y reducir el estrés.
+              </li>
+              <li>
+                Linfático 💧: Masaje suave que estimula tu sistema circulatorio, elimina líquidos retenidos y toxinas,
+                devolviéndole vitalidad a tu cuerpo.
+              </li>
+              <li>
+                Descontracturante/Deportivo 💪 : Maniobras profundas que alivian zonas de dolor, eliminan contracturas y
+                puntos gatillo para recuperar la función muscular.
+              </li>
+              <li>
+                Reductivo 🌿: Estimula la producción de elastina y colágeno, reafirma la piel, ayuda a reducir medidas y
+                tonificar.
+              </li>
+            </ul>
+            <span style="color: #586053;">
+              ⏰ Duración: 60 minutos<br>
+              📆 Reserva: Al menos 48 hrs antes de tu estancia - 811 029 1729<br>
+              💲 Precio: $3000.00 MXN por pareja<br><br>
+
+              ¡Te esperamos para que vivas una experiencia única y revitalizante!
+            </span>
+            </p>
+          </div>
+          <!-- Image Section -->
+          <div class="image-container" data-aos="flip-left">
+            <img src="assets/img/masajes.jpeg" alt="WiFi Area">
+          </div>
+        </div>
+      </div>
+
+      <img src="assets/img/sparkle.png" alt="Decorative right" class="bottom-right-image2">
+    </section>
+    <!-- end masajes -->
+
+    <!-- flores -->
+    <section id="flores" class="pricing"
+      style="background-color: #0D3B32; padding-top: 20px !important;padding-bottom: 20px !important;">
+      <div class="container">
+        <div class="section-title" style="padding-bottom: 10px !important;">
+          <h1 class="nagbuloe-font" style="color: #99A17C; margin-bottom: 0px !important;">Ramos florales</h1>
+          <h5 class="nagbuloe-font" style="color: #99A17C;">Servicios adicionales</h5>
+        </div>
+
+        <div class="row no-gutters text-center"> <!-- Center titles and images -->
+          <div class="col-lg-4 d-flex flex-column align-items-center mt-4" data-aos="flip-left">
+            <img src="assets/img/rosas1.png" width="100%" alt="" class="mb-3 round-image">
+            <h3 class="nagbuloe-font" style="color: #99A17C;">Ramo 24 Rosas Rojas</h3>
+            <ul class="text-justify-center" style="list-style-type: none;">
+              <li class="nagbuloe-font mt-1" style="font-size: 20px; color: #E2C842;">$800.00</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 d-flex flex-column align-items-center mt-4" data-aos="flip-up">
+            <img src="assets/img/rosas2.png" width="100%" alt="" class="mb-3 round-image">
+            <h3 class="nagbuloe-font" style="color: #99A17C;">Ramo 48 Rosas Rojas</h3>
+            <ul class="text-justify-center" style="list-style-type: none;">
+              <li class="nagbuloe-font mt-1" style="font-size: 20px; color: #E2C842;">$1600.00</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 d-flex flex-column align-items-center mt-4" data-aos="flip-right">
+            <img src="assets/img/rosas3.png" width="100%" alt="" class="mb-3 round-image">
+            <h3 class="nagbuloe-font" style="color: #99A17C;">Ramo 100 Rosas Rojas</h3>
+            <ul class="text-justify-center" style="list-style-type: none;">
+              <li class="nagbuloe-font mt-1" style="font-size: 20px; color: #E2C842;">$2600.00</li>
+            </ul>
+          </div>
+
+          <div class="section-title" style="padding-top: 30px !important;">
+            <h5 class="nagbuloe-font" style="color: #99A17C; margin-bottom: 0px !important;">PEDIDOS DEBERAN HACERSE CON 48 HRS ANTES DE TU ESTANCIA</h5>
+            <h5 class="nagbuloe-font" style="color: #99A17C;">811 029 1729</h5>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- end flores -->
+
+    <!-- footer -->
+    <section class="bg-image-section">
+      <div class="floating-text-box text-center">
+        <p>
+        <h4 class="BD-font">RESERVACIONES</h4><br><br>
+        Whatsapp: 811 029 1729<br>
+        instagram.com/intothemoonmx
+        </p>
+      </div>
+      <div class="bottom-banner-title">
+        <span class="bona-nova-font" style="color: #FED716; font-size: 5rem;">INTO THE MOON</span>
+      </div>
+    </section>
+    <!-- end footer -->
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files (Deferred) -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    });
+  </script>
+
+</body>
+
+</html>
