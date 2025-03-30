@@ -4041,7 +4041,8 @@ h6, .h6 {
     transform: translate(-50%, -50%);
     -webkit-filter: blur(125px);
     filter: blur(125px);
-    background: var(--primary-color); }
+    /* background: var(--primary-color);  */
+  }
     @media only screen and (max-width: 991px) {
       .slider-item-two:after {
         width: 200px;
