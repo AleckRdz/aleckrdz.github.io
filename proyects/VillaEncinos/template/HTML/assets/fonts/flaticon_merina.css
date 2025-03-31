@@ -1,9 +1,8 @@
-@charset "UTF-8";
 @font-face {
   font-family: "flaticon_merina";
-  src: url("./flaticon_merina.ttf?f27ca9c5c4a70c40b6e10f4963b93d7d") format("truetype"), url("./flaticon_merina.woff?f27ca9c5c4a70c40b6e10f4963b93d7d") format("woff"), url("./flaticon_merina.woff2?f27ca9c5c4a70c40b6e10f4963b93d7d") format("woff2"), url("./flaticon_merina.eot?f27ca9c5c4a70c40b6e10f4963b93d7d#iefix") format("embedded-opentype"), url("./flaticon_merina.svg?f27ca9c5c4a70c40b6e10f4963b93d7d#flaticon_merina") format("svg"); }
-
-i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  src: url("./flaticon_merina.ttf?f27ca9c5c4a70c40b6e10f4963b93d7d") format("truetype"), url("./flaticon_merina.woff?f27ca9c5c4a70c40b6e10f4963b93d7d") format("woff"), url("./flaticon_merina.woff2?f27ca9c5c4a70c40b6e10f4963b93d7d") format("woff2"), url("./flaticon_merina.eot?f27ca9c5c4a70c40b6e10f4963b93d7d#iefix") format("embedded-opentype"), url("./flaticon_merina.svg?f27ca9c5c4a70c40b6e10f4963b93d7d#flaticon_merina") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
   font-family: flaticon_merina !important;
   font-style: normal;
   font-weight: normal !important;
@@ -11,79 +10,105 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .flaticon-location:before {
-  content: ""; }
+  content: "\f101";
+}
 
 .flaticon-check-mark:before {
-  content: ""; }
+  content: "\f102";
+}
 
 .flaticon-stationary-bike:before {
-  content: ""; }
+  content: "\f103";
+}
 
 .flaticon-jacuzzi:before {
-  content: ""; }
+  content: "\f104";
+}
 
 .flaticon-swim:before {
-  content: ""; }
+  content: "\f105";
+}
 
 .flaticon-relax:before {
-  content: ""; }
+  content: "\f106";
+}
 
 .flaticon-restaurant:before {
-  content: ""; }
+  content: "\f107";
+}
 
 .flaticon-transportation:before {
-  content: ""; }
+  content: "\f108";
+}
 
 .flaticon-transportation-1:before {
-  content: ""; }
+  content: "\f109";
+}
 
 .flaticon-spa:before {
-  content: ""; }
+  content: "\f10a";
+}
 
 .flaticon-wifi-router:before {
-  content: ""; }
+  content: "\f10b";
+}
 
 .flaticon-drink:before {
-  content: ""; }
+  content: "\f10c";
+}
 
 .flaticon-bathtub:before {
-  content: ""; }
+  content: "\f10d";
+}
 
 .flaticon-swimming-pool:before {
-  content: ""; }
+  content: "\f10e";
+}
 
 .flaticon-mop:before {
-  content: ""; }
+  content: "\f10f";
+}
 
 .flaticon-food-delivery:before {
-  content: ""; }
+  content: "\f110";
+}
 
 .flaticon-treadmill:before {
-  content: ""; }
+  content: "\f111";
+}
 
 .flaticon-facial:before {
-  content: ""; }
+  content: "\f112";
+}
 
 .flaticon-mission:before {
-  content: ""; }
+  content: "\f113";
+}
 
 .flaticon-hotel:before {
-  content: ""; }
+  content: "\f114";
+}
 
 .flaticon-champagne:before {
-  content: ""; }
+  content: "\f115";
+}
 
 .flaticon-laundry-machine:before {
-  content: ""; }
+  content: "\f116";
+}
 
 .flaticon-location-1:before {
-  content: ""; }
+  content: "\f117";
+}
 
 .flaticon-email-marketing:before {
-  content: ""; }
+  content: "\f118";
+}
 
 .flaticon-call:before {
-  content: ""; }
+  content: "\f119";
+}/*# sourceMappingURL=flaticon_merina.css.map */
