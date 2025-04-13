@@ -655,3 +655,4 @@ if (jQuery('.room-calendar').length) {
         calendar.render();
     });
 }
+
