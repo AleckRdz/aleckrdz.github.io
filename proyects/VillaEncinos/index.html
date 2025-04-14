@@ -65,6 +65,24 @@
         .next-arrow{
             display: none !important;
         }
+
+        .square-img {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Hace que el div sea cuadrado */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.square-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
     </style>
     
 </head>
@@ -325,53 +343,116 @@
         </section>
          <!-- Alojamiento y Amenidades End -->
 
-         <!-- Galería Start -->
-        <section id="galeria" class="instagram-area pt-130 rpt-100 pb-130 rpb-100 rel z-1">
+         <!-- Galería Start -->    
+        <section id="galeria" class="gallery-page-area pt-130 rpt-100 pb-100 rpb-0">
             <div class="container">
                 <!-- Título centrado -->
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8 col-md-10">
                         <div class="section-title text-center mb-50 rmb-40 wow fadeInUp delay-0-2s">
-                            <h2>Galería</h2>
+                            <h2>📷 Galería</h2>
                         </div>
                     </div>
                 </div>
         
-                <!-- Galería de imágenes -->
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-3 col-md-4 col-sm-6 instagram-item wow fadeInUp delay-0-2s">
-                        <a class="instagram-gallery" href="assets/images/drive/DSC03159.webp">
-                            <img src="assets/images/drive/DSC03159.webp" alt="instagram" class="img-fluid">
-                        </a>
+                <div class="row g-3 justify-content-center">
+                    <!-- Imágenes 1-4 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03214.webp" alt="Gallery">
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 instagram-item wow fadeInUp delay-0-3s">
-                        <a class="instagram-gallery" href="assets/images/drive/DSC03161.webp">
-                            <img src="assets/images/drive/DSC03161.webp" alt="instagram" class="img-fluid">
-                        </a>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03159.webp" alt="Gallery">
+                            </div>
+                        </div>
                     </div>
-                    <!-- Opcional: bloque para promoción -->
-                    <div class="col-lg-6 col-md-8 instagram-item wow fadeInUp delay-0-6s">
-                        <div class="content text-white bg-dark p-4 rounded text-center">
-                            <a href="https://www.instagram.com/villaencinos.nl/" target="_blank" class="text-white">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03161.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03176.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Imagen 5 (doble ancho en móvil) -->
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03209.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Bloque Instagram (ocupa 2 espacios en desktop) -->
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div
+                            class="content text-white bg-dark p-4 rounded text-center h-100 d-flex flex-column justify-content-center align-items-center">
+                            <a href="https://www.instagram.com/villaencinos.nl/" target="_blank"
+                                class="text-white text-decoration-none">
                                 <div class="icon mb-2"><i class="fab fa-instagram fa-2x"></i></div>
                                 <h4>Síguenos en Instagram</h4>
                             </a>
-                            <hr class="bg-light">
+                            <hr class="bg-light w-100">
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 instagram-item wow fadeInUp delay-0-4s">
-                        <a class="instagram-gallery" href="assets/images/drive/DSC03176.webp">
-                            <img src="assets/images/drive/DSC03176.webp" alt="instagram" class="img-fluid">
-                        </a>
+        
+                    <!-- Imágenes 6-9 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03223.webp" alt="Gallery">
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 instagram-item wow fadeInUp delay-0-5s">
-                        <a class="instagram-gallery" href="assets/images/drive/DSC03209.webp">
-                            <img src="assets/images/drive/DSC03209.webp" alt="instagram" class="img-fluid">
-                        </a>
-                    </div>                            
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03236.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03250.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03267.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Imagen 10 (doble ancho en móvil) -->
+                    <!-- Imagen 10 (doble ancho en móvil) -->
+                    <div class="col-12 col-md-4 col-lg-3 mb-3 mb-md-0">
+                        <div class="gallery-item">
+                            <div class="image square-img rounded overflow-hidden">
+                                <img src="assets/images/drive/DSC03276.webp" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+
          <!-- Galería End -->
 
          <!-- Tarifas Start -->
