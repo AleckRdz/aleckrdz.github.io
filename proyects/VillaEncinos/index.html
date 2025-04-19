@@ -84,6 +84,31 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-widget:hover {
+            background-color: #128C7E;
+        }
+
+        .whatsapp-widget img {
+            width: 35px;
+            height: 35px;
+        }    
     </style>
 
 </head>
@@ -102,8 +127,8 @@
 
                     <div class="header-inner rel d-flex align-items-center">
                         <div class="logo-outer">
-                            <div class="logo"><a href="index.html"><img src="assets/images/favicon-nbg.png" width="90px"
-                                        alt="Logo" title="Logo"><img src="assets/images/logo-ni-nbg.png" width="180px"
+                            <div class="logo"><a href="index.html"><img loading="lazy" src="assets/images/favicon-nbg.png" width="90px"
+                                        alt="Logo" title="Logo"><img loading="lazy" src="assets/images/logo-ni-nbg.png" width="180px"
                                         alt="Logo" title="Logo"></a></div>
                         </div>
 
@@ -113,7 +138,7 @@
                                 <div class="navbar-header">
                                     <div class="mobile-logo my-15">
                                         <a href="index.html">
-                                            <img src="assets/images/logo-ni-nbg.png" width="160px" alt="Logo"
+                                            <img loading="lazy" src="assets/images/logo-ni-nbg.png" width="160px" alt="Logo"
                                                 title="Logo">
                                         </a>
                                     </div>
@@ -207,7 +232,7 @@
                     <div class="col-lg-6">
                         <div class="about-image-part rmb-55">
                             <div class="top-part">
-                                <img src="assets/images/drive/DJI_0124_cube.jpg" class="rounded" alt="About">
+                                <img loading="lazy" src="assets/images/drive/DJI_0124_cube.jpg" class="rounded" alt="About">
                                 <div class="icon wow fadeInLeft delay-0-2s animated"
                                     style="visibility: visible; animation-name: fadeInLeft;"><i class="flaticon-hotel"></i>
                                 </div>
@@ -219,7 +244,7 @@
                                     <!-- <i class="fal fa-play"></i> -->
                                     Ver Más <i class="far fa-angle-right"></i>
                                 </a>
-                                <img src="assets/images/drive/DSC03251_cube.jpg" class="rounded" alt="About">
+                                <img loading="lazy" src="assets/images/drive/DSC03251_cube.jpg" class="rounded" alt="About">
                             </div>
                         </div>
                     </div>
@@ -237,31 +262,37 @@
                             </div>
                             <div class="feature-list wow fadeInUp delay-0-3s animated"
                                 style="visibility: visible; animation-name: fadeInUp;">
-                                <div class="row">
-                                    <div class="feature-item">
-                                        <div class="content">
-                                            <h5>🏡 Privacidad y exclusividad</h5>
-                                            <p>Espacios completamente climatizados y equipados.</p>
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <div class="col">
+                                        <div class="feature-item">
+                                            <div class="content">
+                                                <h5>🏡 Exclusividad</h5>
+                                                <p>Espacios totalmente equipados.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="feature-item">
-                                        <div class="content">
-                                            <h5>🌿 Naturaleza y tranquilidad</h5>
-                                            <p>Disfruta del lago, la isla y amplias áreas verdes.</p>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                                <div class="row">
-                                    <div class="feature-item">
-                                        <div class="content">
-                                            <h5>🎉 Diversión asegurada</h5>
-                                            <p>Alberca, zona de camping, WiFi, Netflix y más.</p>
+                                    <div class="col">
+                                        <div class="feature-item">
+                                            <div class="content">
+                                                <h5>🌿 Naturaleza</h5>
+                                                <p>Lago, isla y áreas verdes.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="feature-item">
-                                        <div class="content">
-                                            <h5>🐾 Pet-friendly</h5>
-                                            <p>¡Tus mascotas pequeñas también son bienvenidas!</p>
+                                    <div class="col">
+                                        <div class="feature-item">
+                                            <div class="content">
+                                                <h5>🎉 Diversión</h5>
+                                                <p>Alberca, camping, WiFi, y más.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="feature-item">
+                                            <div class="content">
+                                                <h5>🐾 Pet-friendly</h5>
+                                                <p>¡mascotas pequeñas son bienvenidas!</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -290,7 +321,7 @@
                             <div class="section-title text-center text-white mb-60 rmb-40 wow fadeInUp delay-0-2s">
                                 <span class="sub-title mb-10">¿Por qué nosotros?</span>
                                 <h2>🏠 Disfruta de Amenidades y Actividades<h2>
-                                <p>Contamos con amenidades y actividades que van a hacer de tu estancia más cómoda y memorable.</p>
+                                <h4>Contamos con amenidades y actividades que van a hacer de tu estancia más cómoda y memorable.</h4>
                             </div>
                         </div>
                     </div>
@@ -304,15 +335,6 @@
                                 <div class="progress-item mb-3">
                                     <div class="d-flex justify-content-between">
                                         <span>Ciclismo</span>
-                                        <span>100%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: 100%; background-color: #722f37;"></div>
-                                    </div>
-                                </div>
-                                <div class="progress-item mb-3">
-                                    <div class="d-flex justify-content-between">
-                                        <span>Senderismo</span>
                                         <span>100%</span>
                                     </div>
                                     <div class="progress">
@@ -388,42 +410,6 @@
                 <span></span><span></span>
             </div>
         </section>
-
-        <!-- <section id="comodidades" class="services-area-three pt-130 rpt-100 pb-130 rpb-100 rel z-1">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-8 col-md-10">
-                        <div class="section-title text-center mb-50 rmb-40 wow fadeInUp delay-0-2s">
-                            <h2>🏡 Alojamiento y Amenidades</h2>
-                            <p>Todo lo que necesitas para una estancia cómoda, divertida y rodeada de naturaleza en Villa Encinos.</p>
-                        </div>
-                    </div>
-                </div>
-                <ul class="list-style-two three-column pt-10 wow fadeInUp delay-0-2s animated"
-                    style="visibility: visible; animation-name: fadeInUp;">
-                    <li>🛏️ 4 Recámaras - Totalmente climatizadas y privadas</li>
-                    <li>🚽 10 Baños - Privacidad y comodidad para todos</li>
-                    <li>👨‍👩‍👧‍👦 Capacidad para 20 personas - Perfecto para grupos grandes</li>
-                    <li>🏊‍♀️ Alberca privada - Refresca tus días bajo el sol</li>
-                    <li>🎣 Lago para pescar - Tranquilidad y conexión con la naturaleza</li>
-                    <li>🏝️ Isla privada - Un rincón especial para relajarte</li>
-                    <li>🌴 Palapa y terraza - Ambientes frescos para convivir al aire libre</li>
-                    <li>🍳 Cocina equipada - Lista para preparar lo que gustes</li>
-                    <li>🛋️ Sala y comedor - Espacios cómodos y amplios para convivir</li>
-                    <li>🧺 Ropa de cama incluida - Todo listo para tu descanso</li>
-                    <li>📶 WiFi - Conexión rápida y estable</li>
-                    <li>📺 Netflix & Amazon Prime - Disfruta tus series y películas favoritas</li>
-                    <li>❄️ Aire acondicionado - Comodidad total en todo momento</li>
-                    <li>⛺ Área de camping - Vive la experiencia de dormir bajo las estrellas</li>
-                    <li>🐶 Pet Friendly - Se aceptan mascotas pequeñas</li>
-                </ul>
-            </div>
-            <div class="bg-lines for-bg-white">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span>
-            </div>
-        </section> -->
         <!-- Alojamiento y Amenidades End -->
 
         <!-- Galería Start -->
@@ -443,28 +429,28 @@
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03214.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03214.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03159.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03159.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03161.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03161.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03176.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03176.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
@@ -473,7 +459,7 @@
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03209.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03209.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
@@ -495,28 +481,28 @@
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03223.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03223.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03236.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03236.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03250.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03250.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03267.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03267.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
@@ -525,7 +511,7 @@
                     <div class="col-12 col-md-4 col-lg-3 mb-3 mb-md-0">
                         <div class="gallery-item">
                             <div class="image square-img rounded overflow-hidden">
-                                <img src="assets/images/drive/DSC03276.webp" alt="Gallery">
+                                <img loading="lazy" src="assets/images/drive/DSC03276.webp" alt="Gallery">
                             </div>
                         </div>
                     </div>
@@ -614,156 +600,7 @@
                 <span></span><span></span>
             </div>
         </section>
-        <!-- Tarifas End -->
-
-        <!-- Reservaciones y Testimonios Start -->
-        <section id="reservacion" class="testimonials-area py-130 rpy-100 rel z-1 bg-color-and-shapes bgc-black">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 wow fadeInLeft delay-0-2s">
-                        <div class="booking-search rmb-55 rel bg-white">
-                            <div class="section-title">
-                                <span class="sub-title mb-5">Reservación</span>
-                                <h3>Vive la Experiencia</h3>
-                            </div>
-                            <form action="#" name="booking-form" method="post">
-                                <div class="form-group">
-                                    <label for="start-date">Fecha de llegada:</label>
-                                    <input type="date" name="start-date" id="start-date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="end-date">Fecha de salida:</label>
-                                    <input type="date" name="end-date" id="end-date">
-                                </div>
-                                <div class="form-group clearfix">
-                                    <label for="adultos">Huéspedes:</label>
-                                    <input type="number" name="adultos" id="adultos" placeholder="Adultos">
-                                </div>
-                                <div class="form-group clearfix">
-                                    <input type="number" name="ninos" id="ninos" placeholder="Niños">
-                                </div>
-                                <div class="form-group clearfix">
-                                    <label for="paquete">Tipo de estancia:</label>
-                                    <select name="paquete" id="paquete">
-                                        <option value="default" selected="">- Seleccionar -</option>
-                                        <option value="01">Estancia parcial</option>
-                                        <option value="02">Estancia completa</option>
-                                        <option value="03">Evento privado</option>
-                                    </select>
-                                </div>
-                                <!-- comentarios -->
-                                <div class="form-group clearfix">
-                                    <label for="comentarios">Comentarios:</label>
-                                    <textarea name="comentarios" id="comentarios" rows="4"
-                                        placeholder="Escribe tus comentarios o solicitudes especiales aquí"></textarea>
-                                </div>
-                                <div class="form-group pt-30 mb-0">
-                                    <button type="submit" class="theme-btn btnReservacion">Reservar Ahora<i
-                                            class="far fa-angle-right"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-7" id="testimonios">
-                        <div class="testimonial-right text-white wow fadeInRight delay-0-2s">
-                            <div class="section-title mb-65 rmb-45">
-                                <span class="sub-title mb-15">Testimonios</span>
-                                <h2>Lo que Dicen de Nosotros</h2>
-                            </div>
-                            <div class="testimonial-part">
-                                <div class="testimonial-active">
-                                    <div class="testimonial-item">
-                                        <p>Muy buen lugar!</p>
-                                        <div class="testi-author">
-                                            <img src="assets/images/testimonials/karen.webp" alt="Testi Thumb">
-                                            <div class="testi-des">
-                                                <h5>Karen</h5>
-                                                <span>Zapopan, México</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item">
-                                        <p>Excelente lugar para pasar en fin en familia</p>
-                                        <div class="testi-author">
-                                            <img src="assets/images/testimonials/daana.webp" alt="Testi Thumb">
-                                            <div class="testi-des">
-                                                <h5>Daana</h5>
-                                                <span>Monterrey, México</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item">
-                                        <p>Muy cómoda</p>
-                                        <div class="testi-author">
-                                            <img src="assets/images/testimonials/monica.webp" alt="Testi Thumb">
-                                            <div class="testi-des">
-                                                <h5>Monica</h5>
-                                                <span>Monterrey, México</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item">
-                                        <p>excelente quinta para desconectarse de el estrés de la ciudad, muy cómoda y
-                                            bonita.
-                                            Los anfitriones muy amables.</p>
-                                        <div class="testi-author">
-                                            <img src="assets/images/testimonials/paola.webp" alt="Testi Thumb">
-                                            <div class="testi-des">
-                                                <h5>Paola</h5>
-                                                <span>Monterrey, México</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item">
-                                        <p>El lugar esta justo como se ve en las fotografias, espacios grandes, lleno de
-                                            naturaleza, la casa esta muy bien
-                                            equipada, las camas muy comodas, alberca y area de asador increibles, la
-                                            atencion por parte de Elisa y sus trabajadores
-                                            muy buena, siempre al pendiente, sin duda volvere a hospedarme en su
-                                            espacio.</p>
-                                        <div class="testi-author">
-                                            <img src="assets/images/testimonials/everardo.webp" alt="Testi Thumb">
-                                            <div class="testi-des">
-                                                <h5>Everardo</h5>
-                                                <span>Monterrey, México</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-thums">
-                                    <div class="testi-thumb-item">
-                                        <img src="assets/images/testimonials/karen.webp" alt="Testi Thumb">
-                                    </div>
-                                    <div class="testi-thumb-item">
-                                        <img src="assets/images/testimonials/daana.webp" alt="Testi Thumb">
-                                    </div>
-                                    <div class="testi-thumb-item">
-                                        <img src="assets/images/testimonials/monica.webp" alt="Testi Thumb">
-                                    </div>
-                                    <div class="testi-thumb-item">
-                                        <img src="assets/images/testimonials/paola.webp" alt="Testi Thumb">
-                                    </div>
-                                    <div class="testi-thumb-item">
-                                        <img src="assets/images/testimonials/everardo.webp" alt="Testi Thumb">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-dots"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-lines">
-                <span></span><span></span>
-                <span></span><span></span>
-                <span></span><span></span>
-                <span></span><span></span>
-                <span></span><span></span>
-            </div>
-            <div class="wave-shapes"></div>
-            <div class="wave-shapes-two"></div>
-        </section>
-        <!-- Reservaciones y Testimonios End -->
+        <!-- Tarifas End -->        
 
         <!-- FAQ Start -->
         <section id="FAQ" class="faq-area py-130 rpy-100 rel">
@@ -772,7 +609,7 @@
                     <div class="col-lg-6">
                         <div class="faq-image-part rmb-55 rel wow fadeInRight delay-0-2s animated"
                             style="visibility: visible; animation-name: fadeInRight;">
-                            <img src="assets/images/drive/DJI_0119.webp" alt="FAQs">
+                            <img loading="lazy" src="assets/images/drive/DJI_0119.webp" alt="FAQs">
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6 mx-lg-auto">
@@ -897,6 +734,156 @@
         </section>
         <!-- FAQ End -->
 
+        <!-- Reservaciones y Testimonios Start -->
+        <section id="reservacion" class="testimonials-area py-130 rpy-100 rel z-1 bg-color-and-shapes bgc-black">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 wow fadeInLeft delay-0-2s">
+                        <div class="booking-search rmb-55 rel bg-white">
+                            <div class="section-title">
+                                <span class="sub-title mb-5">Reservación</span>
+                                <h3>Vive la Experiencia</h3>
+                            </div>
+                            <form action="#" name="booking-form" method="post">
+                                <div class="form-group">
+                                    <label for="start-date">Fecha de llegada:</label>
+                                    <input type="date" name="start-date" id="start-date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="end-date">Fecha de salida:</label>
+                                    <input type="date" name="end-date" id="end-date">
+                                </div>
+                                <div class="form-group clearfix">
+                                    <label for="adultos">Huéspedes:</label>
+                                    <input type="number" name="adultos" id="adultos" placeholder="Adultos">
+                                </div>
+                                <div class="form-group clearfix">
+                                    <input type="number" name="ninos" id="ninos" placeholder="Niños">
+                                </div>
+                                <div class="form-group clearfix">
+                                    <label for="paquete">Tipo de estancia:</label>
+                                    <select name="paquete" id="paquete">
+                                        <option value="default" selected="">- Seleccionar -</option>
+                                        <option value="01">Estancia parcial</option>
+                                        <option value="02">Estancia completa</option>
+                                        <option value="03">Evento privado</option>
+                                    </select>
+                                </div>
+                                <!-- comentarios -->
+                                <div class="form-group clearfix">
+                                    <label for="comentarios">Comentarios:</label>
+                                    <textarea name="comentarios" id="comentarios" rows="4"
+                                        placeholder="Escribe tus comentarios o solicitudes especiales aquí"></textarea>
+                                </div>
+                                <div class="form-group pt-30 mb-0">
+                                    <button type="submit" class="theme-btn btnReservacion">Reservar Ahora<i
+                                            class="far fa-angle-right"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" id="testimonios">
+                        <div class="testimonial-right text-white wow fadeInRight delay-0-2s">
+                            <div class="section-title mb-65 rmb-45">
+                                <span class="sub-title mb-15">Testimonios</span>
+                                <h2>Lo que Dicen de Nosotros</h2>
+                            </div>
+                            <div class="testimonial-part">
+                                <div class="testimonial-active">
+                                    <div class="testimonial-item">
+                                        <p>Muy buen lugar!</p>
+                                        <div class="testi-author">
+                                            <img loading="lazy" src="assets/images/testimonials/karen.webp" alt="Testi Thumb">
+                                            <div class="testi-des">
+                                                <h5>Karen</h5>
+                                                <span>Zapopan, México</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-item">
+                                        <p>Excelente lugar para pasar en fin en familia</p>
+                                        <div class="testi-author">
+                                            <img loading="lazy" src="assets/images/testimonials/daana.webp" alt="Testi Thumb">
+                                            <div class="testi-des">
+                                                <h5>Daana</h5>
+                                                <span>Monterrey, México</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-item">
+                                        <p>Muy cómoda</p>
+                                        <div class="testi-author">
+                                            <img loading="lazy" src="assets/images/testimonials/monica.webp" alt="Testi Thumb">
+                                            <div class="testi-des">
+                                                <h5>Monica</h5>
+                                                <span>Monterrey, México</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-item">
+                                        <p>excelente quinta para desconectarse de el estrés de la ciudad, muy cómoda y
+                                            bonita.
+                                            Los anfitriones muy amables.</p>
+                                        <div class="testi-author">
+                                            <img loading="lazy" src="assets/images/testimonials/paola.webp" alt="Testi Thumb">
+                                            <div class="testi-des">
+                                                <h5>Paola</h5>
+                                                <span>Monterrey, México</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-item">
+                                        <p>El lugar esta justo como se ve en las fotografias, espacios grandes, lleno de
+                                            naturaleza, la casa esta muy bien
+                                            equipada, las camas muy comodas, alberca y area de asador increibles, la
+                                            atencion por parte de Elisa y sus trabajadores
+                                            muy buena, siempre al pendiente, sin duda volvere a hospedarme en su
+                                            espacio.</p>
+                                        <div class="testi-author">
+                                            <img loading="lazy" src="assets/images/testimonials/everardo.webp"
+                                                alt="Testi Thumb">
+                                            <div class="testi-des">
+                                                <h5>Everardo</h5>
+                                                <span>Monterrey, México</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-thums">
+                                    <div class="testi-thumb-item">
+                                        <img loading="lazy" src="assets/images/testimonials/karen.webp" alt="Testi Thumb">
+                                    </div>
+                                    <div class="testi-thumb-item">
+                                        <img loading="lazy" src="assets/images/testimonials/daana.webp" alt="Testi Thumb">
+                                    </div>
+                                    <div class="testi-thumb-item">
+                                        <img loading="lazy" src="assets/images/testimonials/monica.webp" alt="Testi Thumb">
+                                    </div>
+                                    <div class="testi-thumb-item">
+                                        <img loading="lazy" src="assets/images/testimonials/paola.webp" alt="Testi Thumb">
+                                    </div>
+                                    <div class="testi-thumb-item">
+                                        <img loading="lazy" src="assets/images/testimonials/everardo.webp" alt="Testi Thumb">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-lines">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span><span></span>
+            </div>
+            <div class="wave-shapes"></div>
+            <div class="wave-shapes-two"></div>
+        </section>
+        <!-- Reservaciones y Testimonios End -->
+
         <!-- Mapa Start -->
         <section id="ubicacion" class="faq-area py-130 rpy-100 rel">
             <div class="contact-page-map pb-120 rpb-90 wow fadeInUp delay-0-2s animated"
@@ -930,7 +917,7 @@
                             <div class="instagram-item">
                                 <a class="instagram-gallery wow fadeInDown delay-0-2s"
                                     href="assets/images/drive/DSC03227.webp">
-                                    <img src="assets/images/drive/DSC03227.webp" alt="instagram">
+                                    <img loading="lazy" src="assets/images/drive/DSC03227.webp" alt="instagram">
                                     <span class="icon"><i class="fab fa-instagram"></i></span>
                                 </a>
                             </div>
@@ -939,7 +926,7 @@
                             <div class="instagram-item">
                                 <a class="instagram-gallery wow fadeInDown delay-0-3s"
                                     href="assets/images/drive/DSC03233.webp">
-                                    <img src="assets/images/drive/DSC03233.webp" alt="instagram">
+                                    <img loading="lazy" src="assets/images/drive/DSC03233.webp" alt="instagram">
                                     <span class="icon"><i class="fab fa-instagram"></i></span>
                                 </a>
                             </div>
@@ -948,7 +935,7 @@
                             <div class="instagram-item">
                                 <a class="instagram-gallery wow fadeInDown delay-0-4s"
                                     href="assets/images/drive/DSC03252.webp">
-                                    <img src="assets/images/drive/DSC03252.webp" alt="instagram">
+                                    <img loading="lazy" src="assets/images/drive/DSC03252.webp" alt="instagram">
                                     <span class="icon"><i class="fab fa-instagram"></i></span>
                                 </a>
                             </div>
@@ -957,7 +944,7 @@
                             <div class="instagram-item">
                                 <a class="instagram-gallery wow fadeInDown delay-0-5s"
                                     href="assets/images/drive/DJI_0133.webp">
-                                    <img src="assets/images/drive/DJI_0133.webp" alt="instagram">
+                                    <img loading="lazy" src="assets/images/drive/DJI_0133.webp" alt="instagram">
                                     <span class="icon"><i class="fab fa-instagram"></i></span>
                                 </a>
                             </div>
@@ -966,7 +953,7 @@
                             <div class="instagram-item">
                                 <a class="instagram-gallery wow fadeInDown delay-0-6s"
                                     href="assets/images/drive/DSC03197.webp">
-                                    <img src="assets/images/drive/DSC03197.webp" alt="instagram">
+                                    <img loading="lazy" src="assets/images/drive/DSC03197.webp" alt="instagram">
                                     <span class="icon"><i class="fab fa-instagram"></i></span>
                                 </a>
                             </div>
@@ -975,7 +962,7 @@
                             <div class="instagram-item">
                                 <a class="instagram-gallery wow fadeInDown delay-0-7s"
                                     href="assets/images/drive/DSC03200.webp">
-                                    <img src="assets/images/drive/DSC03200.webp" alt="instagram">
+                                    <img loading="lazy" src="assets/images/drive/DSC03200.webp" alt="instagram">
                                     <span class="icon"><i class="fab fa-instagram"></i></span>
                                 </a>
                             </div>
@@ -986,7 +973,7 @@
                     <div class="col-xl-5 col-lg-6 order-lg-1">
                         <div class="footer-widget widget_newsletter style-two wow fadeInUp delay-0-6s">
                             <div class="footer-logo mt-35">
-                                <a href="index.html"><img src="assets/images/logoFull-nbg.png" alt="Logo"></a>
+                                <a href="index.html"><img loading="lazy" src="assets/images/logoFull-nbg.png" alt="Logo"></a>
                             </div>
                         </div>
                     </div>
@@ -1042,6 +1029,10 @@
         </footer>
         <!-- footer area end -->
 
+        <div class="whatsapp-widget" onclick="redirectToWhatsApp()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <!-- WhatsApp Icon -->
+        </div>
+
         <!-- Scroll Top Button -->
         <button class="scroll-top scroll-to-target" data-target="html"><span class="fas fa-angle-double-up"></span></button>
 
@@ -1076,7 +1067,7 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {            
             const today = new Date();
             const tomorrow = new Date();
             today.setDate(today.getDate() + 1);
@@ -1166,6 +1157,13 @@
                 });
             });
         });
+
+        function redirectToWhatsApp() {
+            var phoneNumber = '+528119771014'; // Replace with your WhatsApp number in international format
+            var message = "Hola, me gustaría solicitar información para una reservación en Villa Encinos.";
+            var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
     </script>
 
 </body>
