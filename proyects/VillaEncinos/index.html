@@ -483,7 +483,7 @@
                         <div class="pricing-item"
                             style="background-image: url(assets/images/background/price-item-bg.png);">
                             <h4 class="title">🛏️ Estancia Parcial</h4>
-                            <span class="price">$8,500</span>
+                            <span class="price">$6,500</span>
                             <span class="per-text">por noche</span>
                             <hr>
                             <ul>
@@ -500,7 +500,7 @@
                         <div class="pricing-item"
                             style="background-image: url(assets/images/background/price-item-bg.png);">
                             <h4 class="title">🏠 Estancia Completa</h4>
-                            <span class="price">$9,500</span>
+                            <span class="price">$7,500</span>
                             <span class="per-text">por noche</span>
                             <hr>
                             <ul>
@@ -1037,7 +1037,7 @@
                 "03": "Evento privado"
             }[paquete] || "No especificado";
 
-            const comentariosText = comentarios ? `Comentarios: ${comentarios}` : 'Ninguno.';
+            const comentariosText = comentarios ? `${comentarios}` : 'Ninguno.';
             const whatsappMessage = `Hola, me gustaría solicitar información para una reservación en Villa Encinos:\n- Fecha de llegada: ${formattedStartDate}\n- Fecha de salida: ${formattedEndDate}\n- Adultos: ${adultos}\n- Niños: ${ninos || 0}\n- Tipo de estancia: ${paqueteText}\n- Comentarios: ${comentariosText}`;
 
             const whatsappURL = `https://wa.me/5218119771014?text=${encodeURIComponent(whatsappMessage)}`;
