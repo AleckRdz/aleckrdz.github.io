@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+16. error-404-section
+--------------------------------------------------------------*/
+.error-404-section {
+    text-align: center;
+
+    .error-message {
+
+        h3 {
+            color: #16171A;
+            font-size: 400px;
+            font-weight: 700;
+            text-transform: capitalize;
+            position: relative;
+            margin-bottom: 0;
+            margin-top: -70px;
+
+            @include media-query(1199px) {
+                font-size: 250px;
+                margin-top: -50px;
+            }
+            @include media-query(991px) {
+                font-size: 150px;
+                margin-top: -30px;
+            }
+            @include media-query(767px) {
+                font-size: 100px;
+                margin-top: -10px;
+            }
+        }
+
+        h4 {
+            color: #212121;
+            font-size: 55px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+
+            @include media-query(1199px) {
+                font-size: 40px;
+            }
+            @include media-query(991px) {
+                font-size: 30px;
+            }
+            @include media-query(767px) {
+                font-size: 20px;
+            }
+        }
+
+        .theme-btn {
+            font-weight: 600;
+        }
+    }
+
+}

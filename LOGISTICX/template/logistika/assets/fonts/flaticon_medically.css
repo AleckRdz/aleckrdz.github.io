@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "flaticon_medically";
+  src: url("./flaticon_medically.woff2?193e8845bf341a32299f49e628674e45") format("woff2"), url("./flaticon_medically.woff?193e8845bf341a32299f49e628674e45") format("woff"), url("./flaticon_medically.eot?193e8845bf341a32299f49e628674e45#iefix") format("embedded-opentype"), url("./flaticon_medically.ttf?193e8845bf341a32299f49e628674e45") format("truetype"), url("./flaticon_medically.svg?193e8845bf341a32299f49e628674e45#flaticon_medically") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon_medically !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-baby:before {
+  content: "\f101";
+}
+
+.flaticon-rehabilitation:before {
+  content: "\f102";
+}
+
+.flaticon-microsurgery:before {
+  content: "\f103";
+}
+
+.flaticon-tooth:before {
+  content: "\f104";
+}
+
+.flaticon-cup:before {
+  content: "\f105";
+}
+
+.flaticon-mortar:before {
+  content: "\f106";
+}
+
+.flaticon-microsurgery-1:before {
+  content: "\f107";
+}
+
+.flaticon-bone:before {
+  content: "\f108";
+}
+
+.flaticon-quote:before {
+  content: "\f109";
+}
+
+.flaticon-star:before {
+  content: "\f10a";
+}
+
+.flaticon-phone-call:before {
+  content: "\f10b";
+}
+
+.flaticon-24-7:before {
+  content: "\f10c";
+}
+
+.flaticon-doctor:before {
+  content: "\f10d";
+}
+
+.flaticon-businesswoman:before {
+  content: "\f10e";
+}
+
+.flaticon-award:before {
+  content: "\f10f";
+}
+
+.flaticon-customer-care:before {
+  content: "\f110";
+}
+
+.flaticon-deadline:before {
+  content: "\f111";
+}
+
+.flaticon-location:before {
+  content: "\f112";
+}
+
+.flaticon-remedy:before {
+  content: "\f113";
+}
+
+.flaticon-left-arrow:before {
+  content: "\f114";
+}
+
+.flaticon-right-arrow:before {
+  content: "\f115";
+}
+
+.flaticon-left-arrow-1:before {
+  content: "\f116";
+}
+
+.flaticon-next:before {
+  content: "\f117";
+}
+
+.flaticon-play:before {
+  content: "\f118";
+}
+
+.flaticon-calendar:before {
+  content: "\f119";
+}
+
+.flaticon-linkedin:before {
+  content: "\f11a";
+}
+
+.flaticon-facebook-app-symbol:before {
+  content: "\f11b";
+}
+
+.flaticon-instagram:before {
+  content: "\f11c";
+}
+
+.flaticon-twitter:before {
+  content: "\f11d";
+}
+
+.flaticon-add-to-cart:before {
+  content: "\f11e";
+}
+
+.flaticon-mail:before {
+  content: "\f11f";
+}
+
+.flaticon-search:before {
+  content: "\f120";
+}
+
+.flaticon-close:before {
+  content: "\f121";
+}
+
+.flaticon-trash:before {
+  content: "\f122";
+}
+
+.flaticon-telephone:before {
+  content: "\f123";
+}
+
+.flaticon-location-1:before {
+  content: "\f124";
+}
+
+.flaticon-star-1:before {
+  content: "\f125";
+}/*# sourceMappingURL=flaticon_medically.css.map */

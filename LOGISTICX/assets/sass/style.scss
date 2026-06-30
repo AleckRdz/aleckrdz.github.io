@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Theme Name:     Logistika - Transportation & Logistics HTML Template
+Version:        1.0.0
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+1. General
+	1.1 Theme Reset Style
+	1.2 Global Elements
+
+2. header
+	2.1 topbar
+	2.2 navigation
+
+3. content
+	3.1 hero-slider
+	3.2 wpo-about-section
+	3.3 wpo-service-section
+	3.4 wpo-funfact-section
+	3.5 wpo-get-quate-section
+	3.6 wpo-features-section
+	3.7 wpo-process-section
+	3.9 wpo-testimonial-section
+	3.10 wpo-partner-section
+	3.11 wpo-cta-section
+	3.12 wpo-team-section
+	3.13 wpo-blog-section
+	3.14 wpo-map-section
+
+4. wpo-footer
+
+5. Home-style-2
+   5.1 wpo-cta-section
+   5.2 wpo-service-section-s2
+   5.3 wpo-funfact-section-s2
+   5.4 wpo-about-section-s2
+   5.5 wpo-request-quate-section
+   5.6 wpo-process-section-s2
+   5.7 wpo-features-section-s2
+   5.8 wpo-pricing-section
+   5.9 wpo-portfolio-testimonial-section
+   5.10 wpo-project-section-s2
+   5.11 wpo-testimonial-section-s2
+   5.12 wpo-partner-section-s2
+   5.13 wpo-faq-section
+   5.14 wpo-blog-section-s2 
+   5.15 wpo-get-touch-section 
+   5.16 wpo-cta-section-s2
+
+6. Home-style-3
+   6.1 wpo-get-quate-section-s2
+   6.2 wpo-partner-section-s3
+   6.3 wpo-introCounter-section
+   6.4 wpo-features-section-s3
+   6.5 wpo-funfact-section-s3
+   6.6 wpo-service-section-s3
+   6.7 wpo-get-quate-section-s3 
+   6.8 wpo-pricing-section-s2
+   6.9 wpo-project-section-s3
+   6.10 wpo-process-section-s3
+   6.11 wpo-testimonial-section-s3
+   6.12 wpo-faq-section-s2
+   6.13 wpo-cta-section-s3
+   6.14 wpo-blog-section-s3
+
+7. wpo-service-single-page
+
+8. wpo-project-single-page
+
+9. wpo-shop-page
+
+10. wpo-shop-single-page
+
+11. wpo-cart-page-style
+
+12. wpo-checkout-page-style
+
+13. wpo-blog-pg-section
+
+14. wpo-blog-single-section
+
+15. wpo-contact-page
+
+16. error-404-section
+
+17. track-page
+
+----------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+1. General
+----------------------------------------------------------------*/
+
+// helpers
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+
+// base
+@import "base/base";
+
+
+// components
+@import "components/section-title";
+@import "components/buttons";
+@import "components/form";
+@import "components/services-sidber";
+@import "components/page-title";
+@import "components/preloader";
+@import "components/blog-sidebar";
+@import "components/pagination";
+
+// layout
+@import "layout/header";
+@import "layout/hero-slider";
+@import "layout/footer";
+
+// components
+@import "components/sticky-header";
+
+
+// page
+@import "page/home-default";
+@import "page/home-style2";
+@import "page/home-style3";
+@import "page/service-single";
+@import "page/project-single";
+
+
+@import "page/shop";
+@import "page/shop-single";
+@import "page/cart";
+@import "page/checkout";
+
+
+
+@import "page/_blog";
+@import "page/blog-single";
+@import "page/contact";
+@import "page/error-404";
+@import "page/track-page";
+
+
+
+
