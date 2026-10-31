@@ -1,4 +1,4 @@
-/* FORME / the reader opens the index, assembles a window and draws a way forward. */
+/* Casa PPaui / el lector abre el índice, arma una ventana y dibuja un camino. */
 (() => {
   'use strict';
   if (!Element.prototype.animate || !window.IntersectionObserver) return;
@@ -12,7 +12,7 @@
     if (!element || !running || preference.matches || document.hidden) return;
     for (const a of animations) if (a.effect.target === element) { a.cancel(); animations.delete(a); }
     const a = element.animate(keyframes, { duration: 850, easing: ease, fill: 'both', ...options });
-    a.id = `forme-${name}`; animations.add(a);
+    a.id = `ppaui-${name}`; animations.add(a);
     a.finished.then(() => { a.cancel(); animations.delete(a); }, () => animations.delete(a));
     return a;
   }
@@ -68,7 +68,7 @@
   const schedule = () => { if (running && !frame) frame = requestAnimationFrame(update); };
   addEventListener('scroll', schedule, { passive: true }); addEventListener('resize', schedule, { passive: true }); addEventListener('load', schedule);
   $$('.service').forEach(service => service.addEventListener('toggle', () => { if (service.open) rise(service.querySelector('.service-content'), 0, 'service'); schedule(); }));
-  window.FormeMotion = {
+  window.PpauiMotion = {
     folio(panel) {
       $$('.folio-detail').forEach(caption => { for (const a of animations) if (a.effect.target === caption) { a.cancel(); animations.delete(a); } });
       // Reveal the identity after its panel opens; never animate or replace the link.
