@@ -8,7 +8,8 @@
   const panels = $$('[data-folio]');
   const selectors = $$('[data-folio-select]');
   const featuredEl = $('#ppaui-featured');
-  const featured = featuredEl ? JSON.parse(featuredEl.textContent) : [];
+  let featured = [];
+  try { featured = featuredEl ? JSON.parse(featuredEl.textContent) : []; } catch { featured = []; }
   let index = 0;
   function selectFolio(next, focus = false) {
     if (!panels.length) return;
