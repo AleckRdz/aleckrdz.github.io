@@ -1444,7 +1444,7 @@ function updateWhatsApp(lang) {
   var whatsappBtn = document.getElementById('whatsappBtn');
   var whatsappText = document.getElementById('whatsappText');
   if (whatsappBtn && whatsappText) {
-    var phone = '5218110291729';
+    var phone = '528132475278';
     var msg = translations[lang] ? translations[lang].whatsapp_message : translations.en.whatsapp_message;
     var btnText = translations[lang] ? translations[lang].whatsapp_btn : translations.en.whatsapp_btn;
     var btnTitle = translations[lang] ? translations[lang].whatsapp_title : translations.en.whatsapp_title;
@@ -1628,7 +1628,7 @@ document.addEventListener('DOMContentLoaded', function () {
             message += 'Pick up zipcode: ' + encodeURIComponent(pickupZip) + '%0A';
             message += 'Delivery zipcode: ' + encodeURIComponent(deliveryZip);
 
-            window.open('https://wa.me/5281110291729?text=' + message, '_blank');
+            window.open('https://wa.me/528132475278?text=' + message, '_blank');
         });
     }
 

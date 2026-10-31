@@ -1,0 +1,21 @@
+{
+  "tool": "Codex built-in image_gen",
+  "assets": [
+    {
+      "file": "courtyard-house.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium architecture property website photograph, landscape 3:2. A stunning fictional contemporary California courtyard house, monolithic warm ivory board-formed concrete upper volume cantilevered over a glass living room, slender black steel window frames, a sculptural mature Japanese maple in an open rectangular courtyard, a long shallow reflecting pool along the foreground, pale large-format stone and subtle wild grasses. House occupies most of composition, thoughtful asymmetric framing with strong horizontal and vertical geometry, architectural magazine photography shot on medium format, eye level 28mm lens, crisp believable details and natural imperfections. Soft late afternoon sun, cool pale sky, warm interior lights just beginning, understated quiet high-end atmosphere. Natural concrete cream, charcoal, green foliage. No people, no logos, no typography, no watermarks, no collage, no fisheye, no glossy computer-render appearance."
+    },
+    {
+      "file": "ridge-house.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: property website listing photography, landscape 3:2. Beautiful fictional architect-designed low-slung desert house near Palm Springs. Two bold rectilinear volumes of russet weathering steel and smooth warm concrete, floor-to-ceiling dark glass, a generous cantilevered roof shading an outdoor chair and low table, desert rock garden of agave and native grasses, pale sand and a turquoise rectangular pool at edge of frame. Distant rugged mountains and clear soft blue sky. Sophisticated architecture magazine photograph, tactile real material detail, rich late afternoon shadows, restrained earth colours, composition centered on the architecture large in frame. Eye level view. No people, lettering, logos, watermark or collage, no glossy CGI."
+    },
+    {
+      "file": "pacific-house.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: architectural property website editorial image, landscape 3:2. A fictional contemporary timber home on the forested northern California coast. Sculptural two-storey dark cedar exterior with generous glass walls and a horizontal terrace, weathered natural timber deck, an elegant sculptural lounge chair, windswept Monterey cypress and soft grasses, glimpses of muted Pacific ocean in distance. Refined modern architecture with crisp rectangular framing and warm oak visible inside. House large within frame, photographed diagonally from garden toward terrace, natural overcast coastal light with a warm late sun accent, architecture editorial photography, tactile quiet luxury, believable construction. No people, text, signage, logos, watermarks, collage or CGI gloss."
+    },
+    {
+      "file": "alex-morgan.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: real estate advisor editorial portrait for modern architectural website, vertical 4:5 photograph. One entirely fictional male property advisor around forty, medium brown skin, short curly dark hair, subtle natural smile, wearing an unstructured charcoal jacket over a cream crew neck, standing casually in a beautiful concrete and oak architectural studio beside a large window. Framed from upper thighs to above head with realistic relaxed hands. Warm approachable professional, candid independent design magazine portrait, natural skin texture, refined muted charcoal cream and wood palette, soft directional daylight, minimal clean backdrop with one architectural drawing in distance. No text, logos, lettering, watermark, identifiable real person or collage."
+    }
+  ]
+}
